@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" <%- htmlWebpackPlugin.options.context.helmet.htmlAttributes %>>
+  <head>
+    <%- htmlWebpackPlugin.options.context.helmet.title %>
+    <%- htmlWebpackPlugin.options.context.helmet.meta %>
+    <%- htmlWebpackPlugin.options.context.helmet.link %>
+    <%- htmlWebpackPlugin.options.context.helmet.style %>
+    <link rel="stylesheet" type="text/css" href="https://css.tito.io/v1.1" />
+    <% for (var file of htmlWebpackPlugin.options.context.cssFiles) { %>
+      <link href="<%= file %>" rel="stylesheet">
+    <% } %>
+  </head>
+  <body <%- htmlWebpackPlugin.options.context.helmet.bodyAttributes %>>
+    <%- webpackConfig.html %>
+
+    <%- htmlWebpackPlugin.options.context.helmet.noscript %>
+    <%- htmlWebpackPlugin.options.context.helmet.script %>
+    <% for (var script of htmlWebpackPlugin.options.context.jsFiles) { %>
+      <script src="<%= script %>" type="text/javascript"></script>
+    <% } %>
+  </body>
+</html>
