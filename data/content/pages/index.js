@@ -6,6 +6,4 @@ const index = {
   secondary: `foo`
 };
 
-module.exports = {
-  index
-};
+module.exports = [index];

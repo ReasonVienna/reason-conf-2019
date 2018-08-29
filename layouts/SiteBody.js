@@ -2,15 +2,7 @@ import React from "react";
 import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
 import { HelmetProvider } from "react-helmet-async";
-import {
-  AnchorProvider,
-  Footer,
-  Header,
-  Meta,
-  Sponsor,
-  connect
-} from "../components";
-import * as tweakSponsors from "./tweak-sponsors";
+import { AnchorProvider, Footer, Header, Meta, connect } from "../components";
 
 import "normalize.css/normalize.css";
 // import "../styles/fontello-codes.css";
