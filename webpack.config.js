@@ -107,25 +107,19 @@ function developmentConfig() {
       rules: [
         {
           test: /\.s?css$/,
-          use: ["style-loader", "css-loader", "sass-loader"]
-        },
-        {
-          test: /].module\.s?css$/,
-          use: ExtractTextPlugin.extract({
-            use: [
-              "style-loader",
-              {
-                loader: "css-loader",
-                options: {
-                  importLoaders: 2,
-                  modules: true
-                }
-              },
-              "postcss-loader",
-              "sass-loader"
-            ],
-            fallback: "style-loader"
-          })
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 2,
+                modules: true,
+                localIdentName: "[name]__[local]___[hash:base64:5]"
+              }
+            },
+            "postcss-loader",
+            "sass-loader"
+          ]
         }
       ]
     }
