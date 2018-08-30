@@ -23,7 +23,7 @@
     "react-dropzone": "^4.2.9",
     "react-helmet-async": "0.1.0-alpha",
     "react-social-icons": "^2.8.1",
-    "reason-react": "^0.4.1"
+    "reason-react": "^0.5.3"
   },
   "keywords": [
     "gatsby"
@@ -52,7 +52,7 @@
     "autoprefixer": "^7.2.6",
     "babel-loader": "^8.0.0",
     "babel-runtime": "^6.26.0",
-    "bs-platform": "^3.0.0",
+    "bs-platform": "^4.0.5",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^3.0.2",

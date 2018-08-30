@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Speaker Placeholder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="speaker-placeholder" transform="translate(-2329.000000, -2757.000000)" fill-rule="nonzero">
+            <g id="Moodboard">
+                <g id="Speaker-Placeholder" transform="translate(2329.000000, 2757.000000)">
+                    <g id="Vector" fill="#DD4B39">
+                        <g id="path0_fill-link">
+                            <polygon id="path0_fill" points="400 0 0 0 0 400 400 400"></polygon>
+                        </g>
+                    </g>
+                    <g id="?" transform="translate(186.666667, 153.333333)" fill="#FFFFFF">
+                        <g id="path1_fill-link" transform="translate(1.233333, 2.466667)">
+                            <path d="M65.7,137.7 C65.7,127.7 67.9,119.5 72.3,113.1 C76.7,106.5 83.1,99.3 91.5,91.5 C97.3,86.1 101.6,81.6 104.4,78 C107.2,74.2 108.6,70.2 108.6,66 C108.6,60.2 106.1,55.6 101.1,52.2 C96.3,48.6 90,46.8 82.2,46.8 C74.2,46.8 66.9,48.7 60.3,52.5 C53.9,56.3 48.7,61.6 44.7,68.4 L0,44.4 C8.2,30.4 19.8,19.5 34.8,11.7 C49.8,3.9 67.9,0 89.1,0 C112.9,0 132,5 146.4,15 C161,24.8 168.3,38.6 168.3,56.4 C168.3,64.6 166.9,71.9 164.1,78.3 C161.3,84.5 157.9,89.8 153.9,94.2 C150.1,98.4 145.1,103.2 138.9,108.6 C132.1,114.4 127.1,119.4 123.9,123.6 C120.7,127.6 119.1,132.3 119.1,137.7 L65.7,137.7 Z M92.4,216.9 C82.6,216.9 74.5,213.9 68.1,207.9 C61.7,201.7 58.5,194.2 58.5,185.4 C58.5,176.4 61.6,169 67.8,163.2 C74.2,157.4 82.4,154.5 92.4,154.5 C102.4,154.5 110.6,157.4 117,163.2 C123.4,169 126.6,176.4 126.6,185.4 C126.6,194.2 123.4,201.7 117,207.9 C110.6,213.9 102.4,216.9 92.4,216.9 Z" id="path1_fill"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -22,7 +22,7 @@ function commonConfig() {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /(\.bs\.)?\.js$/,
           use: "babel-loader",
           include: [
             path.join(__dirname, "components"),
@@ -64,6 +64,11 @@ function commonConfig() {
         {
           test: /\.md$/,
           use: "raw-loader"
+        },
+        {
+          // Prevent webpack from interpreting Reason files
+          test: /.re$/,
+          loader: "./scripts/ignore-loader"
         }
       ]
     },
@@ -103,6 +108,24 @@ function developmentConfig() {
         {
           test: /\.s?css$/,
           use: ["style-loader", "css-loader", "sass-loader"]
+        },
+        {
+          test: /].module\.s?css$/,
+          use: ExtractTextPlugin.extract({
+            use: [
+              "style-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 2,
+                  modules: true
+                }
+              },
+              "postcss-loader",
+              "sass-loader"
+            ],
+            fallback: "style-loader"
+          })
         }
       ]
     }
