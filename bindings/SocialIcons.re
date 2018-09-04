@@ -1,5 +1,5 @@
 [@bs.module "react-social-icons"]
-external linkClass: ReasonReact.reactClass = "default";
+external linkClass: ReasonReact.reactClass = "SocialIcon";
 let make =
     (
       ~urls: array(string),
@@ -12,5 +12,6 @@ let make =
     "className": Js.Nullable.fromOption(className),
     "color": Js.Nullable.fromOption(color),
   };
+
   ReasonReact.wrapJsForReason(~reactClass=linkClass, ~props, _children);
 };

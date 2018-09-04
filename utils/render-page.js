@@ -10,6 +10,9 @@ module.exports = function renderDefault({ location, content: component }, cb) {
     { location, context: { helmetContext } },
     React.createElement(Route, { component })
   );
+  // <StaticRouter location context>
+  //   <Route component />
+  // </StaticRouter>
 
   getDataFromTree(page)
     .then(() =>

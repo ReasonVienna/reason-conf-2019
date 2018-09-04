@@ -107,6 +107,13 @@ function developmentConfig() {
       rules: [
         {
           test: /\.s?css$/,
+          // TODO: Refactor this extra scss loader config, after migrating to CSS-Modules only
+          include: [path.resolve(__dirname, "styles")],
+          use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
+        },
+        {
+          test: /\.s?css$/,
+          exclude: [path.resolve(__dirname, "styles")],
           use: [
             "style-loader",
             {

@@ -33,3 +33,11 @@ let md = markdownString => {
     );
   ReactDOMRe.createElement("section", ~props, [||]);
 };
+
+let join = (~sep, arr) =>
+  Belt.Array.reduce(arr, "", (acc, value) =>
+    switch (acc) {
+    | "" => value
+    | str => str ++ sep ++ value
+    }
+  );

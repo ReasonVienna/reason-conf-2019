@@ -2,7 +2,7 @@ module Link = Gatsby.Link;
 
 open Util;
 
-[@bs.module] external style : Js.t({..}) = "./contactForm.module.scss";
+[@bs.module] external style: Js.t({..}) = "./contactForm.module.scss";
 
 let component = ReasonReact.statelessComponent("ContactForm");
 
@@ -13,7 +13,7 @@ let make = _children => {
       <form
         name="contact" action="/thanks/" className=style##root method="post">
         <div className=style##formRow>
-          <label htmlFor="name" className=style##label> ("Name" |> s) </label>
+          <label htmlFor="name" className=style##label> {"Name" |> s} </label>
           <input
             _type="text"
             name="name"
@@ -25,7 +25,7 @@ let make = _children => {
         </div>
         <div className=style##formRow>
           <label htmlFor="email" className=style##label>
-            ("Email" |> s)
+            {"Email" |> s}
           </label>
           <input
             _type="email"
@@ -38,7 +38,7 @@ let make = _children => {
         </div>
         <div className=style##formRow>
           <label htmlFor="message" className=style##label>
-            ("Message" |> s)
+            {"Message" |> s}
           </label>
           <textarea
             id="message"
@@ -47,8 +47,8 @@ let make = _children => {
             required=true
           />
         </div>
-        <Button _type="submit" className=style##submit>
-          (s("Submit"))
+        <Button type_="submit" className=style##submit>
+          {s("Submit")}
         </Button>
         <input _type="hidden" name="form-name" value="contact" />
       </form>,

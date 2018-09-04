@@ -34,7 +34,7 @@ let make = _children => {
             {"Email" |> s}
           </label>
           <input
-            _type="email"
+            type_="email"
             name="EMAIL"
             className=style##input
             id="mce-EMAIL"
@@ -43,14 +43,14 @@ let make = _children => {
           />
           <div className=style##hiddenInput>
             <input
-              _type="text"
+              type_="text"
               name="b_2ff99718c52457a4fa5219f66_3e392893b9"
               tabIndex=(-1)
             />
           </div>
           <Button type_="submit"> {s("Subscribe")} </Button>
         </div>
-        <input _type="hidden" name="form-name" value="newsletter" />
+        <input type_="hidden" name="form-name" value="newsletter" />
       </form>,
       ~props={"data-netlify": true},
       [||],

@@ -9,6 +9,7 @@
     { "dir": "components", "subdirs": true },
     "templates",
     "utils",
+    "layouts",
     { "dir": "bindings", "subdirs": true },
     { "dir": "data", "subdirs": true }
     /*     ,{
@@ -21,5 +22,5 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"]
+  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors", "-bs-g"]
 }

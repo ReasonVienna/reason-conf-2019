@@ -1,4 +1,4 @@
-module Link = Antwar.Link;
+module Link = ReactRouterDom.Link;
 
 [@bs.module] external style: Js.t({..}) = "./navigation.module.scss";
 
@@ -10,10 +10,10 @@ type navigationLocation =
   | Header
   | Footer;
 
-let make = (~pathName, ~navigationLocation=Header, _children) => {
+let make = (~pathname, ~navigationLocation=Header, _children) => {
   ...component,
   render: _self => {
-    let isHomePage = pathName == "/";
+    let isHomePage = pathname == "/";
     let rootClassName =
       switch (navigationLocation) {
       | Header => style##root_header

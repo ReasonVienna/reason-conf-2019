@@ -2,9 +2,11 @@ import React from "react";
 import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
 import { HelmetProvider } from "react-helmet-async";
-import { AnchorProvider, Footer, Header, Meta, connect } from "../components";
+import { Footer, Meta, connect } from "../components";
 
-import "normalize.css/normalize.css";
+import Layout from "./Layout.bs";
+
+// import "normalize.css/normalize.css";
 // import "../styles/fontello-codes.css";
 // import "../styles/fontello-embedded.css";
 import "../styles/style.scss";
@@ -14,39 +16,44 @@ const siteName = "ReasonConf";
 const SiteBody = (
   {
     children,
-    location: { pathname },
-    page: {
-      file: { title, description, keywords }
-    },
+    location,
+    page: { file },
     partners = [],
     goldSponsors = [],
     silverSponsors = [],
     bronzeSponsors = []
   },
   { router }
-) => (
-  <HelmetProvider
-    context={
-      router && router.staticContext && router.staticContext.helmetContext
-    }
-  >
-    <AnchorProvider>
-      <Meta
-        siteName={siteName}
-        title={title}
-        description={description}
-        keywords={keywords}
-      />
-      <main>
-        <Header pathname={pathname} title={title} />
-        <div className="main-container container">
-          <section className="grid grid_6col">{children}</section>
-        </div>
-        <Footer />
-      </main>
-    </AnchorProvider>
-  </HelmetProvider>
-);
+) => {
+  /*
+  ReasonReact doesn't support the stateless function 
+  context parameter, like used here... therefore we will
+  keep the SiteBody as a shim for the ReasonReact app
+  */
+
+  return (
+    <Layout location={location} file={file} router={router}>
+      {children}
+    </Layout>
+  );
+  // return <HelmetProvider
+  //   context={
+  //     router && router.staticContext && router.staticContext.helmetContext
+  //   }
+  // >
+  //   <Meta
+  //     siteName={siteName}
+  //     title={title}
+  //     description={description}
+  //     keywords={keywords}
+  //   />
+  //   <div className="page">
+  //     <main>{children}</main>
+  //     <Footer />
+  //   </div>
+  // </HelmetProvider>
+};
+
 SiteBody.propTypes = {
   children: PropTypes.node,
   location: PropTypes.object,

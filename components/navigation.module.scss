@@ -1,99 +1,99 @@
 @import "../styles/variables.scss";
 
-// .root {
-//   display: block;
-// }
+.root {
+  display: block;
+}
 
-// .link_active {
-//   color: #fff;
-//   background-image: linear-gradient(transparentize($primaryColor, 0));
-//   background-size: 1px 30px;
-//   background-position: 0 0%;
-//   transition: background 0.25s;
-//   &:hover {
-//     color: #fff;
-//     background-image: linear-gradient(transparentize($primaryColor, 0));
-//     cursor: default;
-//   }
-// }
+.link_active {
+  color: #fff;
+  background-image: linear-gradient(transparentize($primaryColor, 0));
+  background-size: 1px 30px;
+  background-position: 0 0%;
+  transition: background 0.25s;
+  &:hover {
+    color: #fff;
+    background-image: linear-gradient(transparentize($primaryColor, 0));
+    cursor: default;
+  }
+}
 
-// .link_home {
-//   flex: 0 auto;
-//   display: block;
-//   background: none;
-//   &:hover {
-//     background: none;
-//     filter: brightness(110%);
-//   }
-// }
+.link_home {
+  flex: 0 auto;
+  display: block;
+  background: none;
+  &:hover {
+    background: none;
+    filter: brightness(110%);
+  }
+}
 
-// .logo {
-//   margin: 0 0 20px;
-//   height: 2.2em;
-//   @media (min-width: 768px) {
-//     margin: 0;
-//   }
-// }
+.logo {
+  margin: 0 0 20px;
+  height: 2.2em;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+}
 
-// .root_header {
-//   composes: root;
-//   align-items: flex-end;
-//   @media (min-width: 768px) {
-//     display: flex;
-//     text-align: right;
-//   }
+.root_header {
+  composes: root;
+  align-items: flex-end;
+  @media (min-width: 768px) {
+    display: flex;
+    text-align: right;
+  }
 
-//   .link {
-//     display: inline-block;
-//     padding: 0.125em 0.25em 0;
-//     font-family: $displayFontFamily;
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     font-size: 0.65em;
-//     letter-spacing: 1px;
-//   }
-// }
+  .link {
+    display: inline-block;
+    padding: 0.125em 0.25em 0;
+    font-family: $displayFontFamily;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.65em;
+    letter-spacing: 1px;
+  }
+}
 
-// .list {
-//   flex: 1 auto;
-//   margin: 0;
-//   padding: 0;
-//   list-style-type: none;
-//   justify-self: center;
-//   @media (min-width: 768px) {
-//     justify-self: start;
-//   }
-// }
+.list {
+  flex: 1 auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-self: center;
+  @media (min-width: 768px) {
+    justify-self: start;
+  }
+}
 
-// .listItem {
-//   display: inline-block;
-//   margin: 0 0.5em 0 0;
+.listItem {
+  display: inline-block;
+  margin: 0 0.5em 0 0;
 
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }
+  &:last-child {
+    margin-right: 0;
+  }
+}
 
-// .listItemBuy {
-//   composes: listItem;
-// }
+.listItemBuy {
+  composes: listItem;
+}
 
-// .ticketsButton {
-//   composes: root from "./button.module.scss";
-//   composes: link;
-//   padding: 0.5em 0.5em 0.35em !important;
-// }
+.ticketsButton {
+  composes: root from "./button.module.scss";
+  composes: link;
+  padding: 0.5em 0.5em 0.35em !important;
+}
 
-// .root_footer {
-//   .link_home {
-//     display: none;
-//   }
+.root_footer {
+  .link_home {
+    display: none;
+  }
 
-//   .list {
-//     line-height: 1.5;
-//   }
+  .list {
+    line-height: 1.5;
+  }
 
-//   .listItem {
-//     display: block;
-//   }
-// }
+  .listItem {
+    display: block;
+  }
+}

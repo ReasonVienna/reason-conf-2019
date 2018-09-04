@@ -4,7 +4,7 @@ let component = ReasonReact.statelessComponent("Home");
 
 module Tickets = Tito.Tickets;
 
-module Link = Antwar.Link;
+module Link = ReactRouterDom.Link;
 
 let speakerColumn = (speaker: Data.Speaker.t) =>
   <li className="speaker-list--item" key={speaker.name}>
@@ -14,7 +14,6 @@ let speakerColumn = (speaker: Data.Speaker.t) =>
   </li>;
 
 let sponsorLogo = (sponsor: Partners.sponsorT) => {
-  Js.log(sponsor);
   let className =
     switch (sponsor.tier) {
     | Gold => "partners--listItem_gold"
@@ -57,7 +56,7 @@ let make = _children => {
             />
           </h1>
           <section className="teaser--navigation">
-            <Navigation pathName="/" />
+            <Navigation pathname="/" />
           </section>
           <div className="teaser--meta">
             <h2 className="teaser--dates">

@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+}
+
+.text {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+.smallText {
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.formRow {
+  display: flex;
+}
+
+.label {
+  display: none;
+  margin-right: 0.5em;
+  line-height: 2;
+  font-weight: bold;
+}
+
+.input {
+  display: inline-block;
+  flex: 1 auto;
+  margin-right: 0.25em;
+  padding: 0.25em;
+}
+
+.hiddenInput {
+  position: absolute;
+  left: -5000px;
+}
