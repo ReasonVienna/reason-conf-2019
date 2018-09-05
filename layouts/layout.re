@@ -38,18 +38,59 @@ let subscribeFormIfNeeded = hasSubscribeForm =>
 
 let make =
     (
-      ~_location: ReactRouter.location,
+      ~location: ReactRouter.location,
       ~file: file,
       ~router: ReactRouter.StaticRouter.t,
       children,
     ) => {
   ...component,
   render: _self => {
+    let pageType =
+      switch (location.pathname) {
+      | "/" => Home
+      | "/speaker"
+      | "/speaker/" => NoLayout
+      | "/badges"
+      | "/badges/" => Print
+      | _ => Normal
+      };
+    let isThanksPage = location.pathname == "/thanks/";
     let helmetContext = ReactRouter.StaticRouter.getHelmetContext(router);
     let {title, description, keywords} = file;
     <HelmetProvider context=helmetContext>
       <Meta siteName="ReasonConf" title description keywords />
-      <div className="page"> <main> children </main> <Footer /> </div>
+      {
+        switch (pageType) {
+        | NoLayout => <div> <Helmet title /> children </div>
+        | Print =>
+          <div className="page-print">
+            <Helmet title bodyAttributes={"class": "A4"}>
+              <link
+                rel="stylesheet"
+                type_="text/css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
+              />
+            </Helmet>
+            children
+          </div>
+        | Home =>
+          <div className="page">
+            <main> children </main>
+            {subscribeFormIfNeeded(!isThanksPage)}
+            <Footer />
+          </div>
+        | Normal =>
+          <div className="page">
+            <Helmet title />
+            <div className="container container_centered">
+              <header> <Navigation pathname={location.pathname} /> </header>
+              <article> children </article>
+            </div>
+            {subscribeFormIfNeeded(!isThanksPage)}
+            <Footer />
+          </div>
+        }
+      }
     </HelmetProvider>;
   },
 };
@@ -67,12 +108,7 @@ let default =
           | None => [||]
           },
       };
-
-      make(
-        ~_location=jsProps##location,
-        ~file,
-        ~router=jsProps##router,
-        jsProps##children,
-      );
+      let location = ReactRouter.{pathname: jsProps##location##pathname};
+      make(~location, ~file, ~router=jsProps##router, jsProps##children);
     },
   );

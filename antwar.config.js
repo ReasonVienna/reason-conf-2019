@@ -17,31 +17,21 @@ module.exports = {
     //   description: "Page was not found",
     //   title: "Page not found",
     // }),
-    "/": page("index")
-    // "2018": page("2018", {
-    //   description: "React Finland 2018",
-    //   title: "React Finland 2018",
-    // }),
-    // "for-attendees": page("for-attendees"),
-    // "for-sponsors": page("for-sponsors"),
-    // about: page("about"),
-    // imprint: page("imprint"),
-    // "privacy-policy": page("privacy-policy"),
-    // "2018/schedule": page("schedule"),
-    // "2018/speakers": page("speakers"),
-    // "2018/workshops": page("workshops"),
+    "/": page("page_index.bs"),
+    speakers: page("speakers.bs")
   }
 };
 
-function page(name, meta) {
+function page(filename, meta = {}) {
+  const name = path.basename(filename, ".bs");
   const ret = () => {
-    const pageComponent = require(`./pages/${name}`).default;
-    const pageData = pages.find(({ id }) => id === name) || {};
+    const component = require(`./pages/${filename}`).default;
+    const data = pages.find(({ id }) => id === name) || {};
 
-    pageComponent.description = pageData.description || meta.description;
-    pageComponent.title = pageData.title || meta.title;
+    component.description = data.description || meta.description;
+    component.title = data.title || meta.title;
 
-    return pageComponent;
+    return component;
   };
 
   ret.name = name;

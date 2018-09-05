@@ -27,7 +27,8 @@ function commonConfig() {
           include: [
             path.join(__dirname, "components"),
             path.join(__dirname, "layouts"),
-            path.join(__dirname, "pages")
+            path.join(__dirname, "pages"),
+            path.join(__dirname, "data")
           ]
         },
         {

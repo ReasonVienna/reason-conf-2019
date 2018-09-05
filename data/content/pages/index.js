@@ -6,4 +6,14 @@ const index = {
   secondary: `foo`
 };
 
-module.exports = [index];
+const page_index = {
+  ...index,
+  id: "page_index"
+};
+
+const speakers = {
+  id: "speakers",
+  title: "Speakers"
+};
+
+module.exports = [index, page_index, speakers];
