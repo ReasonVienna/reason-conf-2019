@@ -46,34 +46,48 @@ let make = _children => {
   ...component,
   render: _self =>
     <div>
-      <header className="teaser">
-        <section className="container_centered grid grid_6cols">
-          <h1 className="teaser--logo">
-            <img
-              src=Assets.logo
-              alt="ReasonConf 2018"
-              className="teaser--image"
-            />
-          </h1>
-          <section className="teaser--navigation">
-            <Navigation pathname="/" />
-          </section>
-          <div className="teaser--meta">
-            <h2 className="teaser--dates">
-              <time dateTime="2018-05-11/2018-05-13">
-                {{j|11–13 May 2018|j} |> s}
-              </time>
-            </h2>
-            <p className="teaser--location"> {"Vienna, Austria" |> s} </p>
-          </div>
-          <p className="teaser--tagline">
-            {
-              {j|World’s first Reason conference for web-developers & OCaml enthusiasts|j}
-              |> s
-            }
-          </p>
-        </section>
-      </header>
+      <ParallaxScroll
+        from="top-bottom"
+        to_="bottom-top"
+        props={
+          "--header-ty": {
+            "from": "100px",
+            "to": "-100px",
+          },
+          "--header-clip": {
+            "from": "10",
+            "to": "4vw",
+          },
+        }>
+        ...<header className="teaser">
+             <section className="container_centered grid grid_6cols">
+               <h1 className="teaser--logo">
+                 <img
+                   src=Assets.logo
+                   alt="ReasonConf 2018"
+                   className="teaser--image"
+                 />
+               </h1>
+               <section className="teaser--navigation">
+                 <Navigation pathname="/" />
+               </section>
+               <div className="teaser--meta">
+                 <h2 className="teaser--dates">
+                   <time dateTime="2018-05-11/2018-05-13">
+                     {{j|11–13 May 2018|j} |> s}
+                   </time>
+                 </h2>
+                 <p className="teaser--location"> {"Vienna, Austria" |> s} </p>
+               </div>
+               <p className="teaser--tagline">
+                 {
+                   {j|World’s first Reason conference for web-developers & OCaml enthusiasts|j}
+                   |> s
+                 }
+               </p>
+             </section>
+           </header>
+      </ParallaxScroll>
       <section className="offering">
         <div className="container_centered grid grid_6cols">
           <h2 className="offering--heading">
@@ -180,13 +194,23 @@ let make = _children => {
       <section className="speakers">
         <div className="container_centered">
           <h2> {"Speakers" |> s} </h2>
-          <ul className="speaker-list">
-            {
-              Data.Speaker.speakers
-              |> Array.map(speakerColumn)
-              |> ReasonReact.array
-            }
-          </ul>
+          <ParallaxScroll
+            from="top-bottom"
+            to_="bottom-top"
+            props={
+              "--speakers-ty": {
+                "from": "100px",
+                "to": "-100px",
+              },
+            }>
+            ...<ul className="speaker-list">
+                 {
+                   Data.Speaker.speakers
+                   |> Array.map(speakerColumn)
+                   |> ReasonReact.array
+                 }
+               </ul>
+          </ParallaxScroll>
         </div>
       </section>
       <section className="sponsors">
