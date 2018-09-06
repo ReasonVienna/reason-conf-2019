@@ -1,14 +1,17 @@
 const index = {
   id: "index",
-  title: "Reason Conf",
+  title: "Home",
   description: "Some description",
   intro: "Some intro",
   secondary: `foo`
 };
 
 const page_index = {
-  ...index,
-  id: "page_index"
+  id: "page_index",
+  title: "Home",
+  description: "Some description",
+  intro: "Some intro",
+  secondary: `foo`
 };
 
 const speakers = {
@@ -16,4 +19,9 @@ const speakers = {
   title: "Speakers"
 };
 
-module.exports = [index, page_index, speakers];
+const schedule = {
+  id: "schedule",
+  title: "Schedule"
+};
+
+module.exports = [page_index, speakers, schedule];

@@ -81,7 +81,6 @@ let make =
           </div>
         | Normal =>
           <div className="page">
-            <Helmet title />
             <div className="container container_centered">
               <header> <Navigation pathname={location.pathname} /> </header>
               <article> children </article>
@@ -100,14 +99,15 @@ let default =
     ~component,
     jsProps => {
       let file = {
-        title: jsProps##title,
-        description: jsProps##description,
+        title: jsProps##file##title,
+        description: jsProps##file##description,
         keywords:
-          switch (jsProps##keywords) {
+          switch (jsProps##file##keywords) {
           | Some(v) => v
           | None => [||]
           },
       };
+
       let location = ReactRouter.{pathname: jsProps##location##pathname};
       make(~location, ~file, ~router=jsProps##router, jsProps##children);
     },

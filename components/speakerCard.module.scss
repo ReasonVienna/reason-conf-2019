@@ -31,39 +31,39 @@
   }
 }
 
-// .compact {
-//   composes: root;
-//   display: flex;
+.compact {
+  composes: root;
+  display: flex;
 
-//   & > img {
-//     margin-right: 10px;
-//     width: 40px;
-//   }
+  & > img {
+    margin-right: 10px;
+    width: 40px;
+  }
 
-//   & > figcaption {
-//     left: 0;
-//     top: 0;
-//     margin: 0;
-//     padding: 0;
-//     overflow: initial;
-//     z-index: auto;
-//     background: none;
-//   }
+  & > figcaption {
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    z-index: auto;
+    background: none;
+  }
 
-//   .name {
-//     font-size: 0.85em;
-//     color: inherit;
-//   }
-// }
+  .name {
+    font-size: 0.85em;
+    color: inherit;
+  }
+}
 
-// .name {
-//   margin: 0.25em 0;
-//   font-size: 1em;
-//   color: $textColor;
-// }
+.name {
+  margin: 0.25em 0;
+  font-size: 1em;
+  color: $textColor;
+}
 
-// .company {
-//   margin: 0;
-//   font-size: 0.75rem;
-//   color: #888;
-// }
+.company {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #888;
+}

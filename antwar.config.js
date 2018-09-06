@@ -18,7 +18,8 @@ module.exports = {
     //   title: "Page not found",
     // }),
     "/": page("page_index.bs"),
-    speakers: page("speakers.bs")
+    speakers: page("speakers.bs"),
+    schedule: page("schedule.bs")
   }
 };
 

@@ -36,7 +36,7 @@ let make = (~pathname, ~navigationLocation=Header, _children) => {
       }
       <ul className=style##list>
         <li className=style##listItem>
-          <Link to_="/schedule/#day3" className=style##link ?activeClassName>
+          <Link to_="/schedule/" className=style##link ?activeClassName>
             {s("Schedule")}
           </Link>
         </li>
