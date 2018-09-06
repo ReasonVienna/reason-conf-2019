@@ -1,0 +1,16 @@
+.logos {
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  a {
+    margin: 10px;
+    background: none !important;
+  }
+
+  img {
+    height: 60px;
+  }
+}

@@ -21,6 +21,21 @@ const attendees = {
   title: "For Attendees"
 };
 
+const sponsors = {
+  id: "sponsors",
+  title: "For Sponsors"
+};
+
+const about = {
+  id: "about",
+  title: "About"
+};
+
+const jobs = {
+  id: "jobs",
+  title: "Jobs"
+};
+
 const viennaGuide = [
   {
     id: "vienna-guide/food",
@@ -44,4 +59,13 @@ const viennaGuide = [
   }
 ];
 
-module.exports = [page_index, speakers, schedule, attendees, ...viennaGuide];
+module.exports = [
+  page_index,
+  speakers,
+  schedule,
+  attendees,
+  sponsors,
+  about,
+  jobs,
+  ...viennaGuide
+];
