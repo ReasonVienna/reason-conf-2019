@@ -19,14 +19,20 @@ module.exports = {
     // }),
     "/": page("page_index.bs"),
     speakers: page("speakers.bs"),
-    schedule: page("schedule.bs")
+    schedule: page("schedule.bs"),
+    attendees: page("attendees.bs"),
+    "vienna-guide/food": page("vienna-guide/food.bs"),
+    "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
+    "vienna-guide/culture": page("vienna-guide/culture.bs"),
+    "vienna-guide/drinks-and-bars": page("vienna-guide/drinksAndBars.bs"),
+    "vienna-guide/fun-and-outside": page("vienna-guide/funAndOutside.bs")
   }
 };
 
-function page(filename, meta = {}) {
-  const name = path.basename(filename, ".bs");
+function page(filepath, meta = {}) {
+  const name = filepath.split(".bs")[0];
   const ret = () => {
-    const component = require(`./pages/${filename}`).default;
+    const component = require(`./pages/${filepath}`).default;
     const data = pages.find(({ id }) => id === name) || {};
 
     component.description = data.description || meta.description;
