@@ -36,6 +36,16 @@ const jobs = {
   title: "Jobs"
 };
 
+const privacy = {
+  id: "privacy",
+  title: "Privacy"
+};
+
+const coc = {
+  id: "coc",
+  title: "Code of Conduct"
+};
+
 const viennaGuide = [
   {
     id: "vienna-guide/food",
@@ -67,5 +77,7 @@ module.exports = [
   sponsors,
   about,
   jobs,
+  privacy,
+  coc,
   ...viennaGuide
 ];

@@ -24,7 +24,8 @@ module.exports = {
     sponsors: page("sponsors.bs"),
     jobs: page("jobs.bs"),
     about: page("about.bs"),
-
+    privacy: page("privacy.bs"),
+    "code-of-conduct": page("coc.bs"),
     "vienna-guide/food": page("vienna-guide/food.bs"),
     "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
     "vienna-guide/culture": page("vienna-guide/culture.bs"),
