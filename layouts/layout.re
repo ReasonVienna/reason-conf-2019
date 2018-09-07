@@ -102,10 +102,6 @@ let default =
           },
       };
 
-      let helmetContext =
-        ReactRouter.StaticRouter.getHelmetContext(jsProps##router)
-        ->Belt.Option.getWithDefault(Js.Obj.empty());
-
       let location = ReactRouter.{pathname: jsProps##location##pathname};
       make(~location, ~file, jsProps##children);
     },
