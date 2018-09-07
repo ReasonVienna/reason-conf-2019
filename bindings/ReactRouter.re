@@ -1,9 +1,9 @@
 type location = {pathname: string};
 
 module StaticRouter = {
-  type t;
+  type t = Js.t({.});
 
-  let getHelmetContext: t => ReactHelmetAsync.HelmetProvider.context = [%raw
+  let getHelmetContext: t => option(Js.t({.})) = [%raw
     router => "router && router.staticContext && router.staticContext.helmetContext"
   ];
 };

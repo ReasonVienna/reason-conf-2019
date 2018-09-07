@@ -140,10 +140,25 @@ function buildConfig() {
       rules: [
         {
           test: /\.s?css$/,
-          use: ExtractTextPlugin.extract({
-            use: ["css-loader", "postcss-loader", "sass-loader"],
-            fallback: "style-loader"
-          })
+          // TODO: Refactor this extra scss loader config, after migrating to CSS-Modules only
+          include: [path.resolve(__dirname, "styles")],
+          use: ["css-loader", "postcss-loader", "sass-loader"]
+        },
+        {
+          test: /\.s?css$/,
+          exclude: [path.resolve(__dirname, "styles")],
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 2,
+                modules: true,
+                localIdentName: "[name]__[local]___[hash:base64:5]"
+              }
+            },
+            "postcss-loader",
+            "sass-loader"
+          ]
         }
       ]
     },
@@ -154,17 +169,17 @@ function buildConfig() {
       }),
       new webpack.DefinePlugin({
         window: `false`
-      }),
-      new RedirectWebpackPlugin({
-        redirects: {
-          organizers: "/about/",
-          presentations: "/speakers/",
-          talks: "/speakers/",
-          schedule: "/2018/schedule/",
-          speakers: "/2018/speakers/",
-          workshops: "/2018/workshops/"
-        }
       })
+      // new RedirectWebpackPlugin({
+      //   redirects: {
+      //     organizers: "/about/",
+      //     presentations: "/speakers/",
+      //     talks: "/speakers/",
+      //     schedule: "/2018/schedule/",
+      //     speakers: "/2018/speakers/",
+      //     workshops: "/2018/workshops/"
+      //   }
+      // })
     ]
   };
 }

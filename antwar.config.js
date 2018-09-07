@@ -42,6 +42,7 @@ function page(filepath, meta = {}) {
 
     component.description = data.description || meta.description;
     component.title = data.title || meta.title;
+    component.keywords = data.keywords || meta.keywords || [];
 
     return component;
   };

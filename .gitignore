@@ -22,6 +22,7 @@ lib/
 
 # Antwar
 .antwar/
+build/
 
 # These files are used for JS interop
 !src/layouts/index.js

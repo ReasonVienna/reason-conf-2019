@@ -23,9 +23,9 @@ let make = _children => {
         <p className=style##smallText>
           {
             {js|We use MailChimp as newsletter tool. By subscribing you acknowledge that the information
-                you provide will be transferred to MailChimp for processing in accordance with their
-                [Privacy Policy](https://mailchimp.com/legal/privacy/) and [Terms](https://mailchimp.com/legal/terms/).
-            |js}
+                 you provide will be transferred to MailChimp for processing in accordance with their
+                 [Privacy Policy](https://mailchimp.com/legal/privacy/) and [Terms](https://mailchimp.com/legal/terms/).
+             |js}
             |> md
           }
         </p>

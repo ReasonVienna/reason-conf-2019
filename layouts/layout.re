@@ -1,4 +1,3 @@
-%debugger.chrome
 %raw
 "require('../styles/style.scss')";
 
@@ -36,13 +35,7 @@ let subscribeFormIfNeeded = hasSubscribeForm =>
     </footer>,
   );
 
-let make =
-    (
-      ~location: ReactRouter.location,
-      ~file: file,
-      ~router: ReactRouter.StaticRouter.t,
-      children,
-    ) => {
+let make = (~location: ReactRouter.location, ~file: file, children) => {
   ...component,
   render: _self => {
     let pageType =
@@ -55,9 +48,10 @@ let make =
       | _ => Normal
       };
     let isThanksPage = location.pathname == "/thanks/";
-    let helmetContext = ReactRouter.StaticRouter.getHelmetContext(router);
+
     let {title, description, keywords} = file;
-    <HelmetProvider context=helmetContext>
+
+    <>
       <Meta siteName="ReasonConf" title description keywords />
       {
         switch (pageType) {
@@ -90,7 +84,7 @@ let make =
           </div>
         }
       }
-    </HelmetProvider>;
+    </>;
   },
 };
 
@@ -108,7 +102,18 @@ let default =
           },
       };
 
+      let helmetContext =
+        ReactRouter.StaticRouter.getHelmetContext(jsProps##router)
+        ->Belt.Option.getWithDefault(Js.Obj.empty());
+
       let location = ReactRouter.{pathname: jsProps##location##pathname};
-      make(~location, ~file, ~router=jsProps##router, jsProps##children);
+      make(~location, ~file, jsProps##children);
     },
   );
+
+/* As long as we can't pass the router via props, instead of context, we can't use
+   layout directly via antwar.config */
+
+/*
+ [@bs.val] external module_: Js.t({.}) = "module";
+ let default = (ReactHotLoader.hot(module_))(. wrapped); */

@@ -709,7 +709,7 @@ module Timetable = {
             {j|$fromTime - $toTime$duration|j};
           | None => fromTime
           };
-        Js.log3(task, " ", timeRange);
+        ();
       },
       table,
     );
