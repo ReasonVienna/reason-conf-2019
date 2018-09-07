@@ -142,23 +142,29 @@ function buildConfig() {
           test: /\.s?css$/,
           // TODO: Refactor this extra scss loader config, after migrating to CSS-Modules only
           include: [path.resolve(__dirname, "styles")],
-          use: ["css-loader", "postcss-loader", "sass-loader"]
+          use: ExtractTextPlugin.extract({
+            use: ["css-loader", "postcss-loader", "sass-loader"],
+            fallback: "style-loader"
+          })
         },
         {
           test: /\.s?css$/,
           exclude: [path.resolve(__dirname, "styles")],
-          use: [
-            {
-              loader: "css-loader",
-              options: {
-                importLoaders: 2,
-                modules: true,
-                localIdentName: "[name]__[local]___[hash:base64:5]"
-              }
-            },
-            "postcss-loader",
-            "sass-loader"
-          ]
+          use: ExtractTextPlugin.extract({
+            use: [
+              {
+                loader: "css-loader",
+                options: {
+                  importLoaders: 2,
+                  modules: true,
+                  localIdentName: "[name]__[local]___[hash:base64:5]"
+                }
+              },
+              "postcss-loader",
+              "sass-loader"
+            ],
+            fallback: "style-loader"
+          })
         }
       ]
     },
