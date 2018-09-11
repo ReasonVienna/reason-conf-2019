@@ -3,25 +3,36 @@
   "description": "ReasonConf 2018",
   "version": "1.0.0",
   "dependencies": {
+    "apollo-client": "^2.4.1",
     "bs-date-fns": "^0.1.4",
     "eases": "^1.0.8",
     "github-slugger": "^1.2.0",
+    "graphql": "^0.13.2",
+    "graphql-request": "^1.8.2",
+    "graphql-tools": "^3.1.1",
     "lodash": "^4.17.10",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^0.3.12",
     "normalize.css": "^7.0.0",
     "parse-unit": "^1.0.1",
+    "prop-types": "^15.6.2",
     "re-classnames": "^0.0.3",
+    "react": "^16.4.2",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.4.2",
     "react-dropzone": "^4.2.9",
+    "react-helmet-async": "0.1.0-alpha",
     "react-social-icons": "^2.8.1",
-    "reason-react": "^0.4.1"
+    "reason-react": "^0.5.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
+    "start": "node ./antwar.bootstrap.js develop",
+    "build": "node ./antwar.bootstrap.js build",
     "re:build": "bsb -make-world",
     "re:start": "bsb -make-world -w",
     "re:clean": "bsb -clean-world",
@@ -29,21 +40,50 @@
     "export:speakers": "node ./scripts/speakers.js"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.4",
-    "bs-platform": "^3.0.0",
-    "gatsby": "^1.9.128",
-    "gatsby-link": "^1.6.28",
-    "gatsby-plugin-postcss-sass": "^1.0.15",
-    "gatsby-plugin-react-helmet": "^1.0.8",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "antwar": "^0.26.0",
+    "autoprefixer": "^7.2.6",
+    "babel-loader": "^8.0.0",
+    "babel-runtime": "^6.26.0",
+    "bs-platform": "^4.0.5",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "node-sass": "^4.9.3",
     "papaparse": "^4.4.0",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.8.2",
-    "puppeteer": "^1.2.0"
+    "puppeteer": "^1.2.0",
+    "react-hot-loader": "^4.3.5",
+    "redirect-webpack-plugin": "^0.1.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.3",
+    "webpack-merge": "^4.1.4"
   },
   "lint-staged": {
-    "*.re": ["bsrefmt --in-place", "git add"],
-    "*.{js,json,md,css,scss}": ["prettier --write", "git add"]
+    "*.re": [
+      "bsrefmt --in-place",
+      "git add"
+    ],
+    "*.{js,json,md,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "browserslist": ["> 1%", "last 2 versions", "IE 11"]
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 11"
+  ]
 }
