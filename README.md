@@ -15,7 +15,7 @@ npm install
 Run BuckleScript in one Shell
 
 ```sh
-npm run re:start
+npm run bs:start
 ```
 
 Run Gatsby in another Shell
@@ -29,5 +29,5 @@ Visit `http://localhost:3000` in your browser
 ## Build
 
 ```sh
-npm run re:build && npm run build
+npm run bs:build && npm run build
 ```
