@@ -4,6 +4,8 @@ node_modules
 public/
 *.swp
 *.bs.js
+*.re.js
+.genFlowLog
 .cache/
 .bsb.lock
 
