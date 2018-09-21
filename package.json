@@ -33,8 +33,8 @@
   "scripts": {
     "start": "node ./antwar.bootstrap.js develop",
     "build": "node ./antwar.bootstrap.js build",
-    "bs:build": "bsb -make-world",
-    "bs:start": "bsb -make-world -w",
+    "bs:build": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/vendor/genflow.native --setProjectRoot $PWD\" && bsb -make-world",
+    "bs:start": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/vendor/genflow.native --setProjectRoot $PWD\" && bsb -make-world -w",
     "bs:clean": "bsb -clean-world",
     "netlify": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/vendor/genflow.native --setProjectRoot $PWD\" && bash scripts/setup_genflow.sh && npm run bs:build && npm run build",
     "precommit": "lint-staged",
