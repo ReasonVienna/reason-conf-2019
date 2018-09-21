@@ -46,6 +46,8 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "@mdx-js/loader": "^0.15.3",
+    "@mdx-js/mdx": "^0.15.3",
     "antwar": "^0.26.0",
     "autoprefixer": "^7.2.6",
     "babel-loader": "^8.0.0",
