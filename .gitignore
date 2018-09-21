@@ -5,6 +5,7 @@ public/
 *.swp
 *.bs.js
 *.re.js
+genflow.native
 .genFlowLog
 .cache/
 .bsb.lock
