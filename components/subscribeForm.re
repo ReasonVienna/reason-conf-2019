@@ -18,16 +18,7 @@ let make = _children => {
         className=style##root
         target="_blank">
         <p className=style##text>
-          {s("Get ReasonConf news straight to your inbox.")}
-        </p>
-        <p className=style##smallText>
-          {
-            {js|We use MailChimp as newsletter tool. By subscribing you acknowledge that the information
-                 you provide will be transferred to MailChimp for processing in accordance with their
-                 [Privacy Policy](https://mailchimp.com/legal/privacy/) and [Terms](https://mailchimp.com/legal/terms/).
-             |js}
-            |> md
-          }
+          {s("Get ReasonConf news straight to your inbox")}
         </p>
         <div className=style##formRow>
           <label htmlFor="email" className=style##label>
@@ -50,6 +41,15 @@ let make = _children => {
           </div>
           <Button type_="submit"> {s("Subscribe")} </Button>
         </div>
+        <p className=style##smallText>
+          {
+            {js|We use MailChimp as newsletter tool. By subscribing you acknowledge that the information
+                         you provide will be transferred to MailChimp for processing in accordance with their
+                         [Privacy Policy](https://mailchimp.com/legal/privacy/) and [Terms](https://mailchimp.com/legal/terms/).
+                     |js}
+            |> md
+          }
+        </p>
         <input type_="hidden" name="form-name" value="newsletter" />
       </form>,
       ~props={"data-netlify": true},

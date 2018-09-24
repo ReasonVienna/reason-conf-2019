@@ -25,15 +25,7 @@ type file = {
 };
 
 let subscribeFormIfNeeded = hasSubscribeForm =>
-  componentOrNull(
-    hasSubscribeForm,
-    <footer className="subscribe">
-      <div className="container_centered grid grid_6cols">
-        <h1> {"Subscribe to Newsletter" |> s} </h1>
-        <SubscribeForm />
-      </div>
-    </footer>,
-  );
+  componentOrNull(hasSubscribeForm, <SubscribeSection />);
 
 let make = (~location: ReactRouter.location, ~file: file, children) => {
   ...component,
@@ -70,8 +62,10 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
         | Home =>
           <main>
             <div className="container container_centered"> <Header /> </div>
-            <article> children </article>
-            {subscribeFormIfNeeded(!isThanksPage)}
+            <article>
+              children
+              {subscribeFormIfNeeded(!isThanksPage)}
+            </article>
             <Footer />
           </main>
         | Normal =>
@@ -81,8 +75,8 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
             </div>
             <article>
               <div className="container container_centered"> children </div>
+              {subscribeFormIfNeeded(!isThanksPage)}
             </article>
-            {subscribeFormIfNeeded(!isThanksPage)}
             <Footer />
           </main>
         }

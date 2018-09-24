@@ -1,0 +1,31 @@
+@import "../styles/variables.scss";
+
+.root {
+  composes: bleedingBlockWrapper from "./shared.module.scss";
+
+  h1 {
+    grid-column: span 2;
+    margin: 0;
+    color: $bgColor;
+    font-size: 2rem;
+  }
+
+  form {
+    @media (min-width: 768px) {
+      grid-column: 3 / span 3;
+    }
+  }
+}
+
+.inner {
+  composes: skewedBlock from "./shared.module.scss";
+  padding: 40px 20px;
+  margin-bottom: -40px;
+  background-color: #67a0cb;
+}
+
+.layout {
+  composes: container_centered from "./shared.module.scss";
+  composes: grid from "./shared.module.scss";
+  composes: grid_6 from "./shared.module.scss";
+}
