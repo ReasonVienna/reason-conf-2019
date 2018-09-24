@@ -36,6 +36,7 @@
     "bs:build": "bsb -make-world",
     "bs:start": "bsb -make-world -w",
     "bs:clean": "bsb -clean-world",
+    "netlify": "npm run bs:build && npm run build",
     "precommit": "lint-staged",
     "export:speakers": "node ./scripts/speakers.js"
   },
