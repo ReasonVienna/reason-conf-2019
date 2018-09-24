@@ -2,7 +2,6 @@
 
 .root {
   position: relative;
-  composes: container_centered from "./shared.module.scss";
   composes: grid from "./shared.module.scss";
   composes: grid_12 from "./shared.module.scss";
   color: $bgColor;

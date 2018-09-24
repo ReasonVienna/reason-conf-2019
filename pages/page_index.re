@@ -7,7 +7,6 @@ let make = _children => {
   ...component,
   render: _self =>
     <>
-      <Header />
       <div className="container_centered">
         <OfferingSection />
         <SpeakersSection />

@@ -13,7 +13,7 @@ body {
   padding: 0;
   font: 13pt/1.3 $mainFontFamily;
   color: $textColor;
-  background: $secondaryColor url(../assets/img/bg.jpg) 50% top no-repeat;
+  background: $secondaryColor url(../assets/img/bg.jpg) 50% top no-repeat fixed;
   background-size: contain;
   @media (min-width: 768px) {
     font-size: 13pt;
@@ -79,50 +79,60 @@ button {
   }
 }
 
-article {
-  > section {
-    @extend .grid;
-    @extend .grid_6cols;
-    @media (min-width: 768px) {
-      grid-row-gap: 0 !important;
-    }
+main {
+  // Fixed footer
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    @media (min-width: 768px) {
-      h1 {
-        grid-column: 1 / span 6;
-      }
-      h2 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-      }
-      main {
-        grid-column: 1 / span 4;
-        &.full {
-          grid-column: 1 / span 6;
-        }
-      }
-      aside {
-        grid-column: 5 / span 2;
-      }
-    }
+article {
+  margin: 0 auto;
+  background: $bgColor;
+  width: 90vw;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
+
+.subscribe {
+  margin-top: auto;
+}
+
+//article {
+//  > section {
+//    @extend .grid;
+//    @extend .grid_6cols;
+//    @media (min-width: 768px) {
+//      grid-row-gap: 0 !important;
+//    }
+//
+//    @media (min-width: 768px) {
+//      h1 {
+//        grid-column: 1 / span 6;
+//      }
+//      h2 {
+//        grid-column-start: 1;
+//        grid-column-end: 5;
+//      }
+//      main {
+//        grid-column: 1 / span 4;
+//        &.full {
+//          grid-column: 1 / span 6;
+//        }
+//      }
+//      aside {
+//        grid-column: 5 / span 2;
+//      }
+//    }
+//  }
+//}
 
 .leadText {
   font-size: 125%;
   @media (min-width: 768px) {
     @extend .grid--5col;
   }
-}
-
-// Fixed footer
-main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.subscribe {
-  margin-top: auto;
 }
 
 /* Container element */
@@ -161,55 +171,6 @@ main {
         }
       }
     }
-  }
-}
-
-/* Offering & Timeline */
-.offering {
-  .grid {
-    grid-row-gap: 0;
-  }
-  &--heading {
-    margin: 0;
-    @media (min-width: 768px) {
-      grid-column: 1 / span 2;
-      grid-row: 1;
-    }
-  }
-  &--text {
-    margin: 0;
-    @media (min-width: 768px) {
-      grid-column: 1 / span 2;
-      grid-row: 2;
-    }
-  }
-}
-
-.timeline {
-  @media (min-width: 768px) {
-    grid-column: 3 / span 4;
-    grid-row: 1 / span 2;
-  }
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 20px;
-
-  &--date {
-    margin: 0.1em 0;
-    font-size: 0.9rem;
-    text-align: right;
-    @media (min-width: 768px) {
-      width: 157px;
-    }
-  }
-  &--date > time {
-    color: #888;
-  }
-  &--content {
-    margin: 0;
-  }
-  &--content > h3 {
-    margin: 0;
   }
 }
 

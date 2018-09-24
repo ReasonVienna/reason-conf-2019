@@ -69,19 +69,22 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
           </div>
         | Home =>
           <main>
-            children
+            <div className="container container_centered"> <Header /> </div>
+            <article> children </article>
             {subscribeFormIfNeeded(!isThanksPage)}
             <Footer />
           </main>
         | Normal =>
-          <div className="page">
+          <main>
             <div className="container container_centered">
               <header> <Navigation pathname={location.pathname} /> </header>
-              <article> children </article>
             </div>
+            <article>
+              <div className="container container_centered"> children </div>
+            </article>
             {subscribeFormIfNeeded(!isThanksPage)}
             <Footer />
-          </div>
+          </main>
         }
       }
     </>;

@@ -2,112 +2,70 @@ module Link = ReactRouterDom.Link;
 
 open Util;
 
+[@bs.module] external style: Js.t({..}) = "./offeringSection.module.scss";
+
 let component = ReasonReact.statelessComponent("OfferingSection");
 
 let make = _children => {
   ...component,
   render: _self =>
-    <section className="offering">
-      <div className="container_centered grid grid_6cols">
-        <h2 className="offering--heading">
-          {"Get productive with Reason in 3 days" |> s}
-        </h2>
-        <section className="offering--text">
+    <section className=style##root>
+      <section className=style##descriptions>
+        <h2> {"On the Road to Production" |> s} </h2>
+        <p>
+          {
+            {js|
+                      Last year we have been eagerly onboarding newcomers to the language and we will continue to do so! This year, we designed a conference which is build around shipping products & tools, built in Reason & OCaml.
+                    |js}
+            |> s
+          }
+        </p>
+      </section>
+      <dl className=style##timeline>
+        <dt className=style##day>
+          <time dateTime="2018-04-11"> {"Day 1" |> s} </time>
+        </dt>
+        <dd className=style##dayDescription>
+          <h3> {"Workshops & Knowledge Transfer" |> s} </h3>
           <p>
             {
               {js|
-                      Reason is the next big thing and it is time to bring
-                      the community together. Come and learn about the
-                      language and get inspired for innovation.
-                    |js}
+                        We will offer different workshops, for all kinds of levels.
+                        There will be a beginner workshop for Reason newcomers and more practical workshops to get up to speed to build products more efficiently. Pick your favorite!
+
+                      |js}
               |> s
             }
           </p>
+        </dd>
+        <dt className=style##day>
+          <time dateTime="2018-04-12"> {"Day 2" |> s} </time>
+        </dt>
+        <dd className=style##dayDescription>
+          <h3> {"Conference Day" |> s} </h3>
           <p>
             {
               {js|
-                      We want to motivate you to add Reason & OCaml to
-                      your professional toolbelt and make you
-                      feel comfortable in the ecosystem.
-                    |js}
+                        The conference day will be a single-stage setup with a variety of talks about Reason & OCaml related R&D, case studies and the community.
+                      |js}
               |> s
             }
           </p>
+        </dd>
+        <dt className=style##day>
+          <time dateTime="2018-04-13"> {"Day 3" |> s} </time>
+        </dt>
+        <dd className=style##dayDescription>
+          <h3> {"Open Mic & Reason Dojo Day" |> s} </h3>
           <p>
             {
               {js|
-                      This conference is aiming for a well-balanced schedule
-                      with a practical, social and theoretical context.
-                    |js}
+                        The last day will be split in a Open Microphone session in the noon and a reason-dojo in the afternoon. Take the chance to stand on stage and show the community what you are interested in and take part in a conference-wide reason dojo.
+                      |js}
               |> s
             }
           </p>
-        </section>
-        <dl className="timeline">
-          <dt className="timeline--date">
-            <time dateTime="2018-05-11">
-              {"11" |> s}
-              <sup> {"th" |> s} </sup>
-              {" May, Friday" |> s}
-            </time>
-          </dt>
-          <dd className="timeline--content">
-            <h3> {"Day 1: Get started" |> s} </h3>
-            <p>
-              {
-                {js|
-                        An optional workshop day to get every beginner and
-                        intermediate attendee into the language &
-                        platform.
-                      |js}
-                |> s
-              }
-            </p>
-          </dd>
-          <dt className="timeline--date">
-            <time dateTime="2018-05-12">
-              {"12" |> s}
-              <sup> {"th" |> s} </sup>
-              {" May, Saturday" |> s}
-            </time>
-          </dt>
-          <dd className="timeline--content">
-            <h3> {"Day 2: Get inspired" |> s} </h3>
-            <p>
-              {
-                {js|
-                        This is the main conference day with lectures and talks.
-                        Speakers of the Reason / OCaml community (with special guests
-                        from the Reason & ReasonReact project) will inspire attendees for
-                        more advanced topics.
-                      |js}
-                |> s
-              }
-            </p>
-          </dd>
-          <dt className="timeline--date">
-            <time dateTime="2018-05-13">
-              {"13" |> s}
-              <sup> {"th" |> s} </sup>
-              {" May, Sunday" |> s}
-            </time>
-          </dt>
-          <dd className="timeline--content">
-            <h3> {"Day 3: Get productive" |> s} </h3>
-            <p>
-              {
-                {js|
-                        On the last day we encourage attendees to start
-                        their first Reason projects, aided by our mentors,
-                        speakers and volunteers. Alternatively for those
-                        who want to relax, we offer a local-guided tour
-                        through the beautiful city Vienna!
-                      |js}
-                |> s
-              }
-            </p>
-          </dd>
-        </dl>
-      </div>
+        </dd>
+      </dl>
     </section>,
 };
