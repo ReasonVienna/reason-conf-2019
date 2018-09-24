@@ -1,13 +1,13 @@
 @import "../styles/variables.scss";
 
-$footerTextColor: desaturate(darken($secondaryColor, 35), 30);
-$footerLinkColor: desaturate(darken($secondaryColor, 20), 30);
+$footerTextColor: desaturate(darken($bgColor, 35), 30);
+$footerLinkColor: desaturate(darken($bgColor, 20), 30);
+
 .root {
   padding-top: 2em;
   color: $footerTextColor;
   font-size: smaller;
-  background: rgb(35, 50, 57);
-  clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
+  //clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
 
   :global(.grid) {
     grid-template-columns: repeat(3, 1fr);

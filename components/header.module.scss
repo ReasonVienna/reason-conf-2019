@@ -1,0 +1,27 @@
+@import "../styles/variables";
+
+.root {
+  position: relative;
+  composes: container_centered from "./shared.module.scss";
+  composes: grid from "./shared.module.scss";
+  composes: grid_12 from "./shared.module.scss";
+  color: $bgColor;
+}
+
+.logo {
+  composes: grid--7col from "./shared.module.scss";
+  margin: 0;
+}
+
+.meta {
+  composes: grid--5col from "./shared.module.scss";
+  margin-top: 2em;
+}
+
+.dates {
+  margin: 0;
+}
+
+.nav {
+  composes: grid--12col from "./shared.module.scss";
+}

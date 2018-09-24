@@ -68,11 +68,11 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
             children
           </div>
         | Home =>
-          <div className="page">
-            <main> children </main>
+          <main>
+            children
             {subscribeFormIfNeeded(!isThanksPage)}
             <Footer />
-          </div>
+          </main>
         | Normal =>
           <div className="page">
             <div className="container container_centered">
