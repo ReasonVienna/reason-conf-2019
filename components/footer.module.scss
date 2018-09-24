@@ -1,30 +1,33 @@
 @import "../styles/variables.scss";
 
-$footerTextColor: desaturate(darken($bgColor, 35), 30);
-$footerLinkColor: desaturate(darken($bgColor, 20), 30);
+$footerTextColor: lighten($secondaryColor, 30);
+$footerLinkColor: lighten($secondaryColor, 45);
 
 .root {
-  padding-top: 2em;
+  padding-top: 4vw;
   color: $footerTextColor;
   font-size: smaller;
-  //clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
-
-  :global(.grid) {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
   nav > ul {
     margin: 0;
     padding: 0;
     list-style: none;
     > li {
-      margin-bottom: 0.25em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
     }
   }
 
   a {
     @include link($footerLinkColor);
   }
+}
+
+.wrapper {
+  composes: container_centered from "./shared.module.scss";
+  composes: grid from "./shared.module.scss";
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
 }
 
 .socialIcon {
@@ -41,7 +44,8 @@ $footerLinkColor: desaturate(darken($bgColor, 20), 30);
 }
 
 .copyright {
-  grid-column: span 3;
-  align-self: end;
+  //grid-column: 3 / 3;
+  //align-self: end;
   font-size: 0.9em;
+  //grid-row: 1;
 }

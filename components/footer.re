@@ -22,7 +22,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <footer className=style##root>
-      <div className="container_centered grid">
+      <section className=style##wrapper>
         <Navigation pathname="/" navigationLocation=Footer />
         <nav className=style##additional>
           <ul>
@@ -40,18 +40,18 @@ let make = _children => {
             color="#8eaeb6"
             className=style##socialIcon
           />
-        </nav>
-        <section className=style##copyright>
-          {
-            {j|
+          <section className=style##copyright>
+            {
+              {j|
 ReasonConf is a [not-for-profit conference](/about/) event by ReasonVienna and ReactVienna communities.
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
 © [ReasonConf](mailto:hi@reason-conf.com), 2018|j}
-            |> md
-          }
-        </section>
-      </div>
+              |> md
+            }
+          </section>
+        </nav>
+      </section>
     </footer>,
 };
