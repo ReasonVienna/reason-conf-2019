@@ -18,7 +18,7 @@ let make = _children => {
   render: _self =>
     <section className=style##root>
       <div className="container_centered">
-        <h2> {"Speakers" |> s} </h2>
+        <h1> {"Speakers" |> s} </h1>
         <ParallaxScroll
           from="top-bottom"
           to_="bottom-top"

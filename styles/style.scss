@@ -1,5 +1,5 @@
 @import "normalize.css/normalize.css";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:300,600");
 @import "./variables.scss";
 @import "./tickets.scss";
 
@@ -28,18 +28,21 @@ h5,
 h6 {
   margin: 0.5em 0;
   font-family: $displayFontFamily;
-  font-weight: 700;
+  font-weight: 300;
+  color: $primaryColor;
   @media (min-width: 768px) {
     margin-top: 1.5em;
   }
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 48px;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 a {

@@ -29,7 +29,7 @@ let subscribeFormIfNeeded = hasSubscribeForm =>
     hasSubscribeForm,
     <footer className="subscribe">
       <div className="container_centered grid grid_6cols">
-        <h2> {"Subscribe to Newsletter" |> s} </h2>
+        <h1> {"Subscribe to Newsletter" |> s} </h1>
         <SubscribeForm />
       </div>
     </footer>,

@@ -11,7 +11,7 @@ let make = _children => {
   render: _self =>
     <section className=style##root>
       <section className=style##descriptions>
-        <h2> {"On the Road to Production" |> s} </h2>
+        <h1> {"On the Road to Production" |> s} </h1>
         <p>
           {
             {js|
@@ -26,7 +26,7 @@ let make = _children => {
           <time dateTime="2018-04-11"> {"Day 1" |> s} </time>
         </dt>
         <dd className=style##dayDescription>
-          <h3> {"Workshops & Knowledge Transfer" |> s} </h3>
+          <h2> {"Workshops & Knowledge Transfer" |> s} </h2>
           <p>
             {
               {js|
@@ -42,7 +42,7 @@ let make = _children => {
           <time dateTime="2018-04-12"> {"Day 2" |> s} </time>
         </dt>
         <dd className=style##dayDescription>
-          <h3> {"Conference Day" |> s} </h3>
+          <h2> {"Conference Day" |> s} </h2>
           <p>
             {
               {js|
@@ -56,7 +56,7 @@ let make = _children => {
           <time dateTime="2018-04-13"> {"Day 3" |> s} </time>
         </dt>
         <dd className=style##dayDescription>
-          <h3> {"Open Mic & Reason Dojo Day" |> s} </h3>
+          <h2> {"Open Mic & Reason Dojo Day" |> s} </h2>
           <p>
             {
               {js|

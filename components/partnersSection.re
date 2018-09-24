@@ -36,7 +36,7 @@ let make = _children => {
   render: _self =>
     <section className="sponsors">
       <div className="container_centered">
-        <h2> {"Sponsors & Partners" |> s} </h2>
+        <h1> {"Sponsors & Partners" |> s} </h1>
         <p className="extraText">
           {"Do you want to help us make a better conference? " |> s}
           <Link to_="/sponsors"> {"Become a sponsor!" |> s} </Link>
