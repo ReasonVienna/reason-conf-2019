@@ -9,7 +9,7 @@ let make = _children => {
     <>
       <div className="container_centered">
         <OfferingSection />
-        <SpeakersSection />
+        /*<SpeakersSection />*/
         <PartnersSection />
       </div>
     </>,
