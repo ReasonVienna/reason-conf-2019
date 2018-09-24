@@ -10,24 +10,24 @@ $displayFontFamily: Montserrat, -apple-system, BlinkMacSystemFont,
 
 @mixin link($color) {
   $linkColor: $color;
-  $underlineColor: transparentize(adjust_hue($linkColor, 0), 0.75);
+  $underlineColor: transparentize(adjust_hue($linkColor, 0), 0.5);
   color: $linkColor;
   text-decoration: none;
   background-image: linear-gradient(
-    $underlineColor,
+    transparent,
     $underlineColor 1px,
     transparent 1px
   );
-  background-size: 1px 0.15em;
+  background-size: 1px 0.1em;
   background-position: 0 100%;
   background-repeat: repeat-x;
 
   &:hover {
-    $linkColor: lighten(adjust_hue($linkColor, 0), 10%);
-    $underlineColor: transparentize(adjust_hue($linkColor, 0), 0.5);
+    $linkColor: darken(adjust_hue($linkColor, 0), 10%);
+    $underlineColor: transparentize(adjust_hue($linkColor, 0), 0);
     color: $linkColor;
     background-image: linear-gradient(
-      $underlineColor,
+      transparent,
       $underlineColor 1px,
       transparent 1px
     );

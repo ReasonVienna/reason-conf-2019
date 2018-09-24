@@ -102,35 +102,6 @@ article {
   margin-top: auto;
 }
 
-//article {
-//  > section {
-//    @extend .grid;
-//    @extend .grid_6cols;
-//    @media (min-width: 768px) {
-//      grid-row-gap: 0 !important;
-//    }
-//
-//    @media (min-width: 768px) {
-//      h1 {
-//        grid-column: 1 / span 6;
-//      }
-//      h2 {
-//        grid-column-start: 1;
-//        grid-column-end: 5;
-//      }
-//      main {
-//        grid-column: 1 / span 4;
-//        &.full {
-//          grid-column: 1 / span 6;
-//        }
-//      }
-//      aside {
-//        grid-column: 5 / span 2;
-//      }
-//    }
-//  }
-//}
-
 .leadText {
   font-size: 125%;
   @media (min-width: 768px) {

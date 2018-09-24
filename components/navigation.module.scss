@@ -4,19 +4,6 @@
   display: block;
 }
 
-.link_active {
-  color: #fff;
-  background-image: linear-gradient(transparentize($primaryColor, 0));
-  background-size: 1px 30px;
-  background-position: 0 0%;
-  transition: background 0.25s;
-  &:hover {
-    color: #fff;
-    background-image: linear-gradient(transparentize($primaryColor, 0));
-    cursor: default;
-  }
-}
-
 .link_home {
   flex: 0 auto;
   display: block;
@@ -48,6 +35,7 @@
     padding: 0.125em 0.25em 0;
     font-family: $displayFontFamily;
     font-weight: bold;
+    @include link($bgColor);
     text-transform: uppercase;
     font-size: 0.65em;
     letter-spacing: 1px;
@@ -82,6 +70,7 @@
   composes: root from "./button.module.scss";
   composes: link;
   padding: 0.5em 0.5em 0.35em !important;
+  background-image: none !important;
 }
 
 .root_footer {
