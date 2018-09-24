@@ -12,7 +12,7 @@
 
 .smallText {
   font-size: 0.75em;
-  color: lighten($secondaryColor, 0.5);
+  color: darken($tertiaryColor, 20);
 }
 
 .formRow {

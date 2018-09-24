@@ -52,6 +52,22 @@
   }
 }
 
+.push {
+  @for $i from 1 through 12 {
+    &--#{$i}col {
+      margin-left: (56px + 20px) * $i;
+    }
+  }
+}
+
+.pull {
+  @for $i from 1 through 12 {
+    &--#{$i}col {
+      margin-right: (56px + 20px) * $i;
+    }
+  }
+}
+
 .bleedingBlockWrapper {
   margin-left: -20px;
   margin-right: -20px;

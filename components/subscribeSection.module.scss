@@ -21,7 +21,7 @@
   composes: skewedBlock from "./shared.module.scss";
   padding: 40px 20px;
   margin-bottom: -40px;
-  background-color: #67a0cb;
+  background-color: $tertiaryColor;
 }
 
 .layout {

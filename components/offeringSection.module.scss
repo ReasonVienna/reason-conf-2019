@@ -3,5 +3,59 @@
 .root {
 }
 
+.intro {
+  composes: push--1col from "./shared.module.scss";
+  composes: pull--1col from "./shared.module.scss";
+}
+
 .timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.day {
+  position: relative;
+  composes: grid from "./shared.module.scss";
+  composes: grid_12 from "./shared.module.scss";
+  align-items: center;
+
+  time {
+    position: absolute;
+    left: -4em;
+    top: 2rem;
+    padding: 0.5em;
+    font-size: small;
+    font-weight: 700;
+    color: $bgColor;
+    background: $primaryColor;
+    clip-path: polygon(0 5px, 100% 0, 100% calc(100% - 5px), 0 100%);
+  }
+  h2 {
+    margin: 1rem 0 0;
+  }
+
+  section {
+    position: relative;
+    margin-left: 76px;
+    grid-column: span 7;
+  }
+  img {
+    grid-column: span 5;
+    box-shadow: 10px 10px 0 lighten($tertiaryColor, 30);
+  }
+}
+
+.day2 {
+  composes: day;
+
+  section {
+    position: relative;
+    grid-column: 6 / 12;
+    grid-row: 1;
+  }
+  img {
+    grid-row: 1;
+    grid-column: 1 / 6;
+  }
 }
