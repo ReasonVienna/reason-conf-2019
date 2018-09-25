@@ -14,7 +14,7 @@ let make = _children => {
     <footer className=style##root>
       <div className=style##inner>
         <div className=style##layout>
-          <h1> {"Subscribe to Newsletter" |> s} </h1>
+          <h1 className=style##heading> {"Subscribe to Newsletter" |> s} </h1>
           <SubscribeForm />
         </div>
       </div>

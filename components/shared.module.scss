@@ -2,15 +2,7 @@
 
 /* Container element */
 .container {
-  &_centered {
-    margin: 0 auto;
-    padding: 20px 0;
-    width: 900px;
-    @media (max-width: 900px) {
-      width: auto;
-      max-width: 900px;
-    }
-  }
+  composes: container from "../styles/style.scss";
 }
 
 /* Main grid layout */

@@ -7,11 +7,9 @@ let make = _children => {
   ...component,
   render: _self =>
     <>
-      <div className="container_centered">
-        <OfferingSection />
-        /*<SpeakersSection />*/
-        <PartnersSection />
-      </div>
+      <OfferingSection />
+      /*<SpeakersSection />*/
+      <PartnersSection />
     </>,
 };
 

@@ -3,16 +3,9 @@
 .root {
   composes: bleedingBlockWrapper from "./shared.module.scss";
 
-  h1 {
-    grid-column: span 2;
-    margin: 0;
-    color: $bgColor;
-    font-size: 2rem;
-  }
-
   form {
     @media (min-width: 768px) {
-      grid-column: 3 / span 3;
+      grid-column: 6 / span 6;
     }
   }
 }
@@ -25,7 +18,16 @@
 }
 
 .layout {
-  composes: container_centered from "./shared.module.scss";
+  composes: container from "./shared.module.scss";
   composes: grid from "./shared.module.scss";
-  composes: grid_6 from "./shared.module.scss";
+  composes: grid_12 from "./shared.module.scss";
+}
+
+.heading {
+  composes: push--1col from "./shared.module.scss";
+  composes: grid--5col from "./shared.module.scss";
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $bgColor;
+  font-size: 2rem;
 }

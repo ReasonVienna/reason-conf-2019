@@ -1,6 +1,7 @@
 @import "../styles/variables";
 
 .root {
+  composes: container from "./shared.module.scss";
 }
 
 .intro {
@@ -23,7 +24,7 @@
   time {
     position: absolute;
     left: -4em;
-    top: 2rem;
+    top: 1.5rem;
     padding: 0.5em;
     font-size: small;
     font-weight: 700;
@@ -33,6 +34,7 @@
   }
   h2 {
     margin: 1rem 0 0;
+    line-height: 1;
   }
 
   section {

@@ -14,7 +14,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <section>
-      <main className="container_centered">
+      <main className="container">
         <section className=style##speakers>
           {
             Data.Speaker.speakers

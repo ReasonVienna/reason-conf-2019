@@ -1,5 +1,5 @@
 @import "normalize.css/normalize.css";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Montserrat:300,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Montserrat:300,600|Work+Sans");
 @import "./variables.scss";
 @import "./tickets.scss";
 
@@ -42,6 +42,7 @@ h6 {
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 h2 {
@@ -120,40 +121,11 @@ article {
 
 /* Container element */
 .container {
-  &_centered {
-    margin: 0 auto;
-    padding: 20px;
-    width: 900px;
-    @media (max-width: 900px) {
-      width: auto;
-      max-width: 900px;
-    }
-  }
-}
-
-/* Main grid layout */
-.grid {
-  display: grid;
-
-  @media (min-width: 768px) {
-    grid-gap: 25px;
-  }
-
-  &_4cols {
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  &_6cols {
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(6, 1fr);
-
-      @for $i from 1 through 6 {
-        .grid--#{$i}col {
-          grid-column: span $i;
-        }
-      }
-    }
+  margin: 0 auto;
+  width: 900px;
+  @media (max-width: 900px) {
+    width: auto;
+    max-width: 900px;
   }
 }
 
@@ -201,11 +173,5 @@ article {
 /* Job Listing */
 
 .job {
-  margin-top: 2em;
-}
-
-/* Sponsor Section on Index page */
-
-.extraText {
   margin-top: 2em;
 }

@@ -10,12 +10,6 @@ let component = ReasonReact.statelessComponent("Layout");
 
 let title = "ReasonConf 2018";
 
-type layoutType =
-  | Home
-  | Normal
-  | NoLayout
-  | Print;
-
 type helmetContext = Js.t({.});
 
 type file = {
@@ -61,7 +55,7 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
           </div>
         | Home =>
           <main>
-            <div className="container container_centered"> <Header /> </div>
+            <Header pageType />
             <article>
               children
               {subscribeFormIfNeeded(!isThanksPage)}
@@ -70,11 +64,9 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
           </main>
         | Normal =>
           <main>
-            <div className="container container_centered">
-              <header> <Navigation pathname={location.pathname} /> </header>
-            </div>
+            <Header pageType />
             <article>
-              <div className="container container_centered"> children </div>
+              <div className="container"> children </div>
               {subscribeFormIfNeeded(!isThanksPage)}
             </article>
             <Footer />

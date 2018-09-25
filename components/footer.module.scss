@@ -24,10 +24,14 @@ $footerLinkColor: lighten($secondaryColor, 45);
 }
 
 .wrapper {
-  composes: container_centered from "./shared.module.scss";
+  composes: container from "./shared.module.scss";
+}
+
+.content {
   composes: grid from "./shared.module.scss";
+  composes: push--1col from "./shared.module.scss";
+  composes: pull--1col from "./shared.module.scss";
   grid-template-columns: repeat(3, 1fr);
-  align-items: start;
 }
 
 .socialIcon {

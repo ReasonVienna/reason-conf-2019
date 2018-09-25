@@ -1,15 +1,27 @@
 @import "../styles/variables";
 
 .root {
-  position: relative;
+  composes: container from "./shared.module.scss";
   composes: grid from "./shared.module.scss";
   composes: grid_12 from "./shared.module.scss";
   color: $bgColor;
+  align-items: end;
+  padding-bottom: 20px;
 }
 
 .logo {
   composes: grid--7col from "./shared.module.scss";
   margin: 0;
+}
+
+.link_home {
+  composes: grid--2col from "./shared.module.scss";
+  display: block;
+  background: none;
+  &:hover {
+    background: none;
+    filter: brightness(110%);
+  }
 }
 
 .meta {
@@ -25,5 +37,17 @@
 }
 
 .nav {
-  composes: grid--12col from "./shared.module.scss";
+  composes: grid--10col from "./shared.module.scss";
+  composes: push--1col from "./shared.module.scss";
+}
+
+.root_home {
+  composes: root;
+
+  .nav {
+    display: flex;
+    @media (min-width: 768px) {
+      grid-column: 1 / 13;
+    }
+  }
 }

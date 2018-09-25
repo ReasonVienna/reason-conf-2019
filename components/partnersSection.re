@@ -34,19 +34,19 @@ let sponsorLogo = (sponsor: Partners.sponsorT) => {
 let make = _children => {
   ...component,
   render: _self =>
-    <section className="sponsors">
-      <div className="container_centered">
+    <section className=style##root>
+      <div className=style##intro>
         <h1> {"Sponsors & Partners" |> s} </h1>
         <p className="extraText">
           {"Do you want to help us make a better conference? " |> s}
           <Link to_="/sponsors"> {"Become a sponsor!" |> s} </Link>
         </p>
-        <ul className=style##partners>
-          {Partners.sponsors |> Array.map(sponsorLogo) |> ReasonReact.array}
-        </ul>
-        <ul className=style##partners>
-          {Partners.partners |> Array.map(sponsorLogo) |> ReasonReact.array}
-        </ul>
       </div>
+      <ul className=style##partners>
+        {Partners.sponsors |> Array.map(sponsorLogo) |> ReasonReact.array}
+      </ul>
+      <ul className=style##partners>
+        {Partners.partners |> Array.map(sponsorLogo) |> ReasonReact.array}
+      </ul>
     </section>,
 };

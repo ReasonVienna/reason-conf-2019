@@ -23,35 +23,37 @@ let make = _children => {
   render: _self =>
     <footer className=style##root>
       <section className=style##wrapper>
-        <Navigation pathname="/" navigationLocation=Footer />
-        <nav className=style##additional>
-          <ul>
-            <li>
-              <Link to_="/code-of-conduct/"> {"Code of Conduct" |> s} </Link>
-            </li>
-            <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
-            <li> <a href="/contact/"> {"Contact Us" |> s} </a> </li>
-            <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
-          </ul>
-        </nav>
-        <nav className=style##social>
-          <SocialIcons
-            urls=socialUrls
-            color="#8eaeb6"
-            className=style##socialIcon
-          />
-          <section className=style##copyright>
-            {
-              {j|
+        <div className=style##content>
+          <Navigation navigationLocation=Footer />
+          <nav className=style##additional>
+            <ul>
+              <li>
+                <Link to_="/code-of-conduct/"> {"Code of Conduct" |> s} </Link>
+              </li>
+              <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
+              <li> <a href="/contact/"> {"Contact Us" |> s} </a> </li>
+              <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
+            </ul>
+          </nav>
+          <nav className=style##social>
+            <SocialIcons
+              urls=socialUrls
+              color="#8eaeb6"
+              className=style##socialIcon
+            />
+            <section className=style##copyright>
+              {
+                {j|
 ReasonConf is a [not-for-profit conference](/about/) event by ReasonVienna and ReactVienna communities.
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
 © [ReasonConf](mailto:hi@reason-conf.com), 2018|j}
-              |> md
-            }
-          </section>
-        </nav>
+                |> md
+              }
+            </section>
+          </nav>
+        </div>
       </section>
     </footer>,
 };

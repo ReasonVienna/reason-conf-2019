@@ -1,69 +1,38 @@
 @import "../styles/variables.scss";
 
-.root {
-  display: block;
-}
-
-.link_home {
-  flex: 0 auto;
-  display: block;
-  background: none;
-  &:hover {
-    background: none;
-    filter: brightness(110%);
-  }
-}
-
-.logo {
-  margin: 0 0 20px;
-  height: 2.2em;
-  @media (min-width: 768px) {
-    margin: 0;
-  }
-}
-
 .root_header {
-  composes: root;
-  align-items: flex-end;
-  @media (min-width: 768px) {
-    display: flex;
-    text-align: right;
-  }
+  width: 100%;
 
   .link {
-    display: inline-block;
-    padding: 0.125em 0.25em 0;
-    font-family: $displayFontFamily;
+    display: block;
     font-weight: bold;
     @include link($bgColor);
     text-transform: uppercase;
     font-size: 0.65em;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
   }
 }
 
 .list {
-  flex: 1 auto;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  justify-self: center;
   @media (min-width: 768px) {
+    display: flex;
     justify-self: start;
+    justify-content: space-between;
   }
 }
 
 .listItem {
   display: inline-block;
   margin: 0 0.5em 0 0;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .listItemBuy {
   composes: listItem;
+  margin-right: 0;
 }
 
 .ticketsButton {
@@ -74,15 +43,14 @@
 }
 
 .root_footer {
-  .link_home {
-    display: none;
-  }
-
   .list {
+    display: block;
     line-height: 1.5;
   }
 
   .listItem {
     display: block;
+    padding: 0;
+    margin-right: 0;
   }
 }
