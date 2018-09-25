@@ -11,9 +11,8 @@ Install all depedencies via
 ```sh
 npm install
 
-# This will download genflow.native and put it in `vendor/genflow.native`
-# (You will only need to run this script again, when upgrading the binary)
-./scripts/setup_genflow.sh
+# Also make sure to install all the other tools, like genflow
+npm run setup
 ```
 
 Run BuckleScript in one Shell
