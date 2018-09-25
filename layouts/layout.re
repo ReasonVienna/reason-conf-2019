@@ -53,20 +53,17 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
             </Helmet>
             children
           </div>
-        | Home =>
+        | _ =>
           <main>
             <Header pageType />
             <article>
-              children
-              {subscribeFormIfNeeded(!isThanksPage)}
-            </article>
-            <Footer />
-          </main>
-        | Normal =>
-          <main>
-            <Header pageType />
-            <article>
-              <div className="container"> children </div>
+              {
+                if (pageType == Home) {
+                  children;
+                } else {
+                  <div className="container"> children </div>;
+                }
+              }
               {subscribeFormIfNeeded(!isThanksPage)}
             </article>
             <Footer />

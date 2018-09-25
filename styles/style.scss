@@ -129,6 +129,13 @@ article {
   }
 }
 
+.page-content {
+  @media (min-width: 768px) {
+    margin-left: 76px;
+    margin-right: 76px;
+  }
+}
+
 .thanks {
   margin: 3rem 0;
   &--grid {

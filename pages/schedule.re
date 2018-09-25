@@ -122,7 +122,7 @@ let createRow = ({task, fromTime, toTime}: Data.Timetable.entry) =>
 let make = _children => {
   ...component,
   render: _self =>
-    <div>
+    <section className="page-content">
       <h1> {"Schedule" |> s} </h1>
       <h2>
         <time dateTime="2018-05-11">
@@ -170,56 +170,54 @@ let make = _children => {
           </Link>
         </time>
       </h2>
-      <main>
-        <dl className=style##entries>
-          <dt className=style##entryTime>
-            <time> {"9:00 - 10:00" |> s} </time>
-          </dt>
-          <dd className=style##entryDescription>
-            {"Doors open & forming Teams for the Hackathon" |> s}
-          </dd>
-          <dt className=style##talkTime>
-            <time> {"10:00 - 13:00" |> s} </time>
-          </dt>
-          <dd className=style##talkDescription>
-            {
-              {js|
+      <dl className=style##entries>
+        <dt className=style##entryTime>
+          <time> {"9:00 - 10:00" |> s} </time>
+        </dt>
+        <dd className=style##entryDescription>
+          {"Doors open & forming Teams for the Hackathon" |> s}
+        </dd>
+        <dt className=style##talkTime>
+          <time> {"10:00 - 13:00" |> s} </time>
+        </dt>
+        <dd className=style##talkDescription>
+          {
+            {js|
 Choose between:
 
 1. **Open Mic Session** – everyone can come and give a talk. Speakers can opt-in to be recorded and their talk published by our ReasonConf channel.
 2. **Hackathon** – team up with others or work alone on your project of choice
 3. **Vienna Tour** – explore the city center with one of our local volunteers
             |js}
-              |> md
-            }
-          </dd>
-          <dt className=style##entryTime>
-            <time> {"13:00 - 14:00" |> s} </time>
-          </dt>
-          <dd className=style##entryDescription> {"Lunch" |> s} </dd>
-          <dt className=style##talkTime>
-            <time> {"14:00 - 17:30" |> s} </time>
-          </dt>
-          <dd className=style##talkDescription>
-            {
-              {js|
+            |> md
+          }
+        </dd>
+        <dt className=style##entryTime>
+          <time> {"13:00 - 14:00" |> s} </time>
+        </dt>
+        <dd className=style##entryDescription> {"Lunch" |> s} </dd>
+        <dt className=style##talkTime>
+          <time> {"14:00 - 17:30" |> s} </time>
+        </dt>
+        <dd className=style##talkDescription>
+          {
+            {js|
 Choose between:
 
 1. **Hackathon** – team up with others or work alone on your project of choice
 2. **Vienna Tour** – explore the city center with one of our local volunteers
             |js}
-              |> md
-            }
-          </dd>
-          <dt className=style##entryTime>
-            <time> {"18:00 - 22:00" |> s} </time>
-          </dt>
-          <dd className=style##entryDescription>
-            {"Get together at a local wine tavern (Heuriger)" |> s}
-          </dd>
-        </dl>
-      </main>
-    </div>,
+            |> md
+          }
+        </dd>
+        <dt className=style##entryTime>
+          <time> {"18:00 - 22:00" |> s} </time>
+        </dt>
+        <dd className=style##entryDescription>
+          {"Get together at a local wine tavern (Heuriger)" |> s}
+        </dd>
+      </dl>
+    </section>,
 };
 
 let default =
