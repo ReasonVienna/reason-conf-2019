@@ -21,6 +21,7 @@
   composes: container from "./shared.module.scss";
   composes: grid from "./shared.module.scss";
   composes: grid_12 from "./shared.module.scss";
+  padding-top: 20px;
 }
 
 .heading {
