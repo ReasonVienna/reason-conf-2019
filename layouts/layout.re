@@ -61,7 +61,9 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
                 if (pageType == Home) {
                   children;
                 } else {
-                  <div className="container"> children </div>;
+                  <div className="container">
+                    <div className="page-content"> children </div>
+                  </div>;
                 }
               }
               {subscribeFormIfNeeded(!isThanksPage)}

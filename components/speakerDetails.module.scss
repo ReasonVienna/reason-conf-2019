@@ -1,13 +1,13 @@
 @import "../styles/variables.scss";
 
 .root {
-  composes: global(grid);
-  composes: global(grid_6cols);
+  composes: grid from "../components/shared.module.scss";
+  composes: grid_12 from "../components/shared.module.scss";
   margin: 2em 0;
 }
 
 .speakerCard {
-  composes: global(grid--1col);
+  composes: grid--2col from "../components/shared.module.scss";
 
   figcaption {
     display: none;
@@ -15,7 +15,7 @@
 }
 
 .description {
-  composes: global(grid--4col);
+  composes: grid--10col from "../components/shared.module.scss";
 }
 
 .figure {
