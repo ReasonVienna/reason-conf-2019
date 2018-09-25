@@ -16,14 +16,6 @@ type layoutType =
   | NoLayout
   | Print;
 
-type helmetContext = Js.t({.});
-
-type file = {
-  title: string,
-  description: string,
-  keywords: array(string),
-};
-
 let subscribeFormIfNeeded = hasSubscribeForm =>
   componentOrNull(
     hasSubscribeForm,
@@ -35,7 +27,18 @@ let subscribeFormIfNeeded = hasSubscribeForm =>
     </footer>,
   );
 
-let make = (~location: ReactRouter.location, ~file: file, children) => {
+[@genFlow]
+type file = {
+  title: string,
+  description: string,
+  keywords: array(string),
+};
+
+[@genType]
+type location = {pathname: string};
+
+[@genType]
+let make = (~location: location, ~file: file, children) => {
   ...component,
   render: _self => {
     let pageType =
@@ -87,25 +90,6 @@ let make = (~location: ReactRouter.location, ~file: file, children) => {
     </>;
   },
 };
-
-let default =
-  ReasonReact.wrapReasonForJs(
-    ~component,
-    jsProps => {
-      let file = {
-        title: jsProps##file##title,
-        description: jsProps##file##description,
-        keywords:
-          switch (jsProps##file##keywords) {
-          | Some(v) => v
-          | None => [||]
-          },
-      };
-
-      let location = ReactRouter.{pathname: jsProps##location##pathname};
-      make(~location, ~file, jsProps##children);
-    },
-  );
 
 /* As long as we can't pass the router via props, instead of context, we can't use
    layout directly via antwar.config */
