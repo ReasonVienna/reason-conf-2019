@@ -5,7 +5,7 @@ import { connect } from "../components";
 
 import Helmet, { HelmetProvider } from "react-helmet-async";
 
-import Layout from "./layout.bs";
+import Layout from "./layout.re.js";
 
 import "../styles/style.scss";
 

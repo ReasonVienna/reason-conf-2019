@@ -10,6 +10,9 @@ Install all depedencies via
 
 ```sh
 npm install
+
+# Also make sure to install all the other tools, like genflow
+npm run setup
 ```
 
 Run BuckleScript in one Shell
