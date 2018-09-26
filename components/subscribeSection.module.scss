@@ -2,6 +2,7 @@
 
 .root {
   composes: global(bleedingBlockWrapper);
+  margin-bottom: -40px;
 
   form {
     @media (min-width: 768px) {
@@ -12,8 +13,6 @@
 
 .inner {
   composes: global(skewedBlock);
-  padding: 40px 20px;
-  margin-bottom: -40px;
   background-color: $tertiaryColor;
 }
 
@@ -21,12 +20,10 @@
   composes: global(container);
   composes: global(grid);
   composes: global(grid_12);
-  padding-top: 20px;
 }
 
 .heading {
-  composes: global(push--1col);
-  composes: global(grid--5col);
+  composes: global(grid--4col);
   margin-top: 0;
   margin-bottom: 0;
   color: $bgColor;

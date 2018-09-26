@@ -198,6 +198,7 @@ article {
 }
 
 .skewedBlock {
+  padding: 60px 20px;
   clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
 }
 

@@ -1,0 +1,35 @@
+@import "../styles/variables.scss";
+
+.root {
+  margin: 40px 0;
+}
+
+.inner {
+  composes: global(skewedBlock);
+  background-color: $secondaryColor;
+  background-image: linear-gradient(rgba(black, 0)),
+    url(../assets/img/bg_blurred.jpg);
+  background-size: contain, contain;
+  background-position: center top, 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed;
+}
+
+.layout {
+  composes: global(container);
+}
+
+.heading {
+  margin-top: 0;
+  color: $bgColor;
+  font-size: 2rem;
+}
+
+.tweets {
+  composes: global(grid);
+  composes: global(grid_12);
+
+  > div {
+    grid-column: span 4;
+  }
+}

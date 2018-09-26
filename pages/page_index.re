@@ -9,6 +9,7 @@ let make = _children => {
     <>
       <OfferingSection />
       /*<SpeakersSection />*/
+      <ImpressionsSection />
       <PartnersSection />
     </>,
 };
