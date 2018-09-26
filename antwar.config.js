@@ -25,6 +25,8 @@ module.exports = {
     jobs: page("jobs.bs"),
     about: page("about.bs"),
     privacy: page("privacy.bs"),
+    imprint: page("imprint.mdx"),
+    contact: page("contact.mdx"),
     "code-of-conduct": page("coc.bs"),
     "vienna-guide/food": page("vienna-guide/food.bs"),
     "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
@@ -35,13 +37,13 @@ module.exports = {
 };
 
 function page(filepath, meta = {}) {
-  const name = filepath.split(".bs")[0];
+  const name = filepath.split(".")[0];
   const ret = () => {
     const component = require(`./pages/${filepath}`).default;
     const data = pages.find(({ id }) => id === name) || {};
 
-    component.description = data.description || meta.description;
-    component.title = data.title || meta.title;
+    component.description = data.description || meta.description || "";
+    component.title = data.title || meta.title || "";
     component.keywords = data.keywords || meta.keywords || [];
 
     return component;

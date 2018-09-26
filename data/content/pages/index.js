@@ -31,6 +31,16 @@ const about = {
   title: "About"
 };
 
+const imprint = {
+  id: "imprint",
+  title: "Imprint"
+};
+
+const contact = {
+  id: "contact",
+  title: "Contact"
+};
+
 const jobs = {
   id: "jobs",
   title: "Jobs"
@@ -79,5 +89,7 @@ module.exports = [
   jobs,
   privacy,
   coc,
+  imprint,
+  contact,
   ...viennaGuide
 ];
