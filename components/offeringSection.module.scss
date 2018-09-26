@@ -1,12 +1,12 @@
 @import "../styles/variables";
 
 .root {
-  composes: container from "./shared.module.scss";
+  composes: global(container);
 }
 
 .intro {
-  composes: push--1col from "./shared.module.scss";
-  composes: pull--1col from "./shared.module.scss";
+  composes: global(push--1col);
+  composes: global(pull--1col);
 }
 
 .timeline {
@@ -17,8 +17,8 @@
 
 .day {
   position: relative;
-  composes: grid from "./shared.module.scss";
-  composes: grid_12 from "./shared.module.scss";
+  composes: global(grid);
+  composes: global(grid_12);
   align-items: center;
 
   time {

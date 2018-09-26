@@ -12,8 +12,8 @@ $padding: 25px 15px;
 }
 
 .entries {
-  composes: grid from "../components/shared.module.scss";
-  composes: grid_12 from "../components/shared.module.scss";
+  composes: global(grid);
+  composes: global(grid_12);
   grid-row-gap: 0 !important;
   margin: 0;
   @media (min-width: 768px) {
@@ -22,7 +22,7 @@ $padding: 25px 15px;
 }
 
 .entryTime {
-  composes: grid--2col from "../components/shared.module.scss";
+  composes: global(grid--2col);
   position: relative;
   margin: 0;
   margin-bottom: 20px;
@@ -41,7 +41,7 @@ $padding: 25px 15px;
 }
 
 .entryDescription {
-  composes: grid--10col from "../components/shared.module.scss";
+  composes: global(grid--10col);
   position: relative;
   margin: 0;
   margin-bottom: 20px;

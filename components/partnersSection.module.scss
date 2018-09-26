@@ -1,11 +1,11 @@
 @import "../styles/variables";
 
 .root {
-  composes: container from "./shared.module.scss";
+  composes: global(container);
 }
 .intro {
-  composes: push--1col from "./shared.module.scss";
-  composes: pull--1col from "./shared.module.scss";
+  composes: global(push--1col);
+  composes: global(pull--1col);
   h1 {
     margin-top: 0;
     margin-bottom: 0;

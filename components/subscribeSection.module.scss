@@ -1,7 +1,7 @@
 @import "../styles/variables.scss";
 
 .root {
-  composes: bleedingBlockWrapper from "./shared.module.scss";
+  composes: global(bleedingBlockWrapper);
 
   form {
     @media (min-width: 768px) {
@@ -11,22 +11,22 @@
 }
 
 .inner {
-  composes: skewedBlock from "./shared.module.scss";
+  composes: global(skewedBlock);
   padding: 40px 20px;
   margin-bottom: -40px;
   background-color: $tertiaryColor;
 }
 
 .layout {
-  composes: container from "./shared.module.scss";
-  composes: grid from "./shared.module.scss";
-  composes: grid_12 from "./shared.module.scss";
+  composes: global(container);
+  composes: global(grid);
+  composes: global(grid_12);
   padding-top: 20px;
 }
 
 .heading {
-  composes: push--1col from "./shared.module.scss";
-  composes: grid--5col from "./shared.module.scss";
+  composes: global(push--1col);
+  composes: global(grid--5col);
   margin-top: 0;
   margin-bottom: 0;
   color: $bgColor;

@@ -1,21 +1,21 @@
 @import "../styles/variables";
 
 .root {
-  composes: container from "./shared.module.scss";
-  composes: grid from "./shared.module.scss";
-  composes: grid_12 from "./shared.module.scss";
+  composes: global(container);
+  composes: global(grid);
+  composes: global(grid_12);
   color: $bgColor;
   align-items: end;
   padding-bottom: 20px;
 }
 
 .logo {
-  composes: grid--7col from "./shared.module.scss";
+  composes: global(grid--7col);
   margin: 0;
 }
 
 .link_home {
-  composes: grid--2col from "./shared.module.scss";
+  composes: global(grid--2col);
   display: block;
   background: none;
   &:hover {
@@ -25,7 +25,7 @@
 }
 
 .meta {
-  composes: grid--5col from "./shared.module.scss";
+  composes: global(grid--5col);
   margin-top: 2em;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .nav {
-  composes: grid--10col from "./shared.module.scss";
-  composes: push--1col from "./shared.module.scss";
+  composes: global(grid--11col);
+  composes: global(push--1col);
 }
 
 .root_home {

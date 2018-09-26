@@ -24,13 +24,13 @@ $footerLinkColor: lighten($secondaryColor, 45);
 }
 
 .wrapper {
-  composes: container from "./shared.module.scss";
+  composes: global(container);
 }
 
 .content {
-  composes: grid from "./shared.module.scss";
-  composes: push--1col from "./shared.module.scss";
-  composes: pull--1col from "./shared.module.scss";
+  composes: global(grid);
+  composes: global(push--1col);
+  composes: global(pull--1col);
   grid-template-columns: repeat(3, 1fr);
 }
 
