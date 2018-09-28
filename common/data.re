@@ -911,3 +911,29 @@ and Android/iOS.|js},
     },
   |];
 };
+
+module Partners = {
+  [@bs.module]
+  external accentureLogo: string = "../assets/img/partners/accenture-logo.svg";
+
+  [@bs.module]
+  external janeStreetLogo: string =
+    "../assets/img/partners/janestreet-logo.svg";
+
+  [@bs.module]
+  external g2iLogo: string = "../assets/img/partners/g2i-logo.svg";
+
+  [@bs.module]
+  external tuCCLogo: string = "../assets/img/partners/tucc-logo.svg";
+
+  type sponsorT = {
+    name: string,
+    logoUrl: string,
+    href: string,
+    tier: Tier.tier,
+  };
+
+  let sponsors = [||];
+
+  let partners = [||];
+};

@@ -1,5 +1,5 @@
 module Link = ReactRouterDom.Link;
-
+module Partners = Data.Partners;
 open Util;
 
 [@bs.module] external style: Js.t({..}) = "./partnersSection.module.scss";
