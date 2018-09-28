@@ -22,7 +22,6 @@ module.exports = {
     // schedule: page("schedule.bs"),
     // attendees: page("attendees.bs"),
     sponsors: page("sponsors.bs"),
-    // jobs: page("jobs.bs"),
     about: page("about.bs"),
     privacy: page("privacy.bs"),
     imprint: page("imprint.mdx"),
