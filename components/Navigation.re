@@ -60,7 +60,7 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
           </li>
           <li className=style##listItemBuy>
             <a
-              href="https://ti.to/reason-conf/reason-conf-2018"
+              href="https://ti.to/reason-conf/2019"
               target="_blank"
               className=?ticketsClassName>
               {s("Buy a ticket")}
