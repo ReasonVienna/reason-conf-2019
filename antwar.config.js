@@ -18,21 +18,21 @@ module.exports = {
     //   title: "Page not found",
     // }),
     "/": page("page_index.bs"),
-    speakers: page("speakers.bs"),
-    schedule: page("schedule.bs"),
-    attendees: page("attendees.bs"),
+    // speakers: page("speakers.bs"),
+    // schedule: page("schedule.bs"),
+    // attendees: page("attendees.bs"),
     sponsors: page("sponsors.bs"),
-    jobs: page("jobs.bs"),
+    // jobs: page("jobs.bs"),
     about: page("about.bs"),
     privacy: page("privacy.bs"),
     imprint: page("imprint.mdx"),
     contact: page("contact.mdx"),
-    "code-of-conduct": page("coc.bs"),
-    "vienna-guide/food": page("vienna-guide/food.bs"),
-    "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
-    "vienna-guide/culture": page("vienna-guide/culture.bs"),
-    "vienna-guide/drinks-and-bars": page("vienna-guide/drinksAndBars.bs"),
-    "vienna-guide/fun-and-outside": page("vienna-guide/funAndOutside.bs")
+    "code-of-conduct": page("coc.bs")
+    // "vienna-guide/food": page("vienna-guide/food.bs"),
+    // "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
+    // "vienna-guide/culture": page("vienna-guide/culture.bs"),
+    // "vienna-guide/drinks-and-bars": page("vienna-guide/drinksAndBars.bs"),
+    // "vienna-guide/fun-and-outside": page("vienna-guide/funAndOutside.bs")
   }
 };
 

@@ -20,14 +20,13 @@
   list-style-type: none;
   @media (min-width: 768px) {
     display: flex;
-    justify-self: start;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 }
 
 .listItem {
   display: inline-block;
-  margin: 0 0.5em 0 0;
+  margin: 0 2em 0 0;
 }
 
 .listItemBuy {
