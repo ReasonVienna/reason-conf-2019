@@ -13,6 +13,7 @@ let organizerWithPic = ({imgUrl, name, href, twitter}: Data.Organizer.t) =>
 
 let component = ReasonReact.statelessComponent("Organizers");
 
+[@genType]
 let make = (~organizers: list(Data.Organizer.t), _children) => {
   ...component,
   render: _self =>

@@ -68,12 +68,33 @@ let find_opt = (fn, l) =>
   };
 
 module Organizer = {
+  [@bs.module] external style: Js.t({..}) = "./logoRow.module.scss";
+
+  [@bs.module]
+  external reasonViennaLogo: string =
+    "../assets/img/partners/reasonvienna.svg";
+
+  [@bs.module]
+  external reasonAssocLogo: string =
+    "../assets/img/partners/reason-association-logo.svg";
+
+  [@bs.module]
+  external reactViennaLogo: string =
+    "../assets/img/partners/reactvienna-logo.svg";
+
   type t = {
     name: string,
     imgUrl: string,
     href: string,
     twitter: string,
   };
+
+  type logoT = {
+    name: string,
+    imgUrl: string,
+    href: string,
+  };
+
   /* First in this list should be rendered last */
   let organizers = [
     {
@@ -93,6 +114,24 @@ module Organizer = {
       imgUrl: andreyImg,
       href: "https://twitter.com/okonetchnikov",
       twitter: "okonetchnikov",
+    },
+  ];
+
+  let logos = [
+    {
+      name: "ReactVienna",
+      imgUrl: reactViennaLogo,
+      href: "https://twitter.com/reactvienna",
+    },
+    {
+      name: "ReasonVienna",
+      imgUrl: reasonViennaLogo,
+      href: "https://twitter.com/reasonvienna",
+    },
+    {
+      name: "Reason Association",
+      imgUrl: reasonAssocLogo,
+      href: "https://www.reason-association.org",
     },
   ];
 };
@@ -937,3 +976,7 @@ module Partners = {
 
   let partners = [||];
 };
+
+/* For JS interop */
+let organizers = Organizer.organizers;
+let organizerLogos = Organizer.logos;

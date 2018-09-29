@@ -22,7 +22,7 @@ module.exports = {
     // schedule: page("schedule.bs"),
     // attendees: page("attendees.bs"),
     sponsors: page("sponsors.bs"),
-    about: page("about.bs"),
+    about: page("about.mdx"),
     privacy: page("privacy.bs"),
     imprint: page("imprint.mdx"),
     contact: page("contact.mdx"),
