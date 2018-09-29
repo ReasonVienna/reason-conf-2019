@@ -777,33 +777,33 @@ module Tier = {
   };
   let sponsorTiers: array(t) = [|
     {
-      id: "main",
+      id: "gold",
       name: "Gold Sponsor",
-      cost: 5000,
-      amount: 1,
+      cost: 7500,
+      amount: 2,
       description: {js|
-- Banner placement of your choice (stage, entrance and / or catering)
-- Logo on our website in the sponsor headline
-- Logo shown in every talk recording & voiceover with a message of your choice
+- 2 sponsor slots available
+- Banner placement on stage (Day 2 & 3)
+- Headline logo placement on our website in the sponsor section
+- Logo shown in every talk recording & voiceover with a message of your choice ([Example](https://www.youtube.com/watch?v=ADMeIhjaKnQ))
 - Tweet mention
-- Job offer placement on our job-board
-- 3 tickets included (1050€)
-- Special cooperation to realize your own ideas at the conference
-  (booth, raffles, games, code-challenges, etc.)
+- Logo on the conference badges / lanyards
+- 3 conference tickets (Day 2 & 3) included (1050 EUR)
+- Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)
   |js},
     },
     {
-      id: "regular",
-      name: "Coffee & Food",
+      id: "catering",
+      name: "Catering",
       cost: 2500,
-      amount: 3,
+      amount: 4,
       description: {js|
-- Banner placement at our catering
-- Logo on our website
+- 4 sponsor slots available
+- Banner placement in the catering / coffee area
+- Logo on our website in the sponsor section
 - Logo shown in every talk recording
 - Tweet mention
-- Job offer placement on our job-board
-- 2 tickets included (700€)
+- 2 conference tickets (Day 2 & 3)  included (700 EUR)
     |js},
     },
     {
@@ -812,10 +812,10 @@ module Tier = {
       cost: 1000,
       amount: 10,
       description: {js|
-- Logo on the Website
-- 1 sponsoring package for the ReasonVienna meetup
-- Job offer placement on our job-board
-- 1 ticket included (350€)
+- 10 sponsor slots available
+- Small logo placement on our website in the sponsor section
+- Tweet mention
+- 1 conference tickets (Day 2 & 3)  included (350 EUR)
     |js},
     },
   |];

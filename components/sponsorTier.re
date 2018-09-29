@@ -9,8 +9,8 @@ let make = (~tier: Data.Tier.t, _children) => {
   render: _self => {
     let className =
       switch (tier.id) {
-      | "main" => style##main
-      | "regular" => style##regular
+      | "gold" => style##gold
+      | "catering" => style##catering
       | "supporter" => style##supporter
       | _ => style##root
       };

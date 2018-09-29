@@ -1,8 +1,8 @@
 @import "../styles/variables.scss";
 
-$mainColor: $primaryColor;
-$regularColor: #f0a453;
-$supporterColor: #eec642;
+$goldColor: #eec642;
+$cateringColor: #f0a453;
+$supporterColor: #f7e093;
 
 .root {
   display: block;
@@ -17,30 +17,30 @@ $supporterColor: #eec642;
   }
 }
 
-.main,
-.regular,
+.gold,
+.catering,
 .supporter {
   composes: root;
 }
 
-.main {
-  color: darken($mainColor, 10) !important;
-  border: 1px solid $mainColor;
-  background-color: lighten($mainColor, 45);
+.gold {
+  color: darken($goldColor, 10) !important;
+  border: 1px solid $goldColor;
+  background-color: lighten($goldColor, 45);
 
   .header {
-    background-color: $mainColor;
-    color: lighten($mainColor, 40);
+    background-color: $goldColor;
+    color: lighten($goldColor, 40);
   }
 }
-.regular {
-  color: darken($regularColor, 20) !important;
-  border: 1px solid $regularColor;
-  background-color: lighten($regularColor, 36);
+.catering {
+  color: darken($cateringColor, 20) !important;
+  border: 1px solid $cateringColor;
+  background-color: lighten($cateringColor, 36);
 
   .header {
-    background-color: $regularColor;
-    color: lighten($regularColor, 45);
+    background-color: $cateringColor;
+    color: lighten($cateringColor, 45);
   }
 }
 
