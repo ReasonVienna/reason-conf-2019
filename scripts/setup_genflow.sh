@@ -16,3 +16,4 @@ chmod u+x node_modules/.bin/genflow.native
 
 echo "Check genflow:"
 ls -l node_modules/.bin/genflow.native
+node_modules/.bin/genflow.native --help
