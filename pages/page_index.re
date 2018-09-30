@@ -1,4 +1,3 @@
-module Tickets = Tito.Tickets;
 module Link = ReactRouterDom.Link;
 
 let component = ReasonReact.statelessComponent("Home");
@@ -10,6 +9,7 @@ let make = _children => {
       <OfferingSection />
       /*<SpeakersSection />*/
       <ImpressionsSection />
+      <TicketsSection />
       <PartnersSection />
     </>,
 };
