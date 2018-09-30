@@ -14,7 +14,7 @@ external reactViennaLogo: string =
 let component = ReasonReact.statelessComponent("LogoRow");
 
 let logoWithLink = ({imgUrl, name, href}: Data.Organizer.logoT) =>
-  <a href> <img src=imgUrl alt=name /> </a>;
+  <a href key=name> <img src=imgUrl alt=name /> </a>;
 
 [@genType]
 let make = (~logos: list(Data.Organizer.logoT), _children) => {

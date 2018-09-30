@@ -977,6 +977,58 @@ module Partners = {
   let partners = [||];
 };
 
+module Tweet = {
+  type t = {
+    name: string,
+    handle: string,
+    imgSrc: string,
+    content: string,
+    tweetHref: string,
+  };
+  let startPageTweets = [|
+    {
+      name: {j|Jérémie Dimino|j},
+      handle: "dimenix",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/941456700854472710/__ldUQiF_bigger.jpg|j},
+      content: {j|
+It was really nice to meet people from the @reasonml community at the
+#ReasonConf and see how this new language is making the things we love about
+OCaml accessible to new communities. Thanks to the organizers and
+congratulations to the authors and maintainers of Reason!
+|j},
+      tweetHref: {j|https://twitter.com/dimenix/status/995648995992178688?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    {
+      name: {j|Ben|j},
+      handle: "bsansouci",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/465532103212273664/-yUUaMag_bigger.jpeg|j},
+      content: {j|
+Truly amazing day in Vienna at #ReasonConf
+
+I’ve never seen such a nice community :) @reasonml
+      |j},
+      tweetHref: {j|https://twitter.com/bsansouci/status/995449310627139585?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    {
+      name: {j|Andreas Møller|j},
+      handle: "cullophid",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/3731196850/39fc9827054f8558fc07e9c24ecb4718_bigger.jpeg|j},
+      content: {j|
+I had a great time at #reasonconf! @ryyppy @nikgraf and @okonetchnikov did a
+great job organising the conference.
+      |j},
+      tweetHref: {j|https://twitter.com/cullophid/status/995625518979604480?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    /* {
+         name: {j||j},
+         handle: "",
+         imgSrc: {j||j},
+         content: {j||j},
+         tweetHref: {j||j},
+       }, */
+  |];
+};
+
 /* For JS interop */
 let organizers = Organizer.organizers;
 let organizerLogos = Organizer.logos;
