@@ -13,7 +13,7 @@ let socialUrls = [|
 |];
 
 let socialIcon = (~key: string, ~url: string) =>
-  <SocialIcon url color="#8eaeb6" className=style##socialIcon />;
+  <SocialIcon url key color="#8eaeb6" className=style##socialIcon />;
 let organizerWithPic = ({imgUrl, name, href}: Data.Organizer.t) =>
   <a href className=style##creator key=name>
     <img src=imgUrl alt={j|Photo of $(name)|j} className=style##userpic />
