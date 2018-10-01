@@ -13,9 +13,7 @@ body {
   padding: 0;
   font: 18px/1.5 $mainFontFamily;
   color: $textColor;
-  background: $secondaryColor url(../assets/img/bg.jpg) center top no-repeat
-    fixed;
-  background-size: contain;
+  @include fixedBg("../assets/img/bg.jpg");
 
   @media (max-width: 768px) {
     font-size: 16px;
