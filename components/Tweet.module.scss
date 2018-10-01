@@ -1,13 +1,11 @@
+@import "../styles/variables.scss";
+
 .root {
-  background-color: white;
-  border-radius: 10px;
-
-  color: rgb(28, 32, 34);
-
-  padding: 15px;
-  font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif;
+  grid-column: span 4;
+  padding: 2em;
   font-size: 0.8em;
-  margin: 10px;
+  background: $bgColor;
+  box-shadow: 10px 10px 0 transparentize(black, 0.85);
 
   a,
   a:hover {
@@ -18,33 +16,31 @@
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
 
-  img.avatar {
-    display: block;
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    flex-base: 2em;
-  }
+.avatar {
+  flex: 0;
+  display: block;
+  margin-right: 0.5em;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+}
 
-  .name {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-weight: bold;
+.name {
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
 
-    .handle {
-      font-weight: normal;
-      color: #697882;
-      font-size: 0.85em;
-    }
-  }
+.handle {
+  font-weight: normal;
+  color: $secondaryTextColor;
+  font-size: 0.85em;
+}
 
-  img.icon {
-    width: 1em;
-    height: 1em;
-  }
+.icon {
+  width: 1em;
+  height: 1em;
 }
