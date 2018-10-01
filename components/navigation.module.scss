@@ -14,19 +14,17 @@
 }
 
 .list {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: flex-end;
-  }
 }
 
 .listItem {
   display: inline-block;
-  margin: 0 2em 0 0;
+  margin: 0;
 }
 
 .listItemBuy {

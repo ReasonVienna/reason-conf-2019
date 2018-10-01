@@ -34,7 +34,7 @@
 }
 
 .nav {
-  composes: push--2col from global;
+  composes: push--6col from global;
   composes: pull--1col from global;
   display: flex;
   align-items: center;

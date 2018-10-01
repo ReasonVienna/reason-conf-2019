@@ -1,8 +1,9 @@
 @import "../styles/variables.scss";
 
 .root {
-  grid-column: span 4;
+  composes: grid--4col from global;
   padding: 2em;
+  margin-bottom: 1em;
   font-size: 0.8em;
   background: $bgColor;
   box-shadow: 10px 10px 0 transparentize(black, 0.85);

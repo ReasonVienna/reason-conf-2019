@@ -123,27 +123,12 @@ article {
 }
 
 /* Main grid layout */
-.grid {
-  display: grid;
-
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
     grid-gap: 20px;
-  }
 
-  &_6 {
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(6, 1fr);
-
-      @for $i from 1 through 6 {
-        .grid--#{$i}col {
-          grid-column: span $i;
-        }
-      }
-    }
-  }
-
-  &_12 {
-    @media (min-width: 768px) {
+    &_12 {
       grid-template-columns: repeat(12, 1fr);
 
       @for $i from 1 through 12 {
@@ -153,26 +138,26 @@ article {
       }
     }
   }
-}
 
-.push {
-  @for $i from 0 through 12 {
-    &--#{$i}col {
-      grid-column-start: $i + 1 !important;
+  .push {
+    @for $i from 0 through 12 {
+      &--#{$i}col {
+        grid-column-start: $i + 1 !important;
+      }
     }
   }
-}
 
-.pull {
-  @for $i from 1 through 12 {
-    &--#{$i}col {
-      grid-column-end: 12 + 1 - $i !important;
+  .pull {
+    @for $i from 1 through 12 {
+      &--#{$i}col {
+        grid-column-end: 12 + 1 - $i !important;
+      }
     }
   }
-}
 
-.grid--full {
-  grid-column: 1 / 13;
+  .grid--full {
+    grid-column: 1 / 13;
+  }
 }
 
 /* Container element */
@@ -195,7 +180,9 @@ article {
     grid-row-gap: 0;
 
     > *:not(.grid--full) {
-      grid-column: 2 / 12;
+      @media (min-width: 768px) {
+        grid-column: 2 / 12;
+      }
     }
   }
 }
@@ -208,6 +195,9 @@ article {
   > .skewedBlock {
     padding-left: 20px;
     padding-right: 20px;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 }
 
@@ -215,6 +205,13 @@ article {
   padding-top: 60px;
   padding-bottom: 60px;
   clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+
+  @media (max-width: 768px) {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   h1 {
     margin-top: 0;

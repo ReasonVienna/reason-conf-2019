@@ -13,7 +13,7 @@
 
 .timeline {
   composes: grid--12col from global;
-  margin: 0;
+  margin: 40px 0;
   padding: 0;
   list-style: none;
 }
@@ -22,12 +22,12 @@
   position: relative;
   composes: grid from global;
   composes: grid_12 from global;
-  align-items: center;
+  align-items: start;
+  margin-bottom: 40px;
 
   time {
-    position: absolute;
-    left: -4em;
-    top: 1.5rem;
+    grid-column: 1;
+    margin-top: 0.85em;
     padding: 0.5em;
     font-size: small;
     font-weight: 700;
@@ -35,28 +35,30 @@
     background: $primaryColor;
     clip-path: polygon(0 5px, 100% 0, 100% calc(100% - 5px), 0 100%);
   }
-  h2 {
-    margin: 1rem 0 0;
-    line-height: 1;
-  }
 
   section {
     position: relative;
-    margin-left: 76px;
-    grid-column: span 7;
+    grid-column: 2 / 8;
   }
+
+  h2 {
+    margin: 0;
+    line-height: 1;
+  }
+
   img {
-    grid-column: span 5;
+    grid-column: 8 / 13;
     box-shadow: 10px 10px 0 lighten($tertiaryColor, 30);
   }
 }
 
 .day2 {
   composes: day;
-
+  time {
+    grid-column-start: 6;
+  }
   section {
-    position: relative;
-    grid-column: 6 / 12;
+    grid-column: 7 / 13;
     grid-row: 1;
   }
   img {
