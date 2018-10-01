@@ -1,6 +1,7 @@
 @import "../styles/variables";
 
 .root {
+  margin-top: 20px;
   color: $bgColor;
   align-items: end;
   padding-bottom: 20px;
@@ -12,7 +13,7 @@
 }
 
 .link_home {
-  composes: grid--2col from global;
+  grid-column: 2 / 4;
   display: block;
   background: none;
   &:hover {
