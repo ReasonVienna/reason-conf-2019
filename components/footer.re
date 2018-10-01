@@ -45,18 +45,18 @@ let make = _children => {
                  )
               |> ReasonReact.array
             }
-            <section className=style##copyright>
-              {
-                {j|
+          </nav>
+          <section className=style##copyright>
+            {
+              {j|
 ReasonConf is a [not-for-profit conference](/about/) event by ReasonVienna and ReactVienna communities.
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
 © [ReasonConf](mailto:hi@reason-conf.com), 2018|j}
-                |> md
-              }
-            </section>
-          </nav>
+              |> md
+            }
+          </section>
         </div>
       </section>
     </footer>,

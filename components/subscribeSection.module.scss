@@ -8,7 +8,7 @@
 
   form {
     @media (min-width: 768px) {
-      grid-column: 6 / span 6;
+      grid-column: 5 / span 8;
     }
   }
 }
@@ -18,15 +18,7 @@
   background-color: $tertiaryColor;
 }
 
-.layout {
-  composes: global(container);
-  composes: global(grid);
-  composes: global(grid_12);
-}
-
 .heading {
   composes: global(grid--4col);
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 2rem;
 }

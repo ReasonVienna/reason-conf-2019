@@ -11,12 +11,12 @@ type navigationLocation =
 let make = _children => {
   ...component,
   render: _self =>
-    <footer className=style##root>
+    <section className=style##root>
       <div className=style##inner>
-        <div className=style##layout>
+        <div className="container grid grid_12">
           <h1 className=style##heading> {"Subscribe to Newsletter" |> s} </h1>
           <SubscribeForm />
         </div>
       </div>
-    </footer>,
+    </section>,
 };

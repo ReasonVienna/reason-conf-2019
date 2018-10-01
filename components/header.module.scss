@@ -1,9 +1,6 @@
 @import "../styles/variables";
 
 .root {
-  composes: global(container);
-  composes: global(grid);
-  composes: global(grid_12);
   color: $bgColor;
   align-items: end;
   padding-bottom: 20px;
