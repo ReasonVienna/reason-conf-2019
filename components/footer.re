@@ -12,6 +12,8 @@ let socialUrls = [|
   "https://www.github.com/reasonvienna",
 |];
 
+let socialIcon = (~key: string, ~url: string) =>
+  <SocialIcon url color="#8eaeb6" className=style##socialIcon />;
 let organizerWithPic = ({imgUrl, name, href}: Data.Organizer.t) =>
   <a href className=style##creator key=name>
     <img src=imgUrl alt={j|Photo of $(name)|j} className=style##userpic />
@@ -36,11 +38,13 @@ let make = _children => {
             </ul>
           </nav>
           <nav className=style##social>
-            <SocialIcons
-              urls=socialUrls
-              color="#8eaeb6"
-              className=style##socialIcon
-            />
+            {
+              socialUrls
+              |> Array.mapi((i, url) =>
+                   socialIcon(~key=string_of_int(i), ~url)
+                 )
+              |> ReasonReact.array
+            }
             <section className=style##copyright>
               {
                 {j|
