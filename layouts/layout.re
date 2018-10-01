@@ -10,9 +10,6 @@ let component = ReasonReact.statelessComponent("Layout");
 
 let title = "ReasonConf 2018";
 
-let subscribeFormIfNeeded = hasSubscribeForm =>
-  componentOrNull(hasSubscribeForm, <SubscribeSection />);
-
 [@genFlow]
 type file = {
   title: string,
@@ -36,7 +33,6 @@ let make = (~location: location, ~file: file, children) => {
       | "/badges/" => Print
       | _ => Normal
       };
-    let isThanksPage = location.pathname == "/thanks/";
 
     let {title, description, keywords} = file;
 
@@ -69,7 +65,7 @@ let make = (~location: location, ~file: file, children) => {
                   </div>;
                 }
               }
-              {subscribeFormIfNeeded(!isThanksPage)}
+              <SubscribeSection />
             </article>
             <Footer />
           </main>
