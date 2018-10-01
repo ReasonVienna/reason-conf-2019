@@ -13,7 +13,7 @@ let make =
   ...component,
   render: _self =>
     <Helmet>
-      <link rel="canonical" href="https://reason-conf.at/" />
+      <link rel="canonical" href="https://reason-conf.com/" />
       <link rel="icon" type_="image/png" href="/favicon.png" />
       <title> {ReasonReact.string(siteName ++ " - " ++ title)} </title>
       <meta property="og:site_name" content=siteName />
