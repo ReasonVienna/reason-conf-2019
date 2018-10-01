@@ -19,8 +19,7 @@ let logoWithLink = ({imgUrl, name, href}: Data.Organizer.logoT) =>
 [@genType]
 let make = (~logos: list(Data.Organizer.logoT), _children) => {
   ...component,
-  render: _ => {
-    Js.log(logos);
+  render: _ =>
     <aside className=style##root>
       {
         switch (logos) {
@@ -31,6 +30,5 @@ let make = (~logos: list(Data.Organizer.logoT), _children) => {
           |> ReasonReact.array
         }
       }
-    </aside>;
-  },
+    </aside>,
 };
