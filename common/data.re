@@ -999,6 +999,17 @@ congratulations to the authors and maintainers of Reason!
       tweetHref: {j|https://twitter.com/dimenix/status/995648995992178688?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
     },
     {
+      name: {j|Keira|j},
+      handle: "keirasaid",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/1040753394346995712/HBEIDIZr_bigger.jpg|j},
+      content: {j|
+To the core contributors who came and tirelessly listened, helped, informed,
+debated, taught, demonstrated, and were generally awesome - thank you.
+#ReasonConf
+      |j},
+      tweetHref: {j|https://twitter.com/keirasaid/status/995930697977204736|j},
+    },
+    {
       name: {j|Ben|j},
       handle: "bsansouci",
       imgSrc: {j|https://pbs.twimg.com/profile_images/465532103212273664/-yUUaMag_bigger.jpeg|j},
@@ -1010,14 +1021,38 @@ I’ve never seen such a nice community :) @reasonml
       tweetHref: {j|https://twitter.com/bsansouci/status/995449310627139585?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
     },
     {
-      name: {j|Andreas Møller|j},
-      handle: "cullophid",
-      imgSrc: {j|https://pbs.twimg.com/profile_images/3731196850/39fc9827054f8558fc07e9c24ecb4718_bigger.jpeg|j},
+      name: {j|Johann Sonntagbauer|j},
+      handle: "johann_sonntag",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/822082543101079552/e-TCxTTl_bigger.jpg|j},
       content: {j|
-I had a great time at #reasonconf! @ryyppy @nikgraf and @okonetchnikov did a
-great job organising the conference.
+#ReasonConf was an inspiring experience and not a conference in traditional
+sense. No advertising, simply telling the truth, sharing stories and trying to
+work for the best outcome possible. I am so thankfull to have wittnessed this
+amazing experience thx!
       |j},
-      tweetHref: {j|https://twitter.com/cullophid/status/995625518979604480?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+      tweetHref: {j|https://twitter.com/johann_sonntag/status/995711821574230016|j},
+    },
+    {
+      name: {j|Sophie G|j},
+      handle: "rarity2017",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/929714218332499968/4MpQzqQ0_bigger.jpg|j},
+      content: {j|
+Thank you #ReasonConf organisers for the sightseeing tour! Was a great
+conference from start to finish. Thank you, Vienna!
+      |j},
+      tweetHref: {j|https://twitter.com/rarity2017/status/995682730007580673|j},
+    },
+    {
+      name: {j|Andrey Popp|j},
+      handle: "andreypopp",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/987242695503511553/Q7-BSPEK_bigger.jpg|j},
+      content: {j|
+Got back from @reasonconf, this was the best conf I've ever attended: both from
+the fun and usefulness PoV. Thank you @ryyppy @nikgraf and @okonetchnikov for
+organising it. The @reasonml community is so nice, been very happy to meet in
+person with a lot of people from there 😀
+      |j},
+      tweetHref: {j|https://twitter.com/andreypopp/status/996671658097291264|j},
     },
     /* {
          name: {j||j},

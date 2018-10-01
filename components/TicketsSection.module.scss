@@ -1,2 +1,89 @@
+@import "../styles/variables";
+
 .root {
+  composes: global(bleedingBlockWrapper);
+  margin-bottom: 40px;
+}
+.inner {
+  composes: global(skewedBlock);
+  background-color: $primaryColor;
+}
+
+.heading {
+  color: $bgColor;
+}
+
+:global {
+  .tito-wrapper {
+    padding: 0;
+    background: none;
+    border: none;
+    color: $bgColor;
+    font-family: inherit;
+  }
+
+  .tito-ticket-name-wrapper {
+    width: 70%;
+  }
+
+  .tito-ticket:last-child {
+    border-color: transparentize($bgColor, 0.5) !important;
+  }
+
+  .tito-submit-wrapper,
+  .tito-ticket.row {
+    margin: 0 !important;
+  }
+
+  .tito-ticket-price-quantity-wrapper {
+    width: 30%;
+  }
+
+  .tito-ticket-name {
+    font-size: 120%;
+  }
+
+  .tito-previous .tito-ticket-name-wrapper {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .tito-ticket-description {
+    color: inherit;
+    font-size: 75%;
+  }
+
+  .tito-ticket-price span {
+    font-size: 120%;
+    line-height: 1.4;
+  }
+
+  .tito-badge-link {
+    display: none;
+  }
+
+  .tito-submit-wrapper {
+  }
+
+  .tito-tickets-remaining {
+    background-color: $tertiaryColor !important;
+    border: none !important;
+    color: $bgColor !important;
+    border-radius: 0;
+  }
+
+  .tito-submit {
+    padding: 0.5em 2em !important;
+    font-size: 1em !important;
+    font-family: $displayFontFamily;
+    background-color: $secondaryColor !important;
+    border-color: $secondaryColor !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    width: auto !important;
+
+    &:hover {
+      background-color: lighten($secondaryColor, 10%) !important;
+      border-color: lighten($secondaryColor, 10%) !important;
+    }
+  }
 }

@@ -1,29 +1,11 @@
 @import "../styles/variables.scss";
 
 .root {
-  margin: 40px 0;
-}
-
-.inner {
   composes: global(skewedBlock);
   @include fixedBg("../assets/img/bg_blurred.jpg");
 }
 
-.layout {
-  composes: global(container);
-}
-
 .heading {
-  margin-top: 0;
-  color: $bgColor;
-  font-size: 2rem;
-}
-
-.tweets {
-  composes: global(grid);
-  composes: global(grid_12);
-
-  > div {
-    grid-column: span 4;
-  }
+  composes: global(push--1col);
+  composes: global(pull--1col);
 }

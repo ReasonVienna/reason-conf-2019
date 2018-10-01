@@ -1,9 +1,7 @@
 const page_index = {
   id: "page_index",
   title: "Home",
-  description: "Some description",
-  intro: "Some intro",
-  secondary: `foo`
+  description: "The ReasonML conference for web-developers & OCaml enthusiasts"
 };
 
 const speakers = {

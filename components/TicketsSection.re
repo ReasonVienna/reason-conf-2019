@@ -8,7 +8,13 @@ let make = _children => {
   ...component,
   render: _ =>
     <section className=style##root>
-      <h1> {"Tickets" |> s} </h1>
-      <Tito event="reason-conf/2019" />
+      <div className=style##inner>
+        <div className="container">
+          <div className="push--1col pull--1col">
+            <h1 className=style##heading> {"Tickets" |> s} </h1>
+            <Tito event="reason-conf/2019" />
+          </div>
+        </div>
+      </div>
     </section>,
 };

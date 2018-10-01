@@ -1,7 +1,5 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import PropTypes from "prop-types";
-import { connect } from "../components";
 
 import Helmet, { HelmetProvider } from "react-helmet-async";
 

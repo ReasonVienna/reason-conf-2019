@@ -41,7 +41,7 @@ let make = _children => {
           </div>
           <Button type_="submit"> {s("Subscribe")} </Button>
         </div>
-        <p className=style##smallText>
+        <div className=style##smallText>
           {
             {js|We use MailChimp as newsletter tool. By subscribing you acknowledge that the information
                          you provide will be transferred to MailChimp for processing in accordance with their
@@ -49,7 +49,7 @@ let make = _children => {
                      |js}
             |> md
           }
-        </p>
+        </div>
         <input type_="hidden" name="form-name" value="newsletter" />
       </form>,
       ~props={"data-netlify": true},
