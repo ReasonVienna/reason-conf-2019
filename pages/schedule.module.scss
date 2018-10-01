@@ -12,8 +12,8 @@ $padding: 25px 15px;
 }
 
 .entries {
-  composes: global(grid);
-  composes: global(grid_12);
+  composes: grid from global;
+  composes: grid_12 from global;
   grid-row-gap: 0 !important;
   margin: 0;
   @media (min-width: 768px) {
@@ -22,7 +22,7 @@ $padding: 25px 15px;
 }
 
 .entryTime {
-  composes: global(grid--2col);
+  composes: grid--2col from global;
   position: relative;
   margin: 0;
   margin-bottom: 20px;
@@ -41,7 +41,7 @@ $padding: 25px 15px;
 }
 
 .entryDescription {
-  composes: global(grid--10col);
+  composes: grid--10col from global;
   position: relative;
   margin: 0;
   margin-bottom: 20px;

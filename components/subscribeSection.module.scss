@@ -1,7 +1,7 @@
 @import "../styles/variables.scss";
 
 .root {
-  composes: global(bleedingBlockWrapper);
+  composes: bleedingBlockWrapper from global;
   position: relative;
   top: 40px;
   margin-top: -80px;
@@ -14,11 +14,11 @@
 }
 
 .inner {
-  composes: global(skewedBlock);
+  composes: skewedBlock from global;
   background-color: $tertiaryColor;
 }
 
 .heading {
-  composes: global(grid--4col);
+  composes: grid--4col from global;
   font-size: 2rem;
 }

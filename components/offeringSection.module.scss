@@ -1,12 +1,12 @@
 @import "../styles/variables";
 
 .root {
-  composes: global(container);
+  composes: container from global;
 }
 
 .intro {
-  composes: global(push--1col);
-  composes: global(pull--1col);
+  composes: push--1col from global;
+  composes: pull--1col from global;
 }
 
 .timeline {
@@ -17,8 +17,8 @@
 
 .day {
   position: relative;
-  composes: global(grid);
-  composes: global(grid_12);
+  composes: grid from global;
+  composes: grid_12 from global;
   align-items: center;
 
   time {
