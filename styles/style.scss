@@ -101,6 +101,7 @@ main {
     margin: 0 40px;
     @media (max-width: 768px) {
       margin: 0;
+      padding: 20px;
       width: 100%;
     }
   }
@@ -121,32 +122,12 @@ article {
   color: $tertiaryColor;
 }
 
-/* Main page layout wrapper */
-.page-content {
-  @media (min-width: 768px) {
-    margin-left: 76px;
-    margin-right: 76px;
-  }
-}
-
-/* Container element */
-.container {
-  margin: 0 auto;
-  max-width: 900px;
-}
-
 /* Main grid layout */
 .grid {
   display: grid;
 
   @media (min-width: 768px) {
     grid-gap: 20px;
-  }
-
-  &_4 {
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
   }
 
   &_6 {
@@ -175,9 +156,10 @@ article {
 }
 
 .push {
-  @for $i from 1 through 12 {
+  @for $i from 0 through 12 {
     &--#{$i}col {
-      margin-left: (56px + 20px) * $i;
+      outline: 1px solid;
+      grid-column-start: $i + 1 !important;
     }
   }
 }
@@ -185,7 +167,36 @@ article {
 .pull {
   @for $i from 1 through 12 {
     &--#{$i}col {
-      margin-right: (56px + 20px) * $i;
+      grid-column-end: 12 + 1 - $i !important;
+    }
+  }
+}
+
+.grid--full {
+  grid-column: 1 / 13;
+}
+
+/* Container element */
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  @extend .grid;
+  @extend .grid_12;
+}
+
+/* Because of how MDx is rendered we need this complexity */
+.page-content {
+  padding-bottom: 60px;
+
+  > div {
+    margin: 0 auto;
+    max-width: 900px;
+    @extend .grid;
+    @extend .grid_12;
+    grid-row-gap: 0;
+
+    > *:not(.grid--full) {
+      grid-column: 2 / 12;
     }
   }
 }
@@ -209,21 +220,6 @@ article {
   h1 {
     margin-top: 0;
     color: $bgColor;
-  }
-}
-
-.thanks {
-  margin: 3rem 0;
-  &--grid {
-    grid-column: 2 / span 4;
-  }
-}
-
-.sponsor-tiers {
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
   }
 }
 

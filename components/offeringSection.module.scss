@@ -2,6 +2,8 @@
 
 .root {
   composes: container from global;
+  composes: grid from global;
+  composes: grid_12 from global;
 }
 
 .intro {
@@ -10,6 +12,7 @@
 }
 
 .timeline {
+  composes: grid--12col from global;
   margin: 0;
   padding: 0;
   list-style: none;

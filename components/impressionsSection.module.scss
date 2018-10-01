@@ -4,8 +4,3 @@
   composes: skewedBlock from global;
   @include fixedBg("../assets/img/bg_blurred.jpg");
 }
-
-.heading {
-  composes: push--1col from global;
-  composes: pull--1col from global;
-}

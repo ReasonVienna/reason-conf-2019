@@ -4,11 +4,11 @@ let component = ReasonReact.statelessComponent("SponsorTiers");
 let make = _children => {
   ...component,
   render: _ =>
-    <div className="full sponsor-tiers">
+    <section className="grid--full grid grid_12">
       Data.Tier.(
         sponsorTiers
         |> Array.map(tier => <SponsorTier tier key={tier.id} />)
         |> ReasonReact.array
       )
-    </div>,
+    </section>,
 };
