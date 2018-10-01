@@ -24,11 +24,11 @@ $footerLinkColor: lighten($secondaryColor, 45);
 }
 
 .wrapper {
-  composes: global(container);
+  composes: container from global;
 }
 
 .content {
-  composes: global(grid);
+  composes: grid from global;
   grid-template-columns: repeat(4, 1fr);
 }
 

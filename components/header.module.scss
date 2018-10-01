@@ -7,12 +7,12 @@
 }
 
 .logo {
-  composes: global(grid--7col);
+  composes: grid--7col from global;
   margin: 0;
 }
 
 .link_home {
-  composes: global(grid--2col);
+  composes: grid--2col from global;
   display: block;
   background: none;
   &:hover {
@@ -22,7 +22,7 @@
 }
 
 .meta {
-  composes: global(grid--5col);
+  composes: grid--5col from global;
   margin-top: 2em;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .nav {
-  composes: global(grid--11col);
-  composes: global(push--1col);
+  composes: grid--11col from global;
+  composes: push--1col from global;
 }
 
 .root_home {

@@ -1,11 +1,11 @@
 @import "../styles/variables";
 
 .root {
-  composes: global(container);
+  composes: container from global;
 }
 .intro {
-  composes: global(push--1col);
-  composes: global(pull--1col);
+  composes: push--1col from global;
+  composes: pull--1col from global;
   h1 {
     margin-top: 0;
     margin-bottom: 0;

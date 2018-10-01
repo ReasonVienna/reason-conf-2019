@@ -1,11 +1,11 @@
 @import "../styles/variables";
 
 .root {
-  composes: global(bleedingBlockWrapper);
+  composes: bleedingBlockWrapper from global;
   margin-bottom: 40px;
 }
 .inner {
-  composes: global(skewedBlock);
+  composes: skewedBlock from global;
   background-color: $primaryColor;
 }
 

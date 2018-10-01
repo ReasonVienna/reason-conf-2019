@@ -1,13 +1,13 @@
 @import "../styles/variables.scss";
 
 .root {
-  composes: global(grid);
-  composes: global(grid_12);
+  composes: grid from global;
+  composes: grid_12 from global;
   margin: 2em 0;
 }
 
 .speakerCard {
-  composes: global(grid--2col);
+  composes: grid--2col from global;
 
   figcaption {
     display: none;
@@ -15,7 +15,7 @@
 }
 
 .description {
-  composes: global(grid--10col);
+  composes: grid--10col from global;
 }
 
 .figure {
