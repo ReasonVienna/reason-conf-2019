@@ -68,12 +68,33 @@ let find_opt = (fn, l) =>
   };
 
 module Organizer = {
+  [@bs.module] external style: Js.t({..}) = "./logoRow.module.scss";
+
+  [@bs.module]
+  external reasonViennaLogo: string =
+    "../assets/img/partners/reasonvienna.svg";
+
+  [@bs.module]
+  external reasonAssocLogo: string =
+    "../assets/img/partners/reason-association-logo.svg";
+
+  [@bs.module]
+  external reactViennaLogo: string =
+    "../assets/img/partners/reactvienna-logo.svg";
+
   type t = {
     name: string,
     imgUrl: string,
     href: string,
     twitter: string,
   };
+
+  type logoT = {
+    name: string,
+    imgUrl: string,
+    href: string,
+  };
+
   /* First in this list should be rendered last */
   let organizers = [
     {
@@ -93,6 +114,24 @@ module Organizer = {
       imgUrl: andreyImg,
       href: "https://twitter.com/okonetchnikov",
       twitter: "okonetchnikov",
+    },
+  ];
+
+  let logos = [
+    {
+      name: "ReactVienna",
+      imgUrl: reactViennaLogo,
+      href: "https://twitter.com/reactvienna",
+    },
+    {
+      name: "ReasonVienna",
+      imgUrl: reasonViennaLogo,
+      href: "https://twitter.com/reasonvienna",
+    },
+    {
+      name: "Reason Association",
+      imgUrl: reasonAssocLogo,
+      href: "https://www.reason-association.org",
     },
   ];
 };
@@ -738,33 +777,33 @@ module Tier = {
   };
   let sponsorTiers: array(t) = [|
     {
-      id: "main",
+      id: "gold",
       name: "Gold Sponsor",
-      cost: 5000,
-      amount: 1,
+      cost: 7500,
+      amount: 2,
       description: {js|
-- Banner placement of your choice (stage, entrance and / or catering)
-- Logo on our website in the sponsor headline
-- Logo shown in every talk recording & voiceover with a message of your choice
+- 2 sponsor slots available
+- Banner placement on stage (Day 2 & 3)
+- Headline logo placement on our website in the sponsor section
+- Logo shown in every talk recording & voiceover with a message of your choice ([Example](https://www.youtube.com/watch?v=ADMeIhjaKnQ))
 - Tweet mention
-- Job offer placement on our job-board
-- 3 tickets included (1050€)
-- Special cooperation to realize your own ideas at the conference
-  (booth, raffles, games, code-challenges, etc.)
+- Logo on the conference badges / lanyards
+- 3 conference tickets (Day 2 & 3) included (1050 EUR)
+- Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)
   |js},
     },
     {
-      id: "regular",
-      name: "Coffee & Food",
+      id: "catering",
+      name: "Catering",
       cost: 2500,
-      amount: 3,
+      amount: 4,
       description: {js|
-- Banner placement at our catering
-- Logo on our website
+- 4 sponsor slots available
+- Banner placement in the catering / coffee area
+- Logo on our website in the sponsor section
 - Logo shown in every talk recording
 - Tweet mention
-- Job offer placement on our job-board
-- 2 tickets included (700€)
+- 2 conference tickets (Day 2 & 3)  included (700 EUR)
     |js},
     },
     {
@@ -773,10 +812,10 @@ module Tier = {
       cost: 1000,
       amount: 10,
       description: {js|
-- Logo on the Website
-- 1 sponsoring package for the ReasonVienna meetup
-- Job offer placement on our job-board
-- 1 ticket included (350€)
+- 10 sponsor slots available
+- Small logo placement on our website in the sponsor section
+- Tweet mention
+- 1 conference tickets (Day 2 & 3)  included (350 EUR)
     |js},
     },
   |];
@@ -911,3 +950,85 @@ and Android/iOS.|js},
     },
   |];
 };
+
+module Partners = {
+  [@bs.module]
+  external accentureLogo: string = "../assets/img/partners/accenture-logo.svg";
+
+  [@bs.module]
+  external janeStreetLogo: string =
+    "../assets/img/partners/janestreet-logo.svg";
+
+  [@bs.module]
+  external g2iLogo: string = "../assets/img/partners/g2i-logo.svg";
+
+  [@bs.module]
+  external tuCCLogo: string = "../assets/img/partners/tucc-logo.svg";
+
+  type sponsorT = {
+    name: string,
+    logoUrl: string,
+    href: string,
+    tier: Tier.tier,
+  };
+
+  let sponsors = [||];
+
+  let partners = [||];
+};
+
+module Tweet = {
+  type t = {
+    name: string,
+    handle: string,
+    imgSrc: string,
+    content: string,
+    tweetHref: string,
+  };
+  let startPageTweets = [|
+    {
+      name: {j|Jérémie Dimino|j},
+      handle: "dimenix",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/941456700854472710/__ldUQiF_bigger.jpg|j},
+      content: {j|
+It was really nice to meet people from the @reasonml community at the
+#ReasonConf and see how this new language is making the things we love about
+OCaml accessible to new communities. Thanks to the organizers and
+congratulations to the authors and maintainers of Reason!
+|j},
+      tweetHref: {j|https://twitter.com/dimenix/status/995648995992178688?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    {
+      name: {j|Ben|j},
+      handle: "bsansouci",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/465532103212273664/-yUUaMag_bigger.jpeg|j},
+      content: {j|
+Truly amazing day in Vienna at #ReasonConf
+
+I’ve never seen such a nice community :) @reasonml
+      |j},
+      tweetHref: {j|https://twitter.com/bsansouci/status/995449310627139585?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    {
+      name: {j|Andreas Møller|j},
+      handle: "cullophid",
+      imgSrc: {j|https://pbs.twimg.com/profile_images/3731196850/39fc9827054f8558fc07e9c24ecb4718_bigger.jpeg|j},
+      content: {j|
+I had a great time at #reasonconf! @ryyppy @nikgraf and @okonetchnikov did a
+great job organising the conference.
+      |j},
+      tweetHref: {j|https://twitter.com/cullophid/status/995625518979604480?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Freason-conf.at%2F|j},
+    },
+    /* {
+         name: {j||j},
+         handle: "",
+         imgSrc: {j||j},
+         content: {j||j},
+         tweetHref: {j||j},
+       }, */
+  |];
+};
+
+/* For JS interop */
+let organizers = Organizer.organizers;
+let organizerLogos = Organizer.logos;

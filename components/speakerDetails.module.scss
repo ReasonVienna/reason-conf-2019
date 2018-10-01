@@ -2,12 +2,12 @@
 
 .root {
   composes: global(grid);
-  composes: global(grid_6cols);
+  composes: global(grid_12);
   margin: 2em 0;
 }
 
 .speakerCard {
-  composes: global(grid--1col);
+  composes: global(grid--2col);
 
   figcaption {
     display: none;
@@ -15,7 +15,7 @@
 }
 
 .description {
-  composes: global(grid--4col);
+  composes: global(grid--10col);
 }
 
 .figure {

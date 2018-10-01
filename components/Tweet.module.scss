@@ -1,0 +1,50 @@
+.root {
+  background-color: white;
+  border-radius: 10px;
+
+  color: rgb(28, 32, 34);
+
+  padding: 15px;
+  font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 0.8em;
+  margin: 10px;
+
+  a,
+  a:hover {
+    text-decoration: none;
+    background-image: none;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  img.avatar {
+    display: block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    flex-base: 2em;
+  }
+
+  .name {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: bold;
+
+    .handle {
+      font-weight: normal;
+      color: #697882;
+      font-size: 0.85em;
+    }
+  }
+
+  img.icon {
+    width: 1em;
+    height: 1em;
+  }
+}

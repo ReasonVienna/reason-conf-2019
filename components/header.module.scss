@@ -1,0 +1,53 @@
+@import "../styles/variables";
+
+.root {
+  composes: global(container);
+  composes: global(grid);
+  composes: global(grid_12);
+  color: $bgColor;
+  align-items: end;
+  padding-bottom: 20px;
+}
+
+.logo {
+  composes: global(grid--7col);
+  margin: 0;
+}
+
+.link_home {
+  composes: global(grid--2col);
+  display: block;
+  background: none;
+  &:hover {
+    background: none;
+    filter: brightness(110%);
+  }
+}
+
+.meta {
+  composes: global(grid--5col);
+  margin-top: 2em;
+}
+
+.dates {
+  margin: 0;
+  color: $bgColor;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.nav {
+  composes: global(grid--11col);
+  composes: global(push--1col);
+}
+
+.root_home {
+  composes: root;
+
+  .nav {
+    display: flex;
+    @media (min-width: 768px) {
+      grid-column: 1 / 13;
+    }
+  }
+}

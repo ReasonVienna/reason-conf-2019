@@ -1,13 +1,3 @@
-open Util;
-
-let component = ReasonReact.statelessComponent("Privacy");
-
-let make = _children => {
-  ...component,
-  render: _self =>
-    <div>
-      {
-        {j|
 # Privacy Policy
 
 ## Data protection
@@ -121,11 +111,3 @@ revisions to this Privacy Policy shall indicate your agreement with the terms of
 Privacy Policy.
 
 The last update to our Privacy Statement was posted on June 3rd, 2018.
-|j}
-        |> md
-      }
-    </div>,
-};
-
-let default =
-  ReasonReact.wrapReasonForJs(~component, jsProps => make(jsProps##children));

@@ -10,22 +10,8 @@ let component = ReasonReact.statelessComponent("Layout");
 
 let title = "ReasonConf 2018";
 
-type layoutType =
-  | Home
-  | Normal
-  | NoLayout
-  | Print;
-
 let subscribeFormIfNeeded = hasSubscribeForm =>
-  componentOrNull(
-    hasSubscribeForm,
-    <footer className="subscribe">
-      <div className="container_centered grid grid_6cols">
-        <h2> {"Subscribe to Newsletter" |> s} </h2>
-        <SubscribeForm />
-      </div>
-    </footer>,
-  );
+  componentOrNull(hasSubscribeForm, <SubscribeSection />);
 
 [@genFlow]
 type file = {
@@ -70,21 +56,23 @@ let make = (~location: location, ~file: file, children) => {
             </Helmet>
             children
           </div>
-        | Home =>
-          <div className="page">
-            <main> children </main>
-            {subscribeFormIfNeeded(!isThanksPage)}
+        | _ =>
+          <main>
+            <Header pageType />
+            <article>
+              {
+                if (pageType == Home) {
+                  children;
+                } else {
+                  <div className="container">
+                    <div className="page-content"> children </div>
+                  </div>;
+                }
+              }
+              {subscribeFormIfNeeded(!isThanksPage)}
+            </article>
             <Footer />
-          </div>
-        | Normal =>
-          <div className="page">
-            <div className="container container_centered">
-              <header> <Navigation pathname={location.pathname} /> </header>
-              <article> children </article>
-            </div>
-            {subscribeFormIfNeeded(!isThanksPage)}
-            <Footer />
-          </div>
+          </main>
         }
       }
     </>;

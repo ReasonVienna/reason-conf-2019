@@ -11,3 +11,6 @@ fi
 echo "Downloading genFlow for platform '$PLATFORM' in node_modules/.bin/ directory..."
 
 curl -L https://github.com/cristianoc/genFlow/releases/download/v0.8.0/genflow-$PLATFORM.tar.gz | tar xz -C node_modules/.bin
+
+echo "Test run genflow:"
+node_modules/.bin/genflow.native --help

@@ -1,5 +1,11 @@
 [@bs.module] external marked: (string, Js.t({..})) => string = "marked";
 
+type layoutType =
+  | Home
+  | Normal
+  | NoLayout
+  | Print;
+
 let toHHMM = date => {
   let pad = n =>
     if (n < 10) {

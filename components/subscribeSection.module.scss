@@ -1,0 +1,31 @@
+@import "../styles/variables.scss";
+
+.root {
+  composes: global(bleedingBlockWrapper);
+  margin-bottom: -40px;
+
+  form {
+    @media (min-width: 768px) {
+      grid-column: 6 / span 6;
+    }
+  }
+}
+
+.inner {
+  composes: global(skewedBlock);
+  background-color: $tertiaryColor;
+}
+
+.layout {
+  composes: global(container);
+  composes: global(grid);
+  composes: global(grid_12);
+}
+
+.heading {
+  composes: global(grid--4col);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $bgColor;
+  font-size: 2rem;
+}

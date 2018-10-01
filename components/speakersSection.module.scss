@@ -1,0 +1,42 @@
+@import "../styles/variables";
+
+.root {
+  position: relative;
+  overflow: visible;
+
+  &::before {
+    position: absolute;
+    top: 150px;
+    background: url("../assets/img/speakers-bg.svg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    content: "";
+    @media (min-width: 768px) {
+      background-position-y: calc(var(--speakers-ty) * -1);
+    }
+  }
+}
+
+.list {
+  display: grid;
+  justify-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  position: relative;
+  margin: 40px 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+  }
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+}

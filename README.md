@@ -1,8 +1,8 @@
-# ReasonConf 2018
+# ReasonConf 2019 Website
 
 ## Design mockup
 
-https://www.figma.com/file/fVvLR4MkLxslAkTsl2En07TY/Reason-Conf-2018
+https://www.figma.com/file/HRK5IaLG00uj7oEV2XOg45/Reason-Conf-2019?node-id=0%3A1
 
 ## Develop
 
@@ -21,7 +21,7 @@ Run BuckleScript in one Shell
 npm run bs:start
 ```
 
-Run Gatsby in another Shell
+Run Antwar in another Shell
 
 ```sh
 npm start

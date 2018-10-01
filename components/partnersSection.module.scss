@@ -1,0 +1,89 @@
+@import "../styles/variables";
+
+.root {
+  composes: global(container);
+}
+.intro {
+  composes: global(push--1col);
+  composes: global(pull--1col);
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+
+  a {
+    display: block;
+    background: none !important;
+  }
+}
+
+.listItem {
+  flex: 1 1 auto;
+  max-width: 120px;
+  margin-right: 10px;
+  padding: 0;
+  text-align: center;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.figure {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+.caption {
+  font-size: small;
+  color: $tertiaryColor;
+}
+
+/* Tiers */
+.partner {
+  composes: listItem;
+  max-width: 120px;
+
+  .logo {
+    max-height: 50px;
+  }
+}
+
+.gold {
+  composes: listItem;
+  min-width: 300px;
+
+  .logo {
+    max-height: 100px;
+  }
+}
+
+.catering {
+  composes: listItem;
+  min-width: 200px;
+
+  .logo {
+    max-height: 60px;
+  }
+}
+
+.local {
+  composes: listItem;
+  min-width: 60px;
+
+  .logo {
+    max-height: 60px;
+  }
+}

@@ -9,16 +9,14 @@ let make = _children => {
   ...component,
   render: _self =>
     <section>
-      <main className="full">
-        <h1> {"Speakers" |> s} </h1>
-        <section>
-          {
-            Data.Speaker.speakers
-            |> Array.map(toSpeakerDetail)
-            |> ReasonReact.array
-          }
-        </section>
-      </main>
+      <h1> {"Speakers" |> s} </h1>
+      <section>
+        {
+          Data.Speaker.speakers
+          |> Array.map(toSpeakerDetail)
+          |> ReasonReact.array
+        }
+      </section>
     </section>,
 };
 
