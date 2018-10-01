@@ -6,13 +6,7 @@
 
 .inner {
   composes: global(skewedBlock);
-  background-color: $secondaryColor;
-  background-image: linear-gradient(rgba(black, 0)),
-    url(../assets/img/bg_blurred.jpg);
-  background-size: contain, contain;
-  background-position: center top, 0 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed, fixed;
+  @include fixedBg("../assets/img/bg_blurred.jpg");
 }
 
 .layout {
