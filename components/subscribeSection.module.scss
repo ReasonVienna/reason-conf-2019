@@ -2,7 +2,9 @@
 
 .root {
   composes: global(bleedingBlockWrapper);
-  margin-bottom: -40px;
+  position: relative;
+  top: 40px;
+  margin-top: -80px;
 
   form {
     @media (min-width: 768px) {
@@ -26,6 +28,5 @@
   composes: global(grid--4col);
   margin-top: 0;
   margin-bottom: 0;
-  color: $bgColor;
   font-size: 2rem;
 }

@@ -37,8 +37,11 @@
 .ticketsButton {
   composes: root from "./button.module.scss";
   composes: link;
-  padding: 0.5em 0.5em 0.35em !important;
-  background-image: none !important;
+  padding: 0.5em 0.5em 0.35em;
+  background: $primaryColor !important;
+  &:hover {
+    background: darken($primaryColor, 5) !important;
+  }
 }
 
 .root_footer {

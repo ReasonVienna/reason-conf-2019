@@ -1,7 +1,6 @@
 @import "../styles/variables.scss";
 
 .root {
-  margin: 40px 0;
 }
 
 .inner {
@@ -14,8 +13,8 @@
 }
 
 .heading {
-  margin-top: 0;
-  color: $bgColor;
+  composes: global(push--1col);
+  composes: global(pull--1col);
   font-size: 2rem;
 }
 

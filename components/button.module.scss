@@ -3,15 +3,15 @@
 .root {
   display: inline-block;
   padding: 0.25em 0.5em;
-  color: lighten($primaryColor, 50);
+  color: $bgColor;
   text-decoration: none;
   text-align: center;
   font-family: $displayFontFamily, sans-serif;
-  background-color: $primaryColor;
+  background-color: $secondaryColor;
   border: none;
 
   &:hover {
-    color: white;
-    background: lighten($primaryColor, 5);
+    color: white !important;
+    background: lighten($secondaryColor, 10);
   }
 }

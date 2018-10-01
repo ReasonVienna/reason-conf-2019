@@ -1,10 +1,24 @@
 @import "../styles/variables";
 
+.root {
+  composes: global(bleedingBlockWrapper);
+  margin-bottom: 40px;
+}
+.inner {
+  composes: global(skewedBlock);
+  background-color: $primaryColor;
+}
+
+.heading {
+  color: $bgColor;
+}
+
 :global {
   .tito-wrapper {
     padding: 0;
     background: none;
     border: none;
+    color: $bgColor;
     font-family: inherit;
   }
 
@@ -12,9 +26,13 @@
     width: 70%;
   }
 
+  .tito-ticket:last-child {
+    border-color: transparentize($bgColor, 0.5) !important;
+  }
+
   .tito-submit-wrapper,
   .tito-ticket.row {
-    margin: 0;
+    margin: 0 !important;
   }
 
   .tito-ticket-price-quantity-wrapper {
@@ -47,9 +65,9 @@
   }
 
   .tito-tickets-remaining {
-    background-color: $primaryColor !important;
+    background-color: $tertiaryColor !important;
     border: none !important;
-    color: #fff !important;
+    color: $bgColor !important;
     border-radius: 0;
   }
 
@@ -57,14 +75,15 @@
     padding: 0.5em 2em !important;
     font-size: 1em !important;
     font-family: $displayFontFamily;
-    background-color: $primaryColor !important;
-    border-color: $primaryColor !important;
+    background-color: $secondaryColor !important;
+    border-color: $secondaryColor !important;
     border-radius: 0 !important;
     height: auto !important;
     width: auto !important;
+
     &:hover {
-      background-color: lighten($primaryColor, 10%) !important;
-      border-color: lighten($primaryColor, 10%) !important;
+      background-color: lighten($secondaryColor, 10%) !important;
+      border-color: lighten($secondaryColor, 10%) !important;
     }
   }
 }

@@ -119,11 +119,7 @@ article {
 /* Container element */
 .container {
   margin: 0 auto;
-  width: 900px;
-  @media (max-width: 900px) {
-    width: auto;
-    max-width: 900px;
-  }
+  max-width: 900px;
 }
 
 .page-content {
@@ -197,6 +193,11 @@ article {
 .skewedBlock {
   padding: 60px 20px;
   clip-path: polygon(0 3vw, 100% 0, 100% calc(100% - 3vw), 0 100%);
+
+  h1 {
+    margin-top: 0;
+    color: $bgColor;
+  }
 }
 
 .thanks {
