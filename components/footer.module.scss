@@ -29,9 +29,7 @@ $footerLinkColor: lighten($secondaryColor, 45);
 
 .content {
   composes: global(grid);
-  composes: global(push--1col);
-  composes: global(pull--1col);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .socialIcon {
@@ -48,8 +46,5 @@ $footerLinkColor: lighten($secondaryColor, 45);
 }
 
 .copyright {
-  //grid-column: 3 / 3;
-  //align-self: end;
-  font-size: 0.9em;
-  //grid-row: 1;
+  font-size: 0.8em;
 }
