@@ -49,5 +49,6 @@ $displayFontFamily: Montserrat, -apple-system, BlinkMacSystemFont,
     will-change: transform;
     content: "";
     z-index: -1;
+    pointer-events: none;
   }
 }
