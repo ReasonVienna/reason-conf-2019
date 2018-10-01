@@ -158,7 +158,6 @@ article {
 .push {
   @for $i from 0 through 12 {
     &--#{$i}col {
-      outline: 1px solid;
       grid-column-start: $i + 1 !important;
     }
   }
