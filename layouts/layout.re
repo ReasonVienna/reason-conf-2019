@@ -60,9 +60,7 @@ let make = (~location: location, ~file: file, children) => {
                 if (pageType == Home) {
                   children;
                 } else {
-                  <div className="container">
-                    <div className="page-content"> children </div>
-                  </div>;
+                  <div className="page-content"> children </div>;
                 }
               }
               <SubscribeSection />

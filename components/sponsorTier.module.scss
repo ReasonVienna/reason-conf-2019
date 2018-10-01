@@ -5,6 +5,7 @@ $cateringColor: #f0a453;
 $supporterColor: #f7e093;
 
 .root {
+  composes: grid--4col from global;
   display: block;
   margin: 1rem 0;
   padding: 0;

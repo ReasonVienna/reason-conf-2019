@@ -25,11 +25,10 @@ $footerLinkColor: lighten($secondaryColor, 45);
 
 .wrapper {
   composes: container from global;
-}
 
-.content {
-  composes: grid from global;
-  grid-template-columns: repeat(4, 1fr);
+  > * {
+    grid-column: span 3;
+  }
 }
 
 .socialIcon {

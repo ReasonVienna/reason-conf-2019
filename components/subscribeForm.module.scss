@@ -3,20 +3,24 @@
 .root {
   position: relative;
   color: $bgColor;
+
+  a {
+    @include link($bgColor);
+  }
 }
 
 .text {
   margin-top: 0;
-  line-height: 3rem;
 }
 
 .smallText {
   font-size: 0.75em;
-  color: darken($tertiaryColor, 20);
+  color: lighten($tertiaryColor, 20);
 }
 
 .formRow {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .label {
@@ -27,9 +31,9 @@
 }
 
 .input {
-  display: inline-block;
   flex: 1 auto;
   margin-right: 0.25em;
+  width: 50%;
 }
 
 .hiddenInput {

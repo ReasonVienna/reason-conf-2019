@@ -22,8 +22,8 @@ let make = _children => {
       </div>
       <ol className=style##timeline>
         <li className=style##day>
+          <time dateTime="2018-04-11"> {"Day 1" |> s} </time>
           <section>
-            <time dateTime="2018-04-11"> {"Day 1" |> s} </time>
             <h2> {"Workshops & Knowledge Transfer" |> s} </h2>
             <p>
               {
@@ -40,8 +40,8 @@ let make = _children => {
           />
         </li>
         <li className=style##day2>
+          <time dateTime="2018-04-12"> {"Day 2" |> s} </time>
           <section>
-            <time dateTime="2018-04-12"> {"Day 2" |> s} </time>
             <h2> {"Conference Day" |> s} </h2>
             <p>
               {
@@ -55,8 +55,8 @@ let make = _children => {
           <img src=Assets.offerDay2 alt="Conference Day Photo" />
         </li>
         <li className=style##day>
+          <time dateTime="2018-04-13"> {"Day 3" |> s} </time>
           <section>
-            <time dateTime="2018-04-13"> {"Day 3" |> s} </time>
             <h2> {"Open Mic & Reason Dojo Day" |> s} </h2>
             <p>
               {

@@ -13,7 +13,7 @@ let make = _children => {
   render: _self =>
     <section className=style##root>
       <div className=style##inner>
-        <div className="container grid grid_12">
+        <div className="container">
           <h1 className=style##heading> {"Subscribe to Newsletter" |> s} </h1>
           <SubscribeForm />
         </div>

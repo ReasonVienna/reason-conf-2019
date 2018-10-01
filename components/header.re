@@ -13,15 +13,15 @@ let make = (~pageType, _children) => {
   ...component,
   render: _self => {
     let isHomePage = pageType == Home;
-    let rootClassName =
+    let navClassName =
       if (isHomePage) {
-        style##root_home;
+        style##nav_home;
       } else {
-        style##root;
+        style##nav;
       };
 
-    <header className=rootClassName>
-      <div className="container grid grid_12">
+    <header className=style##root>
+      <div className="container">
         {
           if (isHomePage) {
             logoEl;
@@ -50,7 +50,7 @@ let make = (~pageType, _children) => {
             </div>,
           )
         }
-        <section className=style##nav> <Navigation pageType /> </section>
+        <section className=navClassName> <Navigation pageType /> </section>
       </div>
     </header>;
   },
