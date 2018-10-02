@@ -27,6 +27,8 @@ let make = (~location: location, ~file: file, children) => {
     let pageType =
       switch (location.pathname) {
       | "/" => Home
+      | "/sponsors"
+      | "/sponsors/" => Sponsors
       | "/speaker"
       | "/speaker/" => NoLayout
       | "/badges"
@@ -57,7 +59,7 @@ let make = (~location: location, ~file: file, children) => {
             <Header pageType />
             <article>
               {
-                if (pageType == Home) {
+                if (pageType == Home || pageType == Sponsors) {
                   children;
                 } else {
                   <div className="page-content"> children </div>;
