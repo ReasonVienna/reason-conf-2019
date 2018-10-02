@@ -16,7 +16,7 @@ let make = _children => {
       <p className="leadText">
         {
           {js|
-              Last year we have been eagerly onboarding newcomers to the language and we will continue to do so! This year, we designed a conference which is build around shipping products & tools, built in Reason & OCaml.|js}
+              Last year we have been eagerly onboarding newcomers to the language and we will continue to do so. This year, we designed the conference around shipping products & tools, built in Reason & OCaml.|js}
           |> s
         }
       </p>
