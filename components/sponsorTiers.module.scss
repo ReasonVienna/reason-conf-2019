@@ -5,9 +5,14 @@ $cateringColor: #f0a453;
 $supporterColor: #f7e093;
 
 .root {
-  composes: grid--4col from global;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.tier {
   display: block;
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 0;
   background: white;
   transition: 0.125s transform ease-in;
@@ -21,7 +26,7 @@ $supporterColor: #f7e093;
 .gold,
 .catering,
 .supporter {
-  composes: root;
+  composes: tier;
 }
 
 .gold {
@@ -68,6 +73,7 @@ $supporterColor: #f7e093;
 .amount {
   margin: 0;
 }
+
 .cost {
   display: inline-block;
   margin: 0;
@@ -75,11 +81,11 @@ $supporterColor: #f7e093;
 }
 
 .description {
-  ul {
-    margin: 1.5rem;
-    padding: 0 0 0 1rem;
-    list-style: square;
-  }
+  color: $textColor;
+  margin: 0 1.5rem 0 1.5rem;
+  padding: 1rem;
+  list-style: square;
+
   li {
     margin: 0.5rem 0;
   }
