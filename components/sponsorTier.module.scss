@@ -1,20 +1,24 @@
 @import "../styles/variables.scss";
 
-$goldColor: #eec642;
-$cateringColor: #f0a453;
-$supporterColor: #f7e093;
+$goldColor: #d0ab54;
+$cateringColor: #d46b60;
+$supporterColor: $tertiaryColor;
 
 .root {
   composes: grid--4col from global;
   display: block;
-  margin: 1rem 0;
+  margin: 0 0 20px;
   padding: 0;
-  background: white;
+  background: $bgColor;
+  color: $secondaryColor;
+  box-shadow: 10px 10px 0 transparentize(black, 0.85);
   transition: 0.125s transform ease-in;
 
   &:hover {
-    transform: scale(1.05);
+    color: $secondaryColor;
+    transform: scale(1.01);
     transition: 0.125s transform ease-out;
+    background: lighten($bgColor, 2%);
   }
 }
 
@@ -25,61 +29,69 @@ $supporterColor: #f7e093;
 }
 
 .gold {
-  color: darken($goldColor, 10) !important;
-  border: 1px solid $goldColor;
-  background-color: lighten($goldColor, 45);
+  color: darken($goldColor, 20) !important;
 
   .header {
     background-color: $goldColor;
-    color: lighten($goldColor, 40);
   }
 }
 .catering {
   color: darken($cateringColor, 20) !important;
-  border: 1px solid $cateringColor;
-  background-color: lighten($cateringColor, 36);
 
   .header {
     background-color: $cateringColor;
-    color: lighten($cateringColor, 45);
   }
 }
 
 .supporter {
   color: darken($supporterColor, 20) !important;
-  border: 1px solid $supporterColor;
-  background-color: lighten($supporterColor, 39);
 
   .header {
     background-color: $supporterColor;
-    color: lighten($supporterColor, 55);
   }
 }
 
 .header {
-  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
 }
 
 .name {
+  flex: 1 auto;
   margin: 0;
-  margin-bottom: 0.5rem;
+  color: $bgColor;
+  font-size: 1rem;
+}
+
+.cost {
+  flex: 0 0 100%;
+  order: 2;
+  margin: 0;
+  color: $bgColor;
+  font-size: 2rem;
 }
 
 .amount {
+  flex: 0 0 100%;
+  flex-flow: wrap;
   margin: 0;
-}
-.cost {
-  display: inline-block;
-  margin: 0;
-  font-size: 150%;
 }
 
 .description {
-  ul {
-    margin: 1.5rem;
-    padding: 0 0 0 1rem;
-    list-style: square;
+  padding: 0 25px 10px;
+  font-size: 90%;
+
+  p {
+    margin-left: 0.5rem;
   }
+
+  ul {
+    margin-left: 0.5rem;
+    padding: 0;
+    list-style: square outside;
+  }
+
   li {
     margin: 0.5rem 0;
   }

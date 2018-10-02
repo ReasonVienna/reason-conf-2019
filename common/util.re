@@ -3,6 +3,7 @@
 type layoutType =
   | Home
   | Normal
+  | Sponsors
   | NoLayout
   | Print;
 

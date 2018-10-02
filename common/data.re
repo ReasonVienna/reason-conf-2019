@@ -780,13 +780,12 @@ module Tier = {
       cost: 7500,
       amount: 2,
       description: {js|
-- 2 sponsor slots available
-- Banner placement on stage (Day 2 & 3)
-- Headline logo placement on our website in the sponsor section
+Same as Catering plus...
+
+- Banner on stage (Day 2 & 3)
 - Logo shown in every talk recording & voiceover with a message of your choice
-- Tweet mention
 - Logo on the conference badges / lanyards
-- 3 conference tickets (Day 2 & 3) included (1050 EUR)
+- 3 conference tickets included (1050 EUR)
 - Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)
   |js},
     },
@@ -796,12 +795,11 @@ module Tier = {
       cost: 2500,
       amount: 4,
       description: {js|
-- 4 sponsor slots available
-- Banner placement in the catering / coffee area
-- Logo on our website in the sponsor section
+Same as Local Supporter plus...
+
+- Banner in the catering / coffee area
 - Logo shown in every talk recording
-- Tweet mention
-- 2 conference tickets (Day 2 & 3)  included (700 EUR)
+- 2 conference tickets included (700 EUR)
     |js},
     },
     {
@@ -810,10 +808,9 @@ module Tier = {
       cost: 1000,
       amount: 10,
       description: {js|
-- 10 sponsor slots available
-- Small logo placement on our website in the sponsor section
-- Tweet mention
-- 1 conference tickets (Day 2 & 3)  included (350 EUR)
+- Logo on the website in the sponsor's section
+- Mention on twitter.com
+- 1 conference ticket included (350 EUR)
     |js},
     },
   |];

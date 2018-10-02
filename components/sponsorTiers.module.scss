@@ -1,0 +1,6 @@
+@import "../styles/variables.scss";
+
+.root {
+  composes: skewedBlock from global;
+  @include fixedBg("../assets/img/bg_blurred.jpg");
+}
