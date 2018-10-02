@@ -75,32 +75,8 @@
     }
   }
 
-  .tito-previous .tito-ticket-name-wrapper {
-    text-decoration: none;
-    width: 100%;
-
-    .tito-ticket-name {
-      align-items: center;
-      width: 100%;
-      color: transparentize($bgColor, 0.5);
-      @media (min-width: 768px) {
-        display: flex;
-      }
-
-      &::after {
-        flex: 1 auto;
-        display: block;
-        margin: 0.5em 0;
-        font-size: 0.9rem;
-        content: "Will be available soon...";
-
-        @media (min-width: 768px) {
-          text-align: right;
-        }
-      }
-    }
-  }
+  .tito-previous .tito-ticket-name-wrapper,
   .tito-ticket-status-sold-out {
-    display: none;
+    opacity: 0.5;
   }
 }
