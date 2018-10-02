@@ -22,13 +22,31 @@
     font-family: inherit;
   }
 
-  .tito-ticket.row {
-    border-color: transparentize($bgColor, 0.75) !important;
-  }
-
   .tito-submit-wrapper,
   .tito-ticket.row {
     margin: 0 !important;
+  }
+
+  .tito-ticket.row {
+    @media (min-width: 768px) {
+      display: flex !important;
+    }
+    align-content: space-between;
+    border-color: transparentize($bgColor, 0.75) !important;
+  }
+
+  .tito-ticket-name-wrapper {
+    flex: 1 auto;
+    float: none;
+    width: auto;
+  }
+
+  .tito-ticket-price-quantity-wrapper {
+    flex: 0 0 auto;
+    float: none;
+    overflow: hidden;
+    justify-self: flex-end;
+    width: auto;
   }
 
   .tito-ticket-name {
@@ -38,6 +56,7 @@
   .tito-ticket-description {
     color: inherit;
     font-size: 75%;
+    opacity: 0.5;
   }
 
   .tito-ticket-price span {
@@ -49,14 +68,12 @@
     display: none;
   }
 
-  .tito-submit-wrapper {
-  }
-
   .tito-tickets-remaining {
-    background-color: $tertiaryColor !important;
+    margin-left: 0 !important;
+    background-color: transparentize($bgColor, 0.75) !important;
     border: none !important;
     color: $bgColor !important;
-    border-radius: 0;
+    border-radius: 7px;
   }
 
   .tito-submit {
