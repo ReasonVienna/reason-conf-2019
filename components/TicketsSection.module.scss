@@ -22,12 +22,8 @@
     font-family: inherit;
   }
 
-  .tito-ticket-name-wrapper {
-    width: 70%;
-  }
-
-  .tito-ticket:last-child {
-    border-color: transparentize($bgColor, 0.5) !important;
+  .tito-ticket.row {
+    border-color: transparentize($bgColor, 0.75) !important;
   }
 
   .tito-submit-wrapper,
@@ -35,18 +31,10 @@
     margin: 0 !important;
   }
 
-  .tito-ticket-price-quantity-wrapper {
-    width: 30%;
-  }
-
   .tito-ticket-name {
     font-size: 120%;
   }
 
-  .tito-previous .tito-ticket-name-wrapper {
-    text-decoration: line-through;
-    color: #888;
-  }
   .tito-ticket-description {
     color: inherit;
     font-size: 75%;
@@ -85,5 +73,34 @@
       background-color: lighten($secondaryColor, 10%) !important;
       border-color: lighten($secondaryColor, 10%) !important;
     }
+  }
+
+  .tito-previous .tito-ticket-name-wrapper {
+    text-decoration: none;
+    width: 100%;
+
+    .tito-ticket-name {
+      align-items: center;
+      width: 100%;
+      color: transparentize($bgColor, 0.5);
+      @media (min-width: 768px) {
+        display: flex;
+      }
+
+      &::after {
+        flex: 1 auto;
+        display: block;
+        margin: 0.5em 0;
+        font-size: 0.9rem;
+        content: "Will be available soon...";
+
+        @media (min-width: 768px) {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .tito-ticket-status-sold-out {
+    display: none;
   }
 }
