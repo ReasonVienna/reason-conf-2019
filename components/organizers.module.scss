@@ -1,35 +1,42 @@
+@import "../styles/variables";
+
 .root {
-  display: flex;
+  composes: grid from global;
+  composes: grid_12 from global;
+  composes: grid--full from global;
   margin: 1em 0;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .organizer {
+  composes: grid--4col from global;
+  display: flex;
+  align-items: center;
   margin: 0 0 20px;
   padding: 0;
-  flex: 1 auto;
 
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (min-width: 768px) {
+    align-items: flex-start;
   }
 }
 
 .photo {
   display: inline-block;
-  min-width: 120px;
-  height: 120px;
+  min-width: 100px;
+  height: 100px;
   border-radius: 50%;
-  @media (min-width: 768px) {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
 }
 
 .info {
   display: block;
+  flex: 1 auto;
 }
 
 .name {
+  color: $textColor;
+  font-weight: bold;
   font-size: 90%;
 }
 
