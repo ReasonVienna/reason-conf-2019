@@ -773,7 +773,8 @@ module Tier = {
     name: string,
     cost: int,
     amount: int,
-    description: string,
+    /* description: string, */
+    offer: array(string),
   };
   let sponsorTiers: array(t) = [|
     {
@@ -781,42 +782,42 @@ module Tier = {
       name: "Gold Sponsor",
       cost: 7500,
       amount: 2,
-      description: {js|
-- 2 sponsor slots available
-- Banner placement on stage (Day 2 & 3)
-- Headline logo placement on our website in the sponsor section
-- Logo shown in every talk recording & voiceover with a message of your choice ([Example](https://www.youtube.com/watch?v=ADMeIhjaKnQ))
-- Tweet mention
-- Logo on the conference badges / lanyards
-- 3 conference tickets (Day 2 & 3) included (1050 EUR)
-- Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)
-  |js},
+      offer: [|
+        "2 sponsor slots available",
+        "Banner placement on stage (Day 2 & 3)",
+        "Headline logo placement on our website in the sponsor section",
+        "Logo shown in every talk recording & voiceover with a message of your choice",
+        "Tweet mention",
+        "Logo on the conference badges / lanyards",
+        "3 conference tickets (Day 2 & 3) included (1050 EUR)",
+        "Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)",
+      |],
     },
     {
       id: "catering",
       name: "Catering",
       cost: 2500,
       amount: 4,
-      description: {js|
-- 4 sponsor slots available
-- Banner placement in the catering / coffee area
-- Logo on our website in the sponsor section
-- Logo shown in every talk recording
-- Tweet mention
-- 2 conference tickets (Day 2 & 3)  included (700 EUR)
-    |js},
+      offer: [|
+        "4 sponsor slots available",
+        "Banner placement in the catering / coffee area",
+        "Logo on our website in the sponsor section",
+        "Logo shown in every talk recording",
+        "Tweet mention",
+        "2 conference tickets (Day 2 & 3)  included (700 EUR)",
+      |],
     },
     {
       id: "supporter",
       name: "Local Supporter",
       cost: 1000,
       amount: 10,
-      description: {js|
-- 10 sponsor slots available
-- Small logo placement on our website in the sponsor section
-- Tweet mention
-- 1 conference tickets (Day 2 & 3)  included (350 EUR)
-    |js},
+      offer: [|
+        "10 sponsor slots available",
+        "Small logo placement on our website in the sponsor section",
+        "Tweet mention",
+        "1 conference tickets (Day 2 & 3)  included (350 EUR)",
+      |],
     },
   |];
 };
