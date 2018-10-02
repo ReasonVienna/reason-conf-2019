@@ -808,7 +808,7 @@ Same as Local Supporter plus...
       cost: 1000,
       amount: 10,
       description: {js|
-- Logo on the website in the sponsor section
+- Logo on the website in the sponsor's section
 - Mention on twitter.com
 - 1 conference ticket included (350 EUR)
     |js},
