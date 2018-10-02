@@ -785,7 +785,7 @@ module Tier = {
 - 2 sponsor slots available
 - Banner placement on stage (Day 2 & 3)
 - Headline logo placement on our website in the sponsor section
-- Logo shown in every talk recording & voiceover with a message of your choice ([Example](https://www.youtube.com/watch?v=ADMeIhjaKnQ))
+- Logo shown in every talk recording & voiceover with a message of your choice
 - Tweet mention
 - Logo on the conference badges / lanyards
 - 3 conference tickets (Day 2 & 3) included (1050 EUR)
