@@ -1,10 +1,9 @@
 @import "../styles/variables";
 
 .root {
-  margin-top: 20px;
   color: $bgColor;
   align-items: end;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .logo {
@@ -16,6 +15,10 @@
   grid-column: 2 / 4;
   display: block;
   background: none;
+  max-width: 130px;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
   &:hover {
     background: none;
     filter: brightness(110%);
