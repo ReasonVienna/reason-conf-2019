@@ -17,14 +17,6 @@ external keiraHodgkisonImg: string = "../assets/img/speaker-placeholder.svg";
 [@bs.module]
 external sanderSpiesImg: string = "../assets/img/speaker-placeholder.svg";
 
-[@bs.module] external nikImg: string = "../assets/img/speaker-placeholder.svg";
-
-[@bs.module]
-external patrickImg: string = "../assets/img/speaker-placeholder.svg";
-
-[@bs.module]
-external andreyImg: string = "../assets/img/speaker-placeholder.svg";
-
 [@bs.module]
 external seanImg: string = "../assets/img/speaker-placeholder.svg";
 
@@ -81,6 +73,12 @@ module Organizer = {
   [@bs.module]
   external reactViennaLogo: string =
     "../assets/img/partners/reactvienna-logo.svg";
+
+  [@bs.module] external nikImg: string = "../assets/img/nik.jpg";
+
+  [@bs.module] external patrickImg: string = "../assets/img/patrick.jpg";
+
+  [@bs.module] external andreyImg: string = "../assets/img/andrey.jpg";
 
   type t = {
     name: string,
