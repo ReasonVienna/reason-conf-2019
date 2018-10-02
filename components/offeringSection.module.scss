@@ -6,11 +6,6 @@
   composes: grid_12 from global;
 }
 
-.intro {
-  composes: push--1col from global;
-  composes: pull--1col from global;
-}
-
 .timeline {
   composes: grid--12col from global;
   margin: 40px 0;

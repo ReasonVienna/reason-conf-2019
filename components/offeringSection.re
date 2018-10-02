@@ -10,16 +10,16 @@ let make = _children => {
   ...component,
   render: _self =>
     <section className=style##root>
-      <div className=style##intro>
-        <h1> {"On the Road to Production" |> s} </h1>
-        <p className="leadText">
-          {
-            {js|
+      <h1 className="push--1col pull--1col">
+        {"On the Road to Production" |> s}
+      </h1>
+      <p className="leadText">
+        {
+          {js|
               Last year we have been eagerly onboarding newcomers to the language and we will continue to do so! This year, we designed a conference which is build around shipping products & tools, built in Reason & OCaml.|js}
-            |> s
-          }
-        </p>
-      </div>
+          |> s
+        }
+      </p>
       <ol className=style##timeline>
         <li className=style##day>
           <time dateTime="2018-04-11"> {"Day 1" |> s} </time>

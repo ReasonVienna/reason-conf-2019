@@ -29,16 +29,13 @@ h5,
 h6 {
   margin: 0.5em 0;
   font-family: $displayFontFamily;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 1.25rem;
   color: $primaryColor;
-  @media (min-width: 768px) {
-    margin-top: 1.5em;
-  }
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
@@ -109,6 +106,10 @@ main {
 
 article {
   background: $bgColor;
+
+  h1 {
+    margin-top: 1.5em;
+  }
 }
 
 .subscribe {
@@ -116,6 +117,9 @@ article {
 }
 
 .leadText {
+  @extend .push--0col;
+  @extend .pull--2col;
+  margin-top: 0;
   font-size: 135%;
   font-weight: 300;
   line-height: 1.7;
@@ -148,7 +152,7 @@ article {
   }
 
   .pull {
-    @for $i from 1 through 12 {
+    @for $i from 0 through 12 {
       &--#{$i}col {
         grid-column-end: 12 + 1 - $i !important;
       }
@@ -172,6 +176,11 @@ article {
 .page-content {
   padding-bottom: 60px;
 
+  // Make first paragraph on content pages use leadText styles
+  p:first-of-type {
+    @extend .leadText;
+  }
+
   > div {
     margin: 0 auto;
     max-width: 900px;
@@ -181,7 +190,7 @@ article {
 
     > *:not(.grid--full) {
       @media (min-width: 768px) {
-        grid-column: 2 / 12;
+        grid-column: 2 / 11;
       }
     }
   }
@@ -213,7 +222,8 @@ article {
     padding-right: 20px;
   }
 
-  h1 {
+  h1,
+  h2 {
     margin-top: 0;
     color: $bgColor;
   }
