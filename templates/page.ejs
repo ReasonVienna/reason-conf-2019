@@ -9,6 +9,10 @@
     <% for (var file of htmlWebpackPlugin.options.context.cssFiles) { %>
       <link href="<%= file %>" rel="stylesheet">
     <% } %>
+
+    <% if (process.env.NODE_ENV === "production") { %>
+      <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2ff99718c52457a4fa5219f66/f443b5043bc18f7a252da6d56.js");</script>
+    <% } %>
   </head>
   <body <%- htmlWebpackPlugin.options.context.helmet.bodyAttributes %>>
     <%- webpackConfig.html %>
@@ -19,5 +23,6 @@
       <script src="<%= script %>" type="text/javascript"></script>
     <% } %>
     <script src='https://js.tito.io/v1' async></script>
+
   </body>
 </html>
