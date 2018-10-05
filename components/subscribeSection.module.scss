@@ -6,12 +6,7 @@
   top: 25px;
   margin-top: -70px;
   margin-bottom: -40px;
-
-  form {
-    @media (min-width: 768px) {
-      grid-column: 5 / span 8;
-    }
-  }
+  color: $bgColor;
 }
 
 .inner {
@@ -20,6 +15,5 @@
 }
 
 .heading {
-  composes: grid--4col from global;
   font-size: 2rem;
 }
