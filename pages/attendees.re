@@ -113,9 +113,6 @@ Vienna.
             className=style##map
           />
         </section>
-        <div className="grid--2col" />
-        <section className="grid--2col"> <img src=tu1Path /> </section>
-        <section className="grid--2col"> <img src=tu2Path /> </section>
       </section>
       <h2 id="after-party-venue"> {"After Party Venue" |> s} </h2>
       <main>
