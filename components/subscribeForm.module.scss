@@ -9,13 +9,9 @@
   }
 }
 
-.text {
-  margin-top: 0;
-}
-
 .smallText {
   font-size: 0.75em;
-  color: lighten($tertiaryColor, 20);
+  opacity: 0.65;
 }
 
 .formRow {
