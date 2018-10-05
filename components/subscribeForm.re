@@ -17,9 +17,6 @@ let make = _children => {
         name="mc-embedded-subscribe-form"
         className=style##root
         target="_blank">
-        <p className=style##text>
-          {s("Get ReasonConf news straight to your inbox")}
-        </p>
         <div className=style##formRow>
           <label htmlFor="email" className=style##label>
             {"Email" |> s}
