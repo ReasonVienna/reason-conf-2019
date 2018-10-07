@@ -14,8 +14,15 @@ let make = _children => {
     <section className=style##root>
       <div className=style##inner>
         <div className="container">
-          <h1 className=style##heading> {"Subscribe to Newsletter" |> s} </h1>
-          <SubscribeForm />
+          <div className="grid--4col">
+            <h1 className=style##heading>
+              {"Subscribe to Newsletter" |> s}
+            </h1>
+          </div>
+          <div className="grid--8col">
+            {"Get ReasonConf news straight to your inbox" |> md}
+            <SubscribeForm />
+          </div>
         </div>
       </div>
     </section>,
