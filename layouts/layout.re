@@ -10,7 +10,7 @@ let component = ReasonReact.statelessComponent("Layout");
 
 let title = "ReasonConf 2018";
 
-[@genFlow]
+[@genType]
 type file = {
   title: string,
   description: string,
