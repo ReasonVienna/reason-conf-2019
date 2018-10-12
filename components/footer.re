@@ -31,6 +31,9 @@ let make = _children => {
             <li>
               <Link to_="/code-of-conduct/"> {"Code of Conduct" |> s} </Link>
             </li>
+            <li>
+              <Link to_="/terms-of-service/"> {"Terms of Service" |> s} </Link>
+            </li>
             <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
             <li> <a href="/contact/"> {"Contact Us" |> s} </a> </li>
             <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
