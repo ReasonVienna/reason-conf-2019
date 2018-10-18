@@ -44,7 +44,7 @@ $displayFontFamily: Montserrat, -apple-system, BlinkMacSystemFont,
     left: 0;
     width: 100%;
     height: 100%;
-    background: $secondaryColor url(#{$bgPath}) center top no-repeat fixed;
+    background: $secondaryColor url(#{$bgPath}) center top no-repeat;
     background-size: contain;
     will-change: transform;
     content: "";
