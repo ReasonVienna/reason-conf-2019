@@ -1,0 +1,12 @@
+.shown {
+  background-color: red;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
