@@ -8,8 +8,8 @@ module.exports = env => {
   switch (env) {
     case "build":
       return merge(commonConfig(), buildConfig());
-    // case "interactive":
-    //   return merge(commonConfig(), interactiveConfig());
+    case "interactive":
+      return merge(commonConfig(), interactiveConfig());
     case "start":
     default:
       return merge(commonConfig(), developmentConfig());
@@ -22,7 +22,7 @@ function commonConfig() {
     module: {
       rules: [
         {
-          test: /(\.bs\.)?\.js$/,
+          test: /(\.bs\.)|(\.re\.)?\.js$/,
           use: "babel-loader",
           include: [
             path.join(__dirname, "components"),
@@ -88,23 +88,23 @@ function commonConfig() {
   };
 }
 
-// function interactiveConfig() {
-//   return {
-//     resolve: {
-//       alias: {
-//         react: "preact-compat/dist/preact-compat.min.js",
-//         "react-dom": "preact-compat/dist/preact-compat.min.js",
-//       },
-//     },
-//     plugins: [
-//       new webpack.optimize.UglifyJsPlugin({
-//         compress: {
-//           warnings: false,
-//         },
-//       }),
-//     ],
-//   };
-// }
+function interactiveConfig() {
+  return {
+    resolve: {
+      alias: {
+        react: "preact-compat/dist/preact-compat.min.js",
+        "react-dom": "preact-compat/dist/preact-compat.min.js"
+      }
+    },
+    plugins: [
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
+    ]
+  };
+}
 
 function developmentConfig() {
   return {
