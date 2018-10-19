@@ -21,8 +21,6 @@ type file = {
 [@genType]
 type location = {pathname: string};
 
-let fooProps = {"data-foo": "hello"};
-
 [@genType]
 let make = (~location: location, ~file: file, children) => {
   ...component,
@@ -45,7 +43,6 @@ let make = (~location: location, ~file: file, children) => {
       <Antwar.Interactive
         container={<CookieBox />}
         id="../components/CookieBox.re.js"
-        props=fooProps
       />
       <Meta siteName="ReasonConf" title description keywords />
       {
