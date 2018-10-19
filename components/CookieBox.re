@@ -12,7 +12,7 @@
  it with Antwar's Interactive component.
  */
 
-[@bs.module] external style: Js.t({..}) = "./CookieBox.scss";
+[@bs.module] external style: Js.t({..}) = "./CookieBox.module.scss";
 
 open Util;
 

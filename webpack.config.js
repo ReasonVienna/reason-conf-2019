@@ -9,7 +9,7 @@ module.exports = env => {
     case "build":
       return merge(commonConfig(), buildConfig());
     case "interactive":
-      return merge(commonConfig(), interactiveConfig());
+      return merge(commonConfig(), buildConfig(), interactiveConfig());
     case "start":
     default:
       return merge(commonConfig(), developmentConfig());
@@ -22,7 +22,7 @@ function commonConfig() {
     module: {
       rules: [
         {
-          test: /(\.bs\.)|(\.re\.)?\.js$/,
+          test: /(\.bs|re\.)?\.js$/,
           use: "babel-loader",
           include: [
             path.join(__dirname, "components"),
