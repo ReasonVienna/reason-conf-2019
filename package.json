@@ -36,14 +36,16 @@
   "main": "n/a",
   "scripts": {
     "start": "node ./antwar.bootstrap.js develop",
-    "build": "node ./antwar.bootstrap.js build",
+    "build": "npm run clean && node ./antwar.bootstrap.js build",
     "bs:build": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/node_modules/.bin/gentype.native\" && bsb -make-world",
     "bs:start": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/node_modules/.bin/gentype.native\" && bsb -make-world -w",
     "bs:clean": "bsb -clean-world",
     "netlify": "npm run setup && npm run bs:build && npm run build",
     "precommit": "lint-staged",
     "setup": "bash ./scripts/setup_gentype.sh",
-    "export:speakers": "node ./scripts/speakers.js"
+    "export:speakers": "node ./scripts/speakers.js",
+    "clean": "rm -rf build/",
+    "debug:build": "node --inspect-brk ./antwar.bootstrap.js build"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
