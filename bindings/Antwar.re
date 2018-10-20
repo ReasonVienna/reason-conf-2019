@@ -2,6 +2,21 @@
   This is an actual rewrite of the Interactive component (v0.21.0).
   Check out `node_modules/antwar-interactive/src/Interactive.jsx` for reference
  */
+
+/*
+   This will probably be subject of change when upgrading to newest Antwar versions.
+   It would be better to use process.env.NODE_ENV instead.
+ */
+
+let isDEV: unit => bool = [%raw
+  () => "{
+    if(__DEV__) {
+        return true;
+    }
+    return false;
+}"
+];
+
 module Interactive = {
   let component = ReasonReact.statelessComponent("Interactive");
   let stringify: Js.t({.}) => string = [%raw
@@ -28,31 +43,55 @@ module Interactive = {
         | Some(cn) => "interactive " ++ cn
         };
 
-      /* If there are props, we need to clone and spread the props to the new element,
-         otherwise we can just use the original reactElement */
-      let (props, clonedContainer) =
-        switch (props) {
-        | Some(p) =>
-          let cloned = ReasonReact.cloneElement(container, ~props=p, [||]);
-          (p, cloned);
-        | None => (Js.Obj.empty(), container)
-        };
+      let originalProps = Js.Option.getWithDefault(Js.Obj.empty(), props);
 
-      let merged =
-        Js.Obj.(
-          empty()
-          ->assign({
-              "id": id,
-              "className": mergedClassName,
-              "data-props": props |> shadyConversion |> stringify,
-            })
+      /* In development mode, we want to render the container as a child of the wrapping div, as in:
+             <div className={mergedClassName} {...remainingContainerProps}>
+                {React.createElement(component, props)}
+             </div>
+         */
+      if (isDEV()) {
+        let mergedProps =
+          Js.Obj.(
+            empty()
+            ->assign(originalProps)
+            ->assign({"className": mergedClassName})
+          );
+        let container =
+          ReasonReact.cloneElement(container, ~props=mergedProps, [||]);
+        let wrapper =
+          ReactDOMRe.createElementVariadic(
+            "div",
+            ~props=ReactDOMRe.objToDOMProps(mergedProps),
+            [|container|],
+          );
+        wrapper;
+      } else {
+        /* In production, we don't want to render the container as a child element, as in:
+              <div
+                className={mergedClassName}
+                id={id}
+                {...remainingContainerProps}
+                data-props={JSON.stringify(props)}
+              />
+           */
+        let dataProps = originalProps |> shadyConversion |> stringify;
+        let mergedProps =
+          Js.Obj.(
+            empty()
+            ->assign(originalProps)
+            ->assign({
+                "className": mergedClassName,
+                "id": id,
+                "data-props": dataProps,
+              })
+          );
+        ReactDOMRe.createElementVariadic(
+          "div",
+          ~props=ReactDOMRe.objToDOMProps(mergedProps),
+          [||],
         );
-
-      ReactDOMRe.createElementVariadic(
-        "div",
-        ~props=ReactDOMRe.objToDOMProps(merged),
-        [|clonedContainer|],
-      );
+      };
     },
   };
 };
