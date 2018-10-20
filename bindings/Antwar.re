@@ -9,12 +9,14 @@
  */
 
 let isDEV: unit => bool = [%raw
-  () => "{
+  {|
+  function() {
     if(__DEV__) {
-        return true;
+      return true;
     }
     return false;
-}"
+  }
+|}
 ];
 
 module Interactive = {
