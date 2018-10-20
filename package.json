@@ -36,7 +36,7 @@
   "main": "n/a",
   "scripts": {
     "start": "node ./antwar.bootstrap.js develop",
-    "build": "npm run clean && node ./antwar.bootstrap.js build",
+    "build": "node ./antwar.bootstrap.js build",
     "bs:build": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/node_modules/.bin/gentype.native\" && bsb -make-world",
     "bs:start": "export BS_CMT_POST_PROCESS_CMD=\"$PWD/node_modules/.bin/gentype.native\" && bsb -make-world -w",
     "bs:clean": "bsb -clean-world",
