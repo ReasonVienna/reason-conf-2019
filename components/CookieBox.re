@@ -72,9 +72,14 @@ let make = _children => {
       | Hidden => style##hidden
       };
     <div className>
-      {"This is some CookieBox Text" |> s}
-      <button onClick={_evt => self.send(Agrees)}> {"Okay" |> s} </button>
-      <button onClick={_evt => self.send(Declines)}> {"Nope" |> s} </button>
+      {
+        "We use cookies and other tracking technologies to analyze site traffic, and understand where our audience is coming from. To find out more, please read our [Privacy Policy](/privacy)"
+        |> md
+      }
+      <Button onClick={_evt => self.send(Agrees)}> {"Accept" |> s} </Button>
+      <Button onClick={_evt => self.send(Declines)}>
+        {"Decline" |> s}
+      </Button>
     </div>;
   },
 };

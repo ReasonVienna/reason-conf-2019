@@ -4,7 +4,8 @@ let component = ReasonReact.statelessComponent("Button");
 
 let s = ReasonReact.string;
 
-let make = (~type_, ~className: option(string)=?, children) => {
+let make =
+    (~type_="button", ~onClick, ~className: option(string)=?, children) => {
   ...component,
   render: _self => {
     let classNames =
@@ -16,6 +17,6 @@ let make = (~type_, ~className: option(string)=?, children) => {
       )
       |> Util.join(~sep=" ");
 
-    <button type_ className=classNames> ...children </button>;
+    <button type_ className=classNames onClick> ...children </button>;
   },
 };
