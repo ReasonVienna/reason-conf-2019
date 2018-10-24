@@ -1,6 +1,7 @@
 {
-  "name": "reason-conf-2018",
-  "description": "ReasonConf 2018",
+  "name": "reason-conf",
+  "description": "ReasonConf webiste",
+  "private": true,
   "version": "1.0.0",
   "dependencies": {
     "antwar-interactive": "^0.21.0",
@@ -30,7 +31,7 @@
     "reason-react": "^0.5.3"
   },
   "keywords": [
-    "gatsby"
+    "antwar"
   ],
   "license": "MIT",
   "main": "n/a",
