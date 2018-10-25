@@ -5,7 +5,7 @@ let component = ReasonReact.statelessComponent("Button");
 let s = ReasonReact.string;
 
 let make =
-    (~type_="button", ~onClick, ~className: option(string)=?, children) => {
+    (~type_="button", ~onClick=?, ~className: option(string)=?, children) => {
   ...component,
   render: _self => {
     let classNames =
@@ -17,6 +17,14 @@ let make =
       )
       |> Util.join(~sep=" ");
 
-    <button type_ className=classNames onClick> ...children </button>;
+    let handleClick =
+      switch (onClick) {
+      | Some(fn) => fn
+      | None => (_evt => ())
+      };
+
+    <button type_ className=classNames onClick=handleClick>
+      ...children
+    </button>;
   },
 };
