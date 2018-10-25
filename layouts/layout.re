@@ -3,6 +3,7 @@
 
 open Util;
 
+module Interactive = Antwar.Interactive;
 module Helmet = ReactHelmetAsync.Helmet;
 module HelmetProvider = ReactHelmetAsync.HelmetProvider;
 
@@ -39,6 +40,10 @@ let make = (~location: location, ~file: file, children) => {
     let {title, description, keywords} = file;
 
     <>
+      <Antwar.Interactive
+        container={<CookieBox />}
+        id="components/CookieBox.re.js"
+      />
       <Meta siteName="ReasonConf" title description keywords />
       {
         switch (pageType) {
