@@ -58,7 +58,7 @@ let make = _children => {
             Cookie.createCookie(
               ~name=cookieName,
               ~value=cookieValue,
-              ~days=7,
+              ~days=365,
             );
             GoogleAnalytics.initTracking();
           }
