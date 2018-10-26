@@ -11,7 +11,6 @@ let initTracking = [%raw
     gtag('js', new Date());
 
     gtag('config', 'UA-128192260-1');
-    console.log('weeee');
   }
 |}
 ];
