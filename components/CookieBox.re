@@ -54,9 +54,20 @@ let make = _children => {
       ReasonReact.UpdateWithSideEffects(
         Hidden,
         (
-          _ =>
-            Cookie.createCookie(~name=cookieName, ~value=cookieValue, ~days=7)
+          _ => {
+            Cookie.createCookie(
+              ~name=cookieName,
+              ~value=cookieValue,
+              ~days=7,
+            );
+            GoogleAnalytics.initTracking();
+          }
         ),
+      )
+    | (Agrees, Hidden) =>
+      ReasonReact.UpdateWithSideEffects(
+        Hidden,
+        (_ => GoogleAnalytics.initTracking()),
       )
     | (Declines, Shown) =>
       ReasonReact.UpdateWithSideEffects(
