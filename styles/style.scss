@@ -117,8 +117,8 @@ article {
 }
 
 .leadText {
-  @extend .push--0col;
-  @extend .pull--2col;
+  @extend .push--1col;
+  @extend .pull--1col;
   margin-top: 0;
   font-size: 135%;
   font-weight: 300;
