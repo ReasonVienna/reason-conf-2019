@@ -10,6 +10,7 @@ let socialUrls = [|
   "https://twitter.com/reasonconf",
   "https://www.facebook.com/ReasonConf-1334078980027448/",
   "https://www.github.com/reasonvienna",
+  "https://www.youtube.com/c/ReasonConf",
 |];
 
 let socialIcon = (~key: string, ~url: string) =>
