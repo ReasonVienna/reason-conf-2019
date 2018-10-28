@@ -785,6 +785,7 @@ Same as Catering plus...
 - Banner on stage (Day 2 & 3)
 - Logo shown in every talk recording & voiceover with a message of your choice
 - Logo on the conference badges / lanyards
+- Job offer placement on job-board website section
 - 3 conference tickets included (1050 EUR)
 - Special cooperation to realize your own ideas at the conference (raffles, games code-challenges, etc.)
   |js},
@@ -799,6 +800,7 @@ Same as Local Supporter plus...
 
 - Banner in the catering / coffee area
 - Logo shown in every talk recording
+- Job offer placement on job-board website section
 - 2 conference tickets included (700 EUR)
     |js},
     },
@@ -810,6 +812,7 @@ Same as Local Supporter plus...
       description: {js|
 - Logo on the website in the sponsor's section
 - Mention on twitter.com
+- Job offer placement on job-board website section
 - 1 conference ticket included (350 EUR)
     |js},
     },
