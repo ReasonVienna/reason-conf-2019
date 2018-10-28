@@ -4,6 +4,10 @@
   composes: bleedingBlockWrapper from global;
   margin-bottom: 40px;
   color: $bgColor;
+
+  a {
+    @include link($bgColor);
+  }
 }
 
 .inner {
