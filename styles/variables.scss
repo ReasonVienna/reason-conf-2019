@@ -11,7 +11,7 @@ $displayFontFamily: Montserrat, -apple-system, BlinkMacSystemFont,
 
 @mixin link($color) {
   $linkColor: $color;
-  $underlineColor: transparentize(adjust_hue($linkColor, 0), 0.5);
+  $underlineColor: $linkColor;
   color: $linkColor;
   text-decoration: none;
   background-image: linear-gradient(
