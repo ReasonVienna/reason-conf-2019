@@ -2,3 +2,4 @@
 [@bs.module] external offerDay1: string = "../assets/img/offer-day1.jpg";
 [@bs.module] external offerDay2: string = "../assets/img/offer-day2.jpg";
 [@bs.module] external offerDay3: string = "../assets/img/offer-day3.jpg";
+[@bs.module] external ogImage: string = "../assets/img/open-graph.jpg";

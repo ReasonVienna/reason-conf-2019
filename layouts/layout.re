@@ -2,6 +2,7 @@
 "require('../styles/style.scss')";
 
 open Util;
+open Assets;
 
 module Interactive = Antwar.Interactive;
 module Helmet = ReactHelmetAsync.Helmet;
@@ -44,7 +45,7 @@ let make = (~location: location, ~file: file, children) => {
         container={<CookieBox />}
         id="components/CookieBox.re.js"
       />
-      <Meta siteName="ReasonConf" title description keywords />
+      <Meta siteName="ReasonConf" title description keywords ogImage />
       {
         switch (pageType) {
         | NoLayout => <div> <Helmet title /> children </div>
