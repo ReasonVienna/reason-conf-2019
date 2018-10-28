@@ -36,7 +36,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run bs:start & npm run antwar:start",
+    "start": "npm run antwar:start",
     "prebuild": "npm run bs:clean",
     "build": "npm run bs:build && npm run antwar:build",
     "antwar:start": "node ./antwar.bootstrap.js develop",
