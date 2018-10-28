@@ -18,6 +18,9 @@ module type ContentSig = {
   let toString: t => string;
 };
 
+/* must be calculated in float since the int space only covers a couple days in ms */
+let daysInMilliseconds = days => days *. 24. *. 60. *. 60. *. 1000.;
+
 module Content: ContentSig = {
   exception StopRead(string);
 
@@ -30,7 +33,7 @@ module Content: ContentSig = {
         open Js.Date;
         let futureTime =
           make()->getTime
-          +. float_of_int(days * 24 * 60 * 60 * 1000)
+          +. daysInMilliseconds(float_of_int(days))
           |> fromFloat;
 
         "; expires=" ++ futureTime->toUTCString;
