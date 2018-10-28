@@ -8,6 +8,7 @@ let make =
       ~title: string,
       ~description: string,
       ~keywords: array(string),
+      ~ogImage: string,
       _children,
     ) => {
   ...component,
@@ -26,10 +27,10 @@ let make =
       <meta name="keywords" content={Util.join(~sep=",", keywords)} />
       <meta property="og:title" content=title />
       <meta property="og:description" content=description />
-      <meta property="og:image" content="/meta-image.png" />
+      <meta property="og:image" content=ogImage />
       <meta name="twitter:title" content=title />
       <meta name="twitter:description" content=description />
       <meta name="twitter:site" content="@reasonconf" />
+      <meta property="twitter:image" content=ogImage />
     </Helmet>,
-  /* <meta name="twitter:image" content="./meta-image.png" /> */
 };
