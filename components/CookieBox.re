@@ -54,9 +54,20 @@ let make = _children => {
       ReasonReact.UpdateWithSideEffects(
         Hidden,
         (
-          _ =>
-            Cookie.createCookie(~name=cookieName, ~value=cookieValue, ~days=7)
+          _ => {
+            Cookie.createCookie(
+              ~name=cookieName,
+              ~value=cookieValue,
+              ~days=365,
+            );
+            GoogleAnalytics.initTracking();
+          }
         ),
+      )
+    | (Agrees, Hidden) =>
+      ReasonReact.UpdateWithSideEffects(
+        Hidden,
+        (_ => GoogleAnalytics.initTracking()),
       )
     | (Declines, Shown) =>
       ReasonReact.UpdateWithSideEffects(
@@ -72,10 +83,10 @@ let make = _children => {
       | Hidden => style##hidden
       };
     <div className>
-      {
-        "We use cookies and other tracking technologies to analyze site traffic, and understand where our audience is coming from. To find out more, please read our [Privacy Policy](/privacy)"
-        |> md
-      }
+      <p className=style##acceptText>
+        {"I accept the use of cookies to analyze site traffic." |> s}
+      </p>
+      {"To find out more, please read our [Privacy Policy](/privacy)" |> md}
       <Button onClick={_evt => self.send(Agrees)}> {"Accept" |> s} </Button>
       <Button onClick={_evt => self.send(Declines)}>
         {"Decline" |> s}
