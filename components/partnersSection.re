@@ -11,14 +11,14 @@ let sponsorLogo = (sponsor: Partners.sponsorT) => {
     switch (sponsor.tier) {
     | Gold => style##gold
     | Catering => style##catering
-    | LocalSupport => style##local
+    | Supporter => style##local
     | Partner => style##partner
     };
   let title =
     switch (sponsor.tier) {
     | Gold => "Gold Sponsor"
     | Catering => "Food & Drinks"
-    | LocalSupport => "Supporter"
+    | Supporter => "Supporter"
     | Partner => "Partner"
     };
   <li className key={sponsor.name}>
