@@ -2,7 +2,6 @@ const path = require("path");
 const pages = require("./data/content/pages");
 
 module.exports = {
-  apiUrl: "https://api.react-finland.fi/graphql-2018",
   template: {
     file: path.resolve(__dirname, "templates/page.ejs"),
     context: {
@@ -36,6 +35,16 @@ module.exports = {
   }
 };
 
+const defaultKeywords = [
+  "Reason",
+  "ReasonML",
+  "Conference",
+  "ReasonML",
+  "Conf",
+  "Vienna",
+  "Austria"
+];
+
 function page(filepath, meta = {}) {
   const name = filepath.split(".")[0];
   const ret = () => {
@@ -44,7 +53,7 @@ function page(filepath, meta = {}) {
 
     component.description = data.description || meta.description || "";
     component.title = data.title || meta.title || "";
-    component.keywords = data.keywords || meta.keywords || [];
+    component.keywords = data.keywords || meta.keywords || defaultKeywords;
 
     return component;
   };
