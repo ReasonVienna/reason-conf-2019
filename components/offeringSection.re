@@ -16,7 +16,8 @@ let make = _children => {
       <p className="leadText">
         {
           {js|
-              Last year we have been eagerly onboarding newcomers to the language and we will continue to do so. This year, we designed the conference around shipping products & tools, built in Reason & OCaml.|js}
+              Last year, we have been eagerly onboarding newcomers to the language and we will continue to do so. This year, the conference is all about shipping products and tools built with Reason & OCaml.
+              |js}
           |> s
         }
       </p>
@@ -28,7 +29,7 @@ let make = _children => {
             <p>
               {
                 {js|
-                We will offer different workshops, for all kinds of levels. There will be a beginner workshop for Reason newcomers and more practical workshops to get up to speed to build products more efficiently. Pick your favorite!
+                The first day is dedicated to different workshops for different skill levels and topics. There are beginner friendly workshops about Reason and ReasonReact and also more advanced workshops about GraphQL and OCaml. Our workshop leaders are more experienced Reason / OCaml users and Reason core team members. Check the ticket section for details.
               |js}
                 |> s
               }
@@ -57,11 +58,11 @@ let make = _children => {
         <li className=style##day>
           <time dateTime="2018-04-13"> {"Day 3" |> s} </time>
           <section>
-            <h2> {"Open Mic & Reason Dojo Day" |> s} </h2>
+            <h2> {"Open Stage & Reason Dojo Day" |> s} </h2>
             <p>
               {
                 {js|
-                The last day will be split in a Open Microphone session in the noon and a reason-dojo in the afternoon. Take the chance to stand on stage and show the community what you are interested in and take part in a conference-wide reason dojo.
+                The last day will be split in an Open Stage session with recorded lightning talks in the morning and a Reason Dojo with experienced Dojo Leaders in the afternoon.
                 |js}
                 |> s
               }
