@@ -24,7 +24,7 @@ let make =
         content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"
       />
       <meta name="description" content=description />
-      <meta name="keywords" content={Util.join(~sep=",", keywords)} />
+      <meta name="keywords" content={Util.join(~sep=", ", keywords)} />
       <meta property="og:title" content=title />
       <meta property="og:description" content=description />
       <meta property="og:image" content=ogImage />

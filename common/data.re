@@ -764,7 +764,7 @@ module Tier = {
   type tier =
     | Gold
     | Catering
-    | LocalSupport
+    | Supporter
     | Partner;
   type t = {
     id: string,
@@ -796,7 +796,7 @@ Same as Catering plus...
       cost: 2500,
       amount: 4,
       description: {js|
-Same as Local Supporter plus...
+Same as Supporter plus...
 
 - Banner in the catering / coffee area
 - Logo shown in every talk recording
@@ -806,7 +806,7 @@ Same as Local Supporter plus...
     },
     {
       id: "supporter",
-      name: "Local Supporter",
+      name: "Supporter",
       cost: 1000,
       amount: 10,
       description: {js|
@@ -922,7 +922,7 @@ Our devs are experienced with React, React Native, GraphQL, Node.js,
 and Android/iOS.|js},
         href: {j|http://g2i.co/|j},
       },
-      tier: LocalSupport,
+      tier: Supporter,
       jobAds: [|
         {
           location: OnSite("San Francisco"),
