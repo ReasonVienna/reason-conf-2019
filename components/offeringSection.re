@@ -20,6 +20,9 @@ let make = _children => {
           |> s
         }
       </p>
+      <p>
+        <a href=Data.cfpLink target="_blank"> {"Apply as a Speaker" |> s} </a>
+      </p>
       <ol className=style##timeline>
         <li className=style##day>
           <time dateTime="2018-04-11"> {"Day 1" |> s} </time>
