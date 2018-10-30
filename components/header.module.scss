@@ -12,7 +12,7 @@
 }
 
 .link_home {
-  grid-column: 2 / 4;
+  grid-column: 1 / 4;
   display: block;
   background: none;
   max-width: 130px;
@@ -28,18 +28,24 @@
 .meta {
   composes: grid--6col from global;
   margin-top: 2em;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .dates {
-  margin: 0;
+  margin: 0.5em 0;
   color: $bgColor;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 150%;
 }
 
 .nav {
-  composes: push--6col from global;
-  composes: pull--1col from global;
+  composes: push--3col from global;
+  composes: pull--0col from global;
   display: flex;
   align-items: center;
 }
@@ -47,4 +53,5 @@
 .nav_home {
   composes: push--1col from global;
   composes: pull--1col from global;
+  margin-top: 1em;
 }
