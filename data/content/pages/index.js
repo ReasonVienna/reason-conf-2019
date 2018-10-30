@@ -54,6 +54,11 @@ const coc = {
   title: "Code of Conduct"
 };
 
+const cfp = {
+  id: "cfp",
+  title: "Call for Papers"
+};
+
 const viennaGuide = [
   {
     id: "vienna-guide/food",
@@ -89,5 +94,6 @@ module.exports = [
   coc,
   imprint,
   contact,
+  cfp,
   ...viennaGuide
 ];
