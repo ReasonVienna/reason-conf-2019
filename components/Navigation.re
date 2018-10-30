@@ -58,6 +58,14 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
               {s("About")}
             </Link>
           </li>
+          <li className=style##listItem>
+            <a
+              href="https://discord.gg/5Mtj7rx"
+              target="_blank"
+              className=style##link>
+              {s("Chat")}
+            </a>
+          </li>
           <li className=style##listItemBuy>
             <a
               href="https://ti.to/reason-conf/2019"
