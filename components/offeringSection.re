@@ -29,7 +29,7 @@ let make = _children => {
             <p>
               {
                 {js|
-                The first day is dedicated to different workshops for different skill levels and topics. There are beginner friendly workshops about Reason and ReasonReact and also more advanced workshops about GraphQL and OCaml. Our workshop leaders are more experienced Reason / OCaml users and Reason core team members. Check the ticket section for details.
+                The first day is dedicated to different workshops for different skill levels and topics. There are beginner friendly workshops about Reason and ReasonReact as well as more advanced workshops about GraphQL and OCaml. Our workshop leaders are more experienced Reason / OCaml users and Reason core team members. Check the ticket section for details.
               |js}
                 |> s
               }
