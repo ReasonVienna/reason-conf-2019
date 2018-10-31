@@ -11,7 +11,7 @@ let make = _children => {
       <div className=style##inner>
         <div className="container">
           <div className="grid--4col push--1col">
-            <h1 className=style##heading> {"Tickets" |> s} </h1>
+            <h1 id="tickets" className=style##heading> {"Tickets" |> s} </h1>
           </div>
           <div className="grid--7col pull--1col">
             {
