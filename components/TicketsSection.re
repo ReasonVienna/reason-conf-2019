@@ -10,10 +10,10 @@ let make = _children => {
     <section className=style##root>
       <div className=style##inner>
         <div className="container">
-          <div className="grid--4col">
+          <div className="grid--4col push--1col">
             <h1 className=style##heading> {"Tickets" |> s} </h1>
           </div>
-          <div className="grid--8col">
+          <div className="grid--7col pull--1col">
             {
               "We offer free tickets for underrepresented groups. [Apply for a free ticket](https://diversitytickets.org/en/events/265/applications/new)."
               |> md
