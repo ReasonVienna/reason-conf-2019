@@ -59,6 +59,8 @@ let find_opt = (fn, l) =>
   | Not_found => None
   };
 
+let cfpLink = "https://goo.gl/forms/1X7U4grPRs6MYcCh1";
+
 module Organizer = {
   [@bs.module] external style: Js.t({..}) = "./logoRow.module.scss";
 
