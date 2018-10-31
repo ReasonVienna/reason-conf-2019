@@ -54,6 +54,11 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
                </Link>
              </li> */
           <li className=style##listItem>
+            <Link to_="/cfp/" className=style##link ?activeClassName>
+              {s("Call for Papers")}
+            </Link>
+          </li>
+          <li className=style##listItem>
             <Link to_="/about/" className=style##link ?activeClassName>
               {s("About")}
             </Link>
