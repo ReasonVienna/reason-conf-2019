@@ -60,6 +60,7 @@ let find_opt = (fn, l) =>
   };
 
 let cfpLink = "https://goo.gl/forms/1X7U4grPRs6MYcCh1";
+let discordLink = "https://discord.gg/5Mtj7rx";
 
 module Organizer = {
   [@bs.module] external style: Js.t({..}) = "./logoRow.module.scss";
