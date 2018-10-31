@@ -30,13 +30,18 @@ let make = _children => {
         <nav className=style##additional>
           <ul>
             <li>
+              <a href=Data.discordLink target="_blank">
+                {"Discord Chatroom" |> s}
+              </a>
+            </li>
+            <li>
               <Link to_="/code-of-conduct/"> {"Code of Conduct" |> s} </Link>
             </li>
             <li>
               <Link to_="/terms-of-service/"> {"Terms of Service" |> s} </Link>
             </li>
             <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
-            <li> <a href="/contact/"> {"Contact Us" |> s} </a> </li>
+            <li> <Link to_="/contact/"> {"Contact Us" |> s} </Link> </li>
             <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
           </ul>
         </nav>
@@ -52,7 +57,7 @@ let make = _children => {
         <section className=style##copyright>
           {
             {j|
-ReasonConf is a [not-for-profit conference](/about/) event by ReasonVienna and ReactVienna communities.
+ReasonConf is a [not-for-profit conference](/about/) event by the [Reason Association](https://www.reason-association.org/) and the [ReactVienna](https://www.meetup.com/reactvienna/) community.
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
