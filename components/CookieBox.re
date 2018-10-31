@@ -83,10 +83,10 @@ let make = _children => {
       | Hidden => style##hidden
       };
     <div className>
-      <p className=style##acceptText>
-        {"I accept the use of cookies to analyze site traffic." |> s}
-      </p>
-      {"To find out more, please read our [Privacy Policy](/privacy)" |> md}
+      {
+        "We use cookies to analyze site traffic. \n\nTo find out more, please read our [Privacy Policy](/privacy)"
+        |> md
+      }
       <Button onClick={_evt => self.send(Agrees)}> {"Accept" |> s} </Button>
       <Button onClick={_evt => self.send(Declines)}>
         {"Decline" |> s}
