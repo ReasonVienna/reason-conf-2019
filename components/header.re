@@ -36,7 +36,7 @@ let make = (~pageType, _children) => {
               <p className=style##description>
                 <strong>
                   {
-                    {j|The official ReasonML conference for web developers & OCaml enthusiasts|j}
+                    {j|The ReasonML conference for web developers & OCaml enthusiasts|j}
                     |> s
                   }
                 </strong>
