@@ -64,10 +64,7 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
             </Link>
           </li>
           <li className=style##listItemBuy>
-            <a
-              href="https://ti.to/reason-conf/2019"
-              target="_blank"
-              className=?ticketsClassName>
+            <a href="/#tickets" className=?ticketsClassName>
               {s("Buy a ticket")}
             </a>
           </li>
