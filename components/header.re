@@ -46,7 +46,12 @@ let make = (~pageType, _children) => {
                   {{j|11–13 April 2019|j} |> s}
                 </time>
               </h2>
-              <p className=style##location> {"Vienna, Austria" |> s} </p>
+              <a
+                className=style##location
+                href="https://goo.gl/maps/AGAAyPGReTm"
+                target="_blank">
+                {"WU Campus, Vienna, Austria" |> s}
+              </a>
             </div>,
           )
         }
