@@ -2,8 +2,6 @@ open Util;
 
 module Link = ReactRouterDom.Link;
 
-[@bs.module] external style: Js.t({..}) = "./attendees.module.scss";
-
 [@bs.module]
 external impacthubPath: string = "../assets/img/impacthub-path.jpg";
 
@@ -27,7 +25,7 @@ let make = _children => {
   render: _self =>
     <section>
       <h1 id="top"> {"For Attendees" |> s} </h1>
-      <main className="leadText">
+      <main>
         {
           {js|
 ReasonConf is a 3-day event and it will take place at two different
@@ -77,7 +75,6 @@ We'll provide you with tables, chairs, power outlets etc. Please bring your lapt
         <section className="grid--4col">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.3678616032244!2d16.343639751551496!3d48.199529954720454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d078cbc5cf79b%3A0x3e9197850789a772!2sImpact+Hub+Vienna!5e0!3m2!1sen!2sat!4v1520961144665"
-            className=style##map
           />
         </section>
         <div className="grid--2col" />
@@ -110,7 +107,6 @@ Vienna.
         <section className="grid--4col">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.399509173125!2d16.369843464946502!3d48.198920303474864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0782e6d2964f%3A0x188304c94c34f778!2sDomed+hall+of+the+Vienna+University+of+Technology!5e0!3m2!1sen!2sat!4v1520960925818"
-            className=style##map
           />
         </section>
       </section>
@@ -139,19 +135,18 @@ The after party on day 2 will take place at Cafe Leopold. You can get food and d
         <section className="grid--4col">
           <iframe
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJby9pPJAHbUcRd37S8sX_eSQ&key=AIzaSyDoRypIIXOZYLExH-dx-xpi_dhpxtCnwo0\n"
-            className=style##map
           />
         </section>
       </section>
-      <h2 id="sunday-dinner-venue"> {"Sunday Dinner Venue" |> s} </h2>
-      <main>
-        {
-          {js|
-After the official end of the conference we suggest to gather at a Viennese wine tavern (Heuriger). You can get food and drinks there.
-      |js}
-          |> md
-        }
-      </main>
+      /* <h2 id="sunday-dinner-venue"> {"Sunday Dinner Venue" |> s} </h2>
+               <main>
+                 {
+                   {js|
+         After the official end of the conference we suggest to gather at a Viennese wine tavern (Heuriger). You can get food and drinks there.
+               |js}
+                   |> md
+                 }
+               </main> */
       <section className="grid--6col grid grid_6cols">
         <section className="grid--2col">
           {
@@ -165,7 +160,6 @@ After the official end of the conference we suggest to gather at a Viennese wine
         <section className="grid--4col">
           <iframe
             src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJbe4fpu8IbUcR8lRIFVMXEQ4&key=AIzaSyDoRypIIXOZYLExH-dx-xpi_dhpxtCnwo0"
-            className=style##map
           />
         </section>
       </section>
@@ -203,40 +197,40 @@ The border station between Vienna and VIE airport is called **Wien Schwechat**.
           |> md
         }
       </main>
-      <h2 id="journey"> {"Journey" |> s} </h2>
-      <main>
-        {
-          {js|### Airport VIE -> ImpactHub (Workshop)
+      /* <h2 id="journey"> {"Journey" |> s} </h2>
+               <main>
+                 {
+                   {js|### Airport VIE -> ImpactHub (Workshop)
 
-**FROM:** Flughafen Wien / **TO:** Wien Zieglergasse U3
+         **FROM:** Flughafen Wien / **TO:** Wien Zieglergasse U3
 
-Note: Never use the CAT train, they cost 5 times more and are only 5-8 min faster.
+         Note: Never use the CAT train, they cost 5 times more and are only 5-8 min faster.
 
-- Go to the train station located at the airport
-- Check the monitor for a train stopping at WIEN MITTE (usually S7 or some R train)
-- Go to the ticket machine and buy a one-way ticket for Vienna Kernzone 100 (make sure to validate it during purchase)
-- Buy a ticket to WIEN MITTE, but make sure to **check the extra option** which limits the ticket to the city border
-- Take the train to WIEN MITTE, there you will find the U3 subway (orange marks)
-- Take the U3 subway marked with the direction OTTAKRING
-- Get out at station ZIEGLERGASSE
-- From Zieglergasse, it's a [5 minutes walk to the venue](https://www.google.at/maps/dir/Zieglergasse,+Vienna/Impact+Hub+Vienna,+Lindengasse,+Vienna/@48.1978246,16.3449337,17.36z/data=!4m14!4m13!1m5!1m1!1s0x476d078b0e41c487:0x81ce0b32db44873!2m2!1d16.3462028!2d48.1971524!1m5!1m1!1s0x476d078cbc5cf79b:0x3e9197850789a772!2m2!1d16.3458338!2d48.1995264!3e2)
+         - Go to the train station located at the airport
+         - Check the monitor for a train stopping at WIEN MITTE (usually S7 or some R train)
+         - Go to the ticket machine and buy a one-way ticket for Vienna Kernzone 100 (make sure to validate it during purchase)
+         - Buy a ticket to WIEN MITTE, but make sure to **check the extra option** which limits the ticket to the city border
+         - Take the train to WIEN MITTE, there you will find the U3 subway (orange marks)
+         - Take the U3 subway marked with the direction OTTAKRING
+         - Get out at station ZIEGLERGASSE
+         - From Zieglergasse, it's a [5 minutes walk to the venue](https://www.google.at/maps/dir/Zieglergasse,+Vienna/Impact+Hub+Vienna,+Lindengasse,+Vienna/@48.1978246,16.3449337,17.36z/data=!4m14!4m13!1m5!1m1!1s0x476d078b0e41c487:0x81ce0b32db44873!2m2!1d16.3462028!2d48.1971524!1m5!1m1!1s0x476d078cbc5cf79b:0x3e9197850789a772!2m2!1d16.3458338!2d48.1995264!3e2)
 
-### Wien Hauptbahnhof (main trainstation) -> ImpactHub (Workshop)
+         ### Wien Hauptbahnhof (main trainstation) -> ImpactHub (Workshop)
 
-**FROM:** Wien Hauptbahnhof / **TO:** Wien Zieglergasse U3
+         **FROM:** Wien Hauptbahnhof / **TO:** Wien Zieglergasse U3
 
-- Go to the subway section and look out for a red U1 sign
-- Find a ticket machine and get a 1-way-ticket (make sure to validate the ticket)
-- Take the U1 subway marked with the direction WIEN LEOPOLDAU
-- Get out at STEPHANSPLATZ (U3 / U1), switch to the U3 subway (orange marks)
-- Take the U3 subway marked with the direction OTTAKRING
-- Get out at station ZIEGLERGASSE
-- From Zieglergasse, it's a [5 minutes walk to the venue](https://www.google.at/maps/dir/Zieglergasse,+Vienna/Impact+Hub+Vienna,+Lindengasse,+Vienna/@48.1978246,16.3449337,17.36z/data=!4m14!4m13!1m5!1m1!1s0x476d078b0e41c487:0x81ce0b32db44873!2m2!1d16.3462028!2d48.1971524!1m5!1m1!1s0x476d078cbc5cf79b:0x3e9197850789a772!2m2!1d16.3458338!2d48.1995264!3e2)
+         - Go to the subway section and look out for a red U1 sign
+         - Find a ticket machine and get a 1-way-ticket (make sure to validate the ticket)
+         - Take the U1 subway marked with the direction WIEN LEOPOLDAU
+         - Get out at STEPHANSPLATZ (U3 / U1), switch to the U3 subway (orange marks)
+         - Take the U3 subway marked with the direction OTTAKRING
+         - Get out at station ZIEGLERGASSE
+         - From Zieglergasse, it's a [5 minutes walk to the venue](https://www.google.at/maps/dir/Zieglergasse,+Vienna/Impact+Hub+Vienna,+Lindengasse,+Vienna/@48.1978246,16.3449337,17.36z/data=!4m14!4m13!1m5!1m1!1s0x476d078b0e41c487:0x81ce0b32db44873!2m2!1d16.3462028!2d48.1971524!1m5!1m1!1s0x476d078cbc5cf79b:0x3e9197850789a772!2m2!1d16.3458338!2d48.1995264!3e2)
 
-|js}
-          |> md
-        }
-      </main>
+         |js}
+                   |> md
+                 }
+               </main> */
       <h2 id="internet-and-sim-cards"> {"Internet & SIM cards" |> s} </h2>
       <main>
         {
@@ -253,119 +247,120 @@ You can also top up the prepaid cards at most super markets like Billa, Spar, Me
           |> md
         }
       </main>
-      <h2 id="food-and-catering"> {"Food & Catering" |> s} </h2>
-      <main>
-        {
-          {js|
-During all conference days, we will provide you with lunch, coffee and snacks.
-Also to give you a better idea what to expect, here are the lunch menues for each day:
+      /* <h2 id="food-and-catering"> {"Food & Catering" |> s} </h2>
+               <main>
+                 {
+                   {js|
+         During all conference days, we will provide you with lunch, coffee and snacks.
+         Also to give you a better idea what to expect, here are the lunch menues for each day:
 
-### Day 1 Menu (Workshop)
+         ### Day 1 Menu (Workshop)
 
-Catering is provided by organic kitchen [Issmich](https://www.issmich.at/#home).
+         Catering is provided by organic kitchen [Issmich](https://www.issmich.at/#home).
 
-**Morning (09:00 - 10:00)**
+         **Morning (09:00 - 10:00)**
 
-Coffee & Tea, Refreshments, Danish pastries (sweet & spicy), fruits
+         Coffee & Tea, Refreshments, Danish pastries (sweet & spicy), fruits
 
-**Lunch (13:00 - 14:00)**
+         **Lunch (13:00 - 14:00)**
 
-- Meal
-  - Mediterranean citrus vegetables with Couscous
-  - Indian Curry with Rice
-  - Red wine goulash with Baguette
-  - Maroccan chicken stew with Couscous
+         - Meal
+           - Mediterranean citrus vegetables with Couscous
+           - Indian Curry with Rice
+           - Red wine goulash with Baguette
+           - Maroccan chicken stew with Couscous
 
-- Dessert
-  - Apple Cake
-  - Dark chocolate cake
+         - Dessert
+           - Apple Cake
+           - Dark chocolate cake
 
 
-### Day 2 Menu (Conference)
+         ### Day 2 Menu (Conference)
 
-Catering is provided by our organic & vegetarian friends: [Gaumenfreundinnen](https://www.gaumenfreundinnen.com/).
-Also the whole day will be supported by the great coffee makers [Kaffemik](https://www.kaffemik.at/) to fuel everyone
-with very high quality coffee.
+         Catering is provided by our organic & vegetarian friends: [Gaumenfreundinnen](https://www.gaumenfreundinnen.com/).
+         Also the whole day will be supported by the great coffee makers [Kaffemik](https://www.kaffemik.at/) to fuel everyone
+         with very high quality coffee.
 
-**Morning (09:00 - 10:00)**
+         **Morning (09:00 - 10:00)**
 
-- Rolls with date-and-cheese spread
-- Little danishes filled with apricot or plum jam
+         - Rolls with date-and-cheese spread
+         - Little danishes filled with apricot or plum jam
 
-**Snacks (10:45 - 11:15)**
+         **Snacks (10:45 - 11:15)**
 
-- Various fruits, bananas, apples, pears, strawberries
-- Trail mix with nuts and dried fruits
+         - Various fruits, bananas, apples, pears, strawberries
+         - Trail mix with nuts and dried fruits
 
-**Lunch (12:45 - 14:15):**
+         **Lunch (12:45 - 14:15):**
 
-- Bagels
-  - ... filled with humus, basil and grilled aubergines
-  - ... filled with red beets / horseradish spread and red cabbage
-- Salads
-  - Waldorfsalad with walnuts
-  - Colorful apple / vegetable / lentils salad with dijon dressing
-- Meals
-  - Moroccan Tajine with chickpeas and dates
-  - Spinach spaetzle with cheese sauce
+         - Bagels
+           - ... filled with humus, basil and grilled aubergines
+           - ... filled with red beets / horseradish spread and red cabbage
+         - Salads
+           - Waldorfsalad with walnuts
+           - Colorful apple / vegetable / lentils salad with dijon dressing
+         - Meals
+           - Moroccan Tajine with chickpeas and dates
+           - Spinach spaetzle with cheese sauce
 
-**Cake Break! (16:00 - 16:30)**
+         **Cake Break! (16:00 - 16:30)**
 
-- Nut-chocolate brownies
-- Rhubarb streusel cake
+         - Nut-chocolate brownies
+         - Rhubarb streusel cake
 
-**Evening Snacks (18:00 - 18:30)**
+         **Evening Snacks (18:00 - 18:30)**
 
-- Mini cinnamon buns
-- Rolls with orientalic lentils spread and cucumber
-- Rolls with soft goat cheese and pink pepper
+         - Mini cinnamon buns
+         - Rolls with orientalic lentils spread and cucumber
+         - Rolls with soft goat cheese and pink pepper
 
-### Day 3 Menu (Hackathon)
+         ### Day 3 Menu (Hackathon)
 
-This day is more casual and we will provide basic needs, like coffee, refreshments and
-some snacks. Since the schedule is very relaxed, feel free to discover the vast amount of
-food places, etc. around the venue as well.
+         This day is more casual and we will provide basic needs, like coffee, refreshments and
+         some snacks. Since the schedule is very relaxed, feel free to discover the vast amount of
+         food places, etc. around the venue as well.
 
-**Lunch (13:00 - 14:00)**
+         **Lunch (13:00 - 14:00)**
 
-All kinds of Pizzas (also vegetarian and vegan)
-        |js}
-          |> md
-        }
-      </main>
-      <h2 id="exploring-vienna"> {"Exploring Vienna" |> s} </h2>
-      <main>
-        {
-          {js|
-Vienna has a lot to offer, especially during summer. We know it's
-not always easy to discover a new city as a foreigner, so our locals compiled
-a nice list to get you started:
+         All kinds of Pizzas (also vegetarian and vegan)
+                 |js}
+                   |> md
+                 }
+               </main>
+               <h2 id="exploring-vienna"> {"Exploring Vienna" |> s} </h2>
+               <main>
+                 {
+                   {js|
+         Vienna has a lot to offer, especially during summer. We know it's
+         not always easy to discover a new city as a foreigner, so our locals compiled
+         a nice list to get you started:
 
-|js}
-          |> md
-        }
-        <ul>
-          <li> <Link to_="/vienna-guide/food"> {"Food" |> s} </Link> </li>
-          <li>
-            <Link to_="vienna-guide/drinks-and-bars">
-              {"Drinks & Bars" |> s}
-            </Link>
-          </li>
-          <li>
-            <Link to_="/vienna-guide/coffee">
-              {"Good Coffee Places" |> s}
-            </Link>
-          </li>
-          <li>
-            <Link to_="/vienna-guide/culture"> {"Culture" |> s} </Link>
-          </li>
-          <li>
-            <Link to_="/vienna-guide/fun-and-outside">
-              {"Fun & Outside" |> s}
-            </Link>
-          </li>
-        </ul>
-      </main>
+         |js}
+                   |> md
+                 }
+                 <ul>
+                   <li> <Link to_="/vienna-guide/food"> {"Food" |> s} </Link> </li>
+                   <li>
+                     <Link to_="vienna-guide/drinks-and-bars">
+                       {"Drinks & Bars" |> s}
+                     </Link>
+                   </li>
+                   <li>
+                     <Link to_="/vienna-guide/coffee">
+                       {"Good Coffee Places" |> s}
+                     </Link>
+                   </li>
+                   <li>
+                     <Link to_="/vienna-guide/culture"> {"Culture" |> s} </Link>
+                   </li>
+                   <li>
+                     <Link to_="/vienna-guide/fun-and-outside">
+                       {"Fun & Outside" |> s}
+                     </Link>
+                   </li>
+                 </ul>
+               </main> */
+      <div />
     </section>,
 };
 
