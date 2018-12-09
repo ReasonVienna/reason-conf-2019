@@ -37,12 +37,12 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
                {s("Speakers")}
              </Link>
            </li> */
-        /* <li className=style##listItem>
-             <Link to_="/attendees/" className=style##link ?activeClassName>
-               {s("For Attendees")}
-             </Link>
-           </li> */
 
+          <li className=style##listItem>
+            <Link to_="/attendees/" className=style##link ?activeClassName>
+              {s("For Attendees")}
+            </Link>
+          </li>
           <li className=style##listItem>
             <Link to_="/sponsors/" className=style##link ?activeClassName>
               {s("For Sponsors")}
