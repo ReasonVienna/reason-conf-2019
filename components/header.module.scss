@@ -11,6 +11,15 @@
   margin: 0;
 }
 
+.location,
+.location:hover,
+.location:visited,
+.location:active {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(transparent, white 1px, transparent 1px);
+}
+
 .link_home {
   grid-column: 1 / 4;
   display: block;
