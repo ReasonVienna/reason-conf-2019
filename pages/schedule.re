@@ -58,6 +58,8 @@ Before this workshop, attendees are expected to have good working familiarity wi
 |js}
         ->md
       </p>
+      <h3> "OCaml Workshop"->s </h3>
+      <p> {js|Coming soon …|js}->md </p>
       <h3> "Reason & GraphQL Workshop"->s </h3>
       <p>
         {js|
@@ -67,6 +69,8 @@ We don’t know what the conference audience wants. There are two styles of work
 
 - “Clojure” style: A much more limited scope but much deeper approach. The audience starts with `mkdir my_new_project`  and types in everything from the ground up. They naturally leave with a tiny, limited app but know everything about how it’s built and put together. They may be unclear on how to do the next steps (authentication, db interaction, etc.). Nearly no “magic at a distance,” and members may feel much more confident in their ability to overcome challenges on their own afterwards.
 - “Rails” style: A much higher-view - steps of the workshop are in a git-checkoutable form, and the workshop alternates between checkout-next-step, explain what’s going on and the motivations, and then hacking on a specific task for the step. In this case the audience should be clear on how things fit together and how to build on it, but not necessarily how it all works under the hood, and may have more problems debugging when things go wrong (definitely going to be “magic at a distance” here, but could be exciting enough to get member to continue exploring deeper at home afterwards), and there’ll be a lot of emphasis on using the Discord channel.
+
+2 months before the workshop we send out a survey to everyone who bought a ticket and based on that one or the other will take place.
 
 #### Expected experience level in both cases:
 
@@ -151,8 +155,6 @@ Finally, we’ll explore what schema stitching might look like, so that we can e
 |js}
         ->md
       </p>
-      <h3> "OCaml Workshop"->s </h3>
-      <p> {js|Coming soon …|js}->md </p>
     </div>,
 };
 
