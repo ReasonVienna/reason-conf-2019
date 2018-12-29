@@ -18,7 +18,7 @@ module.exports = {
     // }),
     "/": page("page_index.bs"),
     // speakers: page("speakers.bs"),
-    // schedule: page("schedule.bs"),
+    schedule: page("schedule.bs"),
     attendees: page("attendees.mdx"),
     sponsors: page("sponsors.mdx"),
     about: page("about.mdx"),
