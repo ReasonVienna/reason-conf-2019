@@ -262,7 +262,6 @@ instances of local state that can be easily composed.
     name: "Laura Gaetano",
     company: "Travis Foundation",
     imgUrl: lauraGaetanoImg,
-    /* TODO: CHECK BACK WITH LAURA TO UPDATE THE DESCRIPTION */
     description: {j|
 Laura is a manager at Travis Foundation and the
 organiser of [Rails Girls Summer of Code](https://railsgirlssummerofcode.org/) --

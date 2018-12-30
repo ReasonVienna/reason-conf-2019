@@ -44,6 +44,11 @@ h2 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 p {
   margin-top: 0;
 }
@@ -181,7 +186,7 @@ article {
   padding-bottom: 60px;
 
   // Make first paragraph on content pages use leadText styles
-  p:first-of-type {
+  div > p:first-of-type {
     @extend .leadText;
   }
 
