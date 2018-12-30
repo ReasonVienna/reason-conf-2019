@@ -780,7 +780,7 @@ module Tier = {
       id: "gold",
       name: "Gold Sponsor",
       cost: 7500,
-      amount: 2,
+      amount: 1,
       description: {js|
 Same as Catering plus...
 
@@ -810,7 +810,7 @@ Same as Supporter plus...
       id: "supporter",
       name: "Supporter",
       cost: 1000,
-      amount: 10,
+      amount: 9,
       description: {js|
 - Logo on the website in the sponsor's section
 - Mention on twitter.com
@@ -953,6 +953,9 @@ and Android/iOS.|js},
 
 module Partners = {
   [@bs.module]
+  external ahrefsLogo: string = "../assets/img/partners/ahrefs-logo.png";
+
+  [@bs.module]
   external accentureLogo: string = "../assets/img/partners/accenture-logo.svg";
 
   [@bs.module]
@@ -972,7 +975,20 @@ module Partners = {
     tier: Tier.tier,
   };
 
-  let sponsors = [||];
+  let sponsors = [|
+    {
+      name: "ahrefs",
+      logoUrl: ahrefsLogo,
+      href: "https://ahrefs.com/",
+      tier: Tier.Gold,
+    },
+    {
+      name: "g2i",
+      logoUrl: g2iLogo,
+      href: "https://g2i.co/",
+      tier: Tier.Supporter,
+    },
+  |];
 
   let partners = [||];
 };

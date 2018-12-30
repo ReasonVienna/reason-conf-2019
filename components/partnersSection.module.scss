@@ -17,6 +17,8 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
+  grid-column-start: 2;
+  grid-column-end: 12;
 
   a {
     display: block;
