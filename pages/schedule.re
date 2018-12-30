@@ -15,8 +15,26 @@ let make = _children => {
         "All workshops will be held on the first day from 9:30am to about 5pm."
         ->s
       </p>
-      <h2> "Workshops"->s </h2>
-      <h3> "Beginner Reason & ReasonReact Workshop"->s </h3>
+      <ul />
+      <li>
+        <a href="#beginner-reason-and-reasonreact-workshop">
+          "Beginner Reason & ReasonReact Workshop"->s
+        </a>
+      </li>
+      <li>
+        <a href="#advanced-reasonreact-workshop">
+          "Advanced ReasonReact Workshop"->s
+        </a>
+      </li>
+      <li> <a href="#ocaml-workshop"> "OCaml Workshop"->s </a> </li>
+      <li>
+        <a href="#reason-and-graphql-workshop">
+          "Reason & GraphQL Workshop"->s
+        </a>
+      </li>
+      <h3 id="beginner-reason-and-reasonreact-workshop">
+        "Beginner Reason & ReasonReact Workshop"->s
+      </h3>
       <p>
         {js|
 ReasonML is a new cool JavaScript-like language with a strong type-system and first level React bindings. As with every new language, there comes a new ecosystem and unfamiliar concepts with it.
@@ -39,7 +57,9 @@ In the end, ambitious attendees will be able to integrate Reason React component
       |js}
         ->md
       </p>
-      <h3> "Advanced ReasonReact Workshop"->s </h3>
+      <h3 id="advanced-reasonreact-workshop">
+        "Advanced ReasonReact Workshop"->s
+      </h3>
       <p>
         {js|
 ReasonReact is the default set of bindings to ReactJS in Reason. The bindings have popularized the concept of reducers for controlling local state as well as pushing functional approches to ReactJS design patterns.
@@ -58,9 +78,11 @@ Before this workshop, attendees are expected to have good working familiarity wi
 |js}
         ->md
       </p>
-      <h3> "OCaml Workshop"->s </h3>
+      <h3 id="ocaml-workshop"> "OCaml Workshop"->s </h3>
       <p> {js|Coming soon …|js}->md </p>
-      <h3> "Reason & GraphQL Workshop"->s </h3>
+      <h3 id="reason-and-graphql-workshop">
+        "Reason & GraphQL Workshop"->s
+      </h3>
       <p>
         {js|
 #### Why two proposals?
