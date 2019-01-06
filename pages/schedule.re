@@ -16,7 +16,27 @@ let make = _children => {
         ->s
       </p>
       <h2> "Workshops"->s </h2>
-      <h3> "Beginner Reason & ReasonReact Workshop"->s </h3>
+      <ul>
+        <li>
+          <a href="#beginner-reason-and-reasonreact-workshop">
+            "Beginner Reason & ReasonReact Workshop"->s
+          </a>
+        </li>
+        <li>
+          <a href="#advanced-reasonreact-workshop">
+            "Advanced ReasonReact Workshop"->s
+          </a>
+        </li>
+        <li> <a href="#ocaml-workshop"> "OCaml Workshop"->s </a> </li>
+        <li>
+          <a href="#reason-and-graphql-workshop">
+            "Reason & GraphQL Workshop"->s
+          </a>
+        </li>
+      </ul>
+      <h3 id="beginner-reason-and-reasonreact-workshop">
+        "Beginner Reason & ReasonReact Workshop"->s
+      </h3>
       <span className=style##workshopHostedBy>
         "hosted by Reason Association"->s
       </span>
@@ -42,7 +62,9 @@ In the end, ambitious attendees will be able to integrate Reason React component
       |js}
         ->md
       </p>
-      <h3> "Advanced ReasonReact Workshop"->s </h3>
+      <h3 id="advanced-reasonreact-workshop">
+        "Advanced ReasonReact Workshop"->s
+      </h3>
       <span className=style##workshopHostedBy>
         "hosted by Ricky Vetter"->s
       </span>
@@ -64,12 +86,14 @@ Before this workshop, attendees are expected to have good working familiarity wi
 |js}
         ->md
       </p>
-      <h3> "OCaml Workshop"->s </h3>
+      <h3 id="ocaml-workshop"> "OCaml Workshop"->s </h3>
       <span className=style##workshopHostedBy>
         "hosted by OCaml Labs"->s
       </span>
       <p> {js|Coming soon …|js}->md </p>
-      <h3> "Reason & GraphQL Workshop"->s </h3>
+      <h3 id="reason-and-graphql-workshop">
+        "Reason & GraphQL Workshop"->s
+      </h3>
       <span className=style##workshopHostedBy>
         "hosted by Sean Grove"->s
       </span>
