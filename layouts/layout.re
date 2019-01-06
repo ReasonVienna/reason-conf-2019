@@ -41,10 +41,10 @@ let make = (~location: location, ~file: file, children) => {
     let {title, description, keywords} = file;
 
     <>
-      <Antwar.Interactive
-        container={<GoogleAnalyticsLoader />}
-        id="components/GoogleAnalyticsLoader.re.js"
-      />
+      /* <Antwar.Interactive
+           container={<CookieBox />}
+           id="components/CookieBox.re.js"
+         /> */
       <Meta siteName="ReasonConf" title description keywords ogImage />
       {
         switch (pageType) {

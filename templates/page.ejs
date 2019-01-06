@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" <%- htmlWebpackPlugin.options.context.helmet.htmlAttributes %>>
+<html lang="en" <%- htmlWebpackPlugin.options.context.helmet.htmlAttributes %>
+  >
   <head>
-    <%- htmlWebpackPlugin.options.context.helmet.title %>
-    <%- htmlWebpackPlugin.options.context.helmet.meta %>
-    <%- htmlWebpackPlugin.options.context.helmet.link %>
-    <%- htmlWebpackPlugin.options.context.helmet.style %>
+    <%- htmlWebpackPlugin.options.context.helmet.title %> <%-
+    htmlWebpackPlugin.options.context.helmet.meta %> <%-
+    htmlWebpackPlugin.options.context.helmet.link %> <%-
+    htmlWebpackPlugin.options.context.helmet.style %>
     <link rel="stylesheet" type="text/css" href="https://css.tito.io/v1.1" />
     <% for (var file of htmlWebpackPlugin.options.context.cssFiles) { %>
-      <link href="<%= file %>" rel="stylesheet">
-    <% } %>
-
-    <% if (process.env.NODE_ENV === "production") { %>
-      <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2ff99718c52457a4fa5219f66/f443b5043bc18f7a252da6d56.js");</script>
+    <link href="<%= file %>" rel="stylesheet" />
+    <% } %> <% if (process.env.NODE_ENV === "production") { %>
+    <script id="mcjs">
+      !(function(c, h, i, m, p) {
+        (m = c.createElement(h)),
+          (p = c.getElementsByTagName(h)[0]),
+          (m.async = 1),
+          (m.src = i),
+          p.parentNode.insertBefore(m, p);
+      })(
+        document,
+        "script",
+        "https://chimpstatic.com/mcjs-connected/js/users/2ff99718c52457a4fa5219f66/f443b5043bc18f7a252da6d56.js"
+      );
+    </script>
     <% } %>
   </head>
-  <body <%- htmlWebpackPlugin.options.context.helmet.bodyAttributes %>>
-    <%- webpackConfig.html %>
-
-    <%- htmlWebpackPlugin.options.context.helmet.noscript %>
-    <%- htmlWebpackPlugin.options.context.helmet.script %>
-    <% for (var script of htmlWebpackPlugin.options.context.jsFiles) { %>
-      <script src="<%= script %>" type="text/javascript"></script>
+  <body <%- htmlWebpackPlugin.options.context.helmet.bodyAttributes %>
+    > <%- webpackConfig.html %> <%-
+    htmlWebpackPlugin.options.context.helmet.noscript %> <%-
+    htmlWebpackPlugin.options.context.helmet.script %> <% for (var script of
+    htmlWebpackPlugin.options.context.jsFiles) { %>
+    <script src="<%= script %>" type="text/javascript"></script>
     <% } %>
-    <script src='https://js.tito.io/v1' async></script>
+    <script src="https://js.tito.io/v1" async></script>
+    <script>
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://www.googletagmanager.com/gtag/js?id=UA-128192260-1";
+      document.body.appendChild(script);
 
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-128192260-1", {
+        anonymize_ip: true,
+        cookie_expires: 0
+      });
+    </script>
   </body>
 </html>
