@@ -17,6 +17,9 @@ let make = _children => {
       </p>
       <h2> "Workshops"->s </h2>
       <h3> "Beginner Reason & ReasonReact Workshop"->s </h3>
+      <span className=style##workshopHostedBy>
+        "hosted by Reason Association"->s
+      </span>
       <p>
         {js|
 ReasonML is a new cool JavaScript-like language with a strong type-system and first level React bindings. As with every new language, there comes a new ecosystem and unfamiliar concepts with it.
@@ -40,6 +43,9 @@ In the end, ambitious attendees will be able to integrate Reason React component
         ->md
       </p>
       <h3> "Advanced ReasonReact Workshop"->s </h3>
+      <span className=style##workshopHostedBy>
+        "hosted by Ricky Vetter"->s
+      </span>
       <p>
         {js|
 ReasonReact is the default set of bindings to ReactJS in Reason. The bindings have popularized the concept of reducers for controlling local state as well as pushing functional approches to ReactJS design patterns.
@@ -59,8 +65,14 @@ Before this workshop, attendees are expected to have good working familiarity wi
         ->md
       </p>
       <h3> "OCaml Workshop"->s </h3>
+      <span className=style##workshopHostedBy>
+        "hosted by OCaml Labs"->s
+      </span>
       <p> {js|Coming soon …|js}->md </p>
       <h3> "Reason & GraphQL Workshop"->s </h3>
+      <span className=style##workshopHostedBy>
+        "hosted by Sean Grove"->s
+      </span>
       <p>
         {js|
 #### Why two proposals?
