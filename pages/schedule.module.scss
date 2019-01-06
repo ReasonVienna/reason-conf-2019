@@ -11,6 +11,11 @@ $padding: 25px 15px;
   }
 }
 
+.workshopHostedBy {
+  margin-bottom: 1rem;
+  color: $primaryColor;
+}
+
 .entries {
   composes: grid from global;
   composes: grid_12 from global;
