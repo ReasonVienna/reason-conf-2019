@@ -1017,7 +1017,7 @@ congratulations to the authors and maintainers of Reason!
     {
       name: {j|Keira|j},
       handle: "keirasaid",
-      imgSrc: {j|https://pbs.twimg.com/profile_images/1040753394346995712/HBEIDIZr_bigger.jpg|j},
+      imgSrc: {j|https://pbs.twimg.com/profile_images/1081301106653683712/cQcUaUpA_bigger.jpg|j},
       content: {j|
 To the core contributors who came and tirelessly listened, helped, informed,
 debated, taught, demonstrated, and were generally awesome - thank you.
@@ -1039,7 +1039,7 @@ I’ve never seen such a nice community :) @reasonml
     {
       name: {j|Johann Sonntagbauer|j},
       handle: "johann_sonntag",
-      imgSrc: {j|https://pbs.twimg.com/profile_images/822082543101079552/e-TCxTTl_bigger.jpg|j},
+      imgSrc: {j|https://pbs.twimg.com/profile_images/1076131606979641344/KZkFBvWQ_bigger.jpg|j},
       content: {j|
 #ReasonConf was an inspiring experience and not a conference in traditional
 sense. No advertising, simply telling the truth, sharing stories and trying to
