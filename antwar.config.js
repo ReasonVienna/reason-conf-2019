@@ -20,6 +20,11 @@ module.exports = {
     // speakers: page("speakers.bs"),
     schedule: page("schedule.bs"),
     attendees: page("attendees.mdx"),
+    "attendees/accomodation": page("attendees/accomodation.mdx"),
+    "attendees/activities": page("attendees/activities.mdx"),
+    "attendees/food": page("attendees/food.mdx"),
+    "attendees/internet": page("attendees/internet.mdx"),
+    "attendees/transport": page("attendees/transport.mdx"),
     sponsors: page("sponsors.mdx"),
     about: page("about.mdx"),
     privacy: page("privacy.mdx"),
@@ -28,11 +33,6 @@ module.exports = {
     cfp: page("cfp.mdx"),
     "code-of-conduct": page("coc.mdx"),
     "terms-of-service": page("terms_of_service.mdx")
-    // "vienna-guide/food": page("vienna-guide/food.bs"),
-    // "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
-    // "vienna-guide/culture": page("vienna-guide/culture.bs"),
-    // "vienna-guide/drinks-and-bars": page("vienna-guide/drinksAndBars.bs"),
-    // "vienna-guide/fun-and-outside": page("vienna-guide/funAndOutside.bs")
   }
 };
 

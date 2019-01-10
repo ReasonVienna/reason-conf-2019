@@ -59,29 +59,6 @@ const cfp = {
   title: "Call for Papers"
 };
 
-const viennaGuide = [
-  {
-    id: "vienna-guide/food",
-    title: "Vienna Guide"
-  },
-  {
-    id: "vienna-guide/coffee",
-    title: "Vienna Guide"
-  },
-  {
-    id: "vienna-guide/culture",
-    title: "Vienna Guide"
-  },
-  {
-    id: "vienna-guide/drinks-and-bars",
-    title: "Vienna Guide"
-  },
-  {
-    id: "vienna-guide/fun-and-outside",
-    title: "Vienna Guide"
-  }
-];
-
 module.exports = [
   page_index,
   speakers,
@@ -94,6 +71,5 @@ module.exports = [
   coc,
   imprint,
   contact,
-  cfp,
-  ...viennaGuide
+  cfp
 ];
