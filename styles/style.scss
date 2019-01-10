@@ -270,3 +270,10 @@ article {
 .job {
   margin-top: 2em;
 }
+
+.hostedBy {
+  display: block;
+  font-size: medium;
+  font-weight: bold;
+  color: $tertiaryColor;
+}

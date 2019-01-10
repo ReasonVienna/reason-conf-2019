@@ -28,8 +28,8 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
     <nav className=rootClassName>
       <ul className=style##list>
         <li className=style##listItem>
-          <Link to_="/schedule/" className=style##link ?activeClassName>
-            {s("Schedule")}
+          <Link to_="/workshops/" className=style##link ?activeClassName>
+            {s("Workshops")}
           </Link>
         </li>
         /* <li className=style##listItem>

@@ -19,6 +19,7 @@ module.exports = {
     "/": page("page_index.bs"),
     // speakers: page("speakers.bs"),
     schedule: page("schedule.bs"),
+    workshops: page("workshops.mdx"),
     attendees: page("attendees.mdx"),
     "attendees/accomodation": page("attendees/accomodation.mdx"),
     "attendees/activities": page("attendees/activities.mdx"),
