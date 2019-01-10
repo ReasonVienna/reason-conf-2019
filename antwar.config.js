@@ -26,7 +26,7 @@ module.exports = {
     imprint: page("imprint.mdx"),
     contact: page("contact.mdx"),
     cfp: page("cfp.mdx"),
-    "code-of-conduct": page("coc.bs"),
+    "code-of-conduct": page("coc.mdx"),
     "terms-of-service": page("terms_of_service.mdx")
     // "vienna-guide/food": page("vienna-guide/food.bs"),
     // "vienna-guide/coffee": page("vienna-guide/coffee.bs"),
