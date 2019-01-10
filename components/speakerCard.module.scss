@@ -37,7 +37,7 @@
 
   & > img {
     margin-right: 10px;
-    width: 40px;
+    width: 30px;
   }
 
   & > figcaption {
@@ -53,6 +53,10 @@
   .name {
     font-size: 0.85em;
     color: inherit;
+  }
+
+  .company {
+    display: none;
   }
 }
 

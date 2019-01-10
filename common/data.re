@@ -648,31 +648,21 @@ module Timetable = {
     toTime: option(Js.Date.t),
     duration: option(int),
   };
+  type day = {
+    date: Js.Date.t,
+    entries: list(entry),
+  };
+
   let addDuration = (time, duration) =>
     switch (duration) {
     | Some(d) => DateFns.addMinutes(float_of_int(d), time)
     | None => time
     };
-  let day1StartEntry = {
-    let day2Start = Js.Date.fromString("2018-05-11T11:00:00.000+02:00");
-    let duration = Some(60);
-    let fromTime = day2Start;
-    let toTime = Some(addDuration(day2Start, duration));
+  let day1Steps = [
     {
       task: Misc("Doors open, Registration & Editor Setup"),
-      fromTime,
-      toTime,
-      duration,
-    };
-  };
-  let day2StartEntry = {
-    let day2Start = Js.Date.fromString("2018-05-12T11:00:00.000+02:00");
-    let duration = Some(60);
-    let fromTime = day2Start;
-    let toTime = Some(addDuration(day2Start, duration));
-    {task: Misc("Doors open & Registration"), fromTime, toTime, duration};
-  };
-  let day1Steps = [
+      duration: Some(60),
+    },
     {
       task: Workshop([Speaker.seanGrove, Speaker.jaredForsyth]),
       duration: Some(180),
@@ -685,6 +675,7 @@ module Timetable = {
     {task: OpenEnd("Open End until ImpactHub closes"), duration: Some(120)},
   ];
   let day2Steps = [
+    {task: Misc("Doors open & Registration"), duration: Some(60)},
     {task: Talk(Speaker.chengLou), duration: Some(45)},
     {task: Break("Coffee break"), duration: Some(30)},
     {task: Talk(Speaker.cristianoCalcagno), duration: Some(45)},
@@ -703,8 +694,14 @@ module Timetable = {
     {task: Talk(Speaker.jaredForsyth), duration: Some(45)},
     {task: OpenEnd("After Party at Cafe Leopold"), duration: None},
   ];
-  let calcStep = (pre: entry, step: step): entry => {
-    let fromTime = addDuration(pre.fromTime, pre.duration);
+  let day3Steps = [
+    {
+      task: Misc("Doors open, Registration & Editor Setup"),
+      duration: Some(60),
+    },
+    {task: OpenEnd("Enjoy yourself"), duration: None},
+  ];
+  let calcStep = (fromTime: Js.Date.t, step: step): entry => {
     let toTime =
       switch (step.duration) {
       | None => None
@@ -712,53 +709,26 @@ module Timetable = {
       };
     {task: step.task, duration: step.duration, fromTime, toTime};
   };
-  let rec calcTimetable = (pre: entry, steps: list(step)): list(entry) =>
+  let rec calcTimetable =
+          (fromTime: Js.Date.t, steps: list(step)): list(entry) =>
     switch (steps) {
     | [s, ...rest] =>
-      let next = calcStep(pre, s);
-      [next, ...calcTimetable(next, rest)];
+      let next = calcStep(fromTime, s);
+      [
+        next,
+        ...calcTimetable(addDuration(next.fromTime, next.duration), rest),
+      ];
     | [] => []
     };
-  /* This is just for debugging a table,.. also a good inspiration
-     on how to interpret table data */
-  let logTimetable = (table: list(entry)): unit =>
-    List.iter(
-      (r: entry) => {
-        let task =
-          switch (r.task) {
-          | Talk(speaker) => speaker.name
-          | Misc(msg) => msg
-          | Break(msg) => msg
-          | Workshop(speakers) =>
-            speakers
-            |> List.map((speaker: Speaker.t) => speaker.name)
-            |> String.concat(" ")
-          | OpenEnd(msg) => msg
-          };
-        let fromTime = DateFns.format("DD.MM, HH:mm", r.fromTime);
-        let duration =
-          switch (r.duration) {
-          | Some(d) => {j| ($d min)|j}
-          | None => ""
-          };
-        let timeRange =
-          switch (r.toTime) {
-          | Some(time) =>
-            let toTime = DateFns.format("HH:mm", time);
-            {j|$fromTime - $toTime$duration|j};
-          | None => fromTime
-          };
-        ();
-      },
-      table,
-    );
-  let day1Timetable = [
-    day1StartEntry,
-    ...calcTimetable(day2StartEntry, day1Steps),
-  ];
-  let day2Timetable = [
-    day2StartEntry,
-    ...calcTimetable(day2StartEntry, day2Steps),
+
+  /* TODO: Why is it saying 11am +2 */
+  let startDate = Js.Date.fromString("2019-04-11T11:00:00.000+02:00");
+  let day2 = DateFns.addDays(float_of_int(1), startDate);
+  let day3 = DateFns.addDays(float_of_int(2), startDate);
+  let days = [
+    {date: startDate, entries: calcTimetable(startDate, day1Steps)},
+    {date: day2, entries: calcTimetable(day2, day2Steps)},
+    {date: day3, entries: calcTimetable(day3, day3Steps)},
   ];
 };
 

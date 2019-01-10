@@ -3,61 +3,27 @@
 $border: 1px solid lighten($tertiaryColor, 30);
 $padding: 25px 15px;
 
-:root {
-  --padding: 10px 0 0 0;
-
-  @media (min-width: 768px) {
-    --padding: 10px 0 0 0;
-  }
-}
-
 .entries {
   composes: grid from global;
   composes: grid_12 from global;
+  composes: grid--full from global;
   grid-row-gap: 0 !important;
-  margin: 0;
-  @media (min-width: 768px) {
-    margin: 0 -76px;
-  }
 }
 
 .entryTime {
-  composes: grid--2col from global;
+  grid-column: 2/4;
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
-  padding: var(--padding);
+  padding: 0;
   color: $secondaryTextColor;
-
-  &::after {
-    position: absolute;
-    right: -25px;
-    top: 0;
-    border-top: $border;
-    width: calc(100% + 25px);
-    height: 1px;
-    content: "";
-  }
 }
 
 .entryDescription {
-  composes: grid--10col from global;
+  composes: grid--8col from global;
   position: relative;
   margin: 0;
   margin-bottom: 20px;
-  padding: var(--padding);
-
-  @media (min-width: 768px) {
-    &::after {
-      position: absolute;
-      left: 0;
-      top: 0;
-      border-top: $border;
-      width: 100%;
-      height: 1px;
-      content: "";
-    }
-  }
+  padding: 0;
 }
 
 @media (max-width: 480px) {
@@ -73,13 +39,7 @@ $padding: 25px 15px;
 }
 
 .talkTitle {
-  margin-top: 0.65em;
-
-  & > a {
-    visibility: hidden;
-  }
-
-  &:hover > a {
-    visibility: visible;
-  }
+  composes: headingWithAnchor from global;
+  margin-top: 0;
+  font-size: 1em;
 }
