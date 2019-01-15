@@ -1,10 +1,19 @@
-let component = ReasonReact.statelessComponent("Food");
+# Food & Drinks
 
-let title = "Food";
+Here is the short curated selection of places to get food and drinks in Vienna. 
+There are many more great places in Vienna, so please ask organizers or look up in the Internet. 
 
-let content = {j|
+## ☕️ Coffee
 
-## Quick & Good
+### <a href="https://www.kaffemik.at" target="_blank">kaffemik</a>
+Specialty coffeshop with a great selection of coffee beverages
+
+### <a href="http://cafejelinek.steman.at" target="_blank">Cafe Jelinek</a>
+Very special Altwiener coffee house in the 6th District close to ImpactHub.
+Authentic old style, proper Wiener Melange and handmade cakes and other small Viennese dishes.
+
+
+## 🌭 Quick & Good
 
 ### <a href="http://www.natsu-sushi.at/japan-lokal-7" target="_blank">Natsu Sushi (7th district)</a>
 Very small sushi place with a very low price and very high quality. Really good fast-food alternative and
@@ -17,7 +26,7 @@ Quite a hip location for 7th district hipsters.
 ### <a href="http://www.cafeeuropa.at" target="_blank">Cafe Europa</a>
 Good breakfast, lunch; in the evening a popular bar
 
-## Austrian Flair
+## 🇦🇹 Austrian Flair
 
 ### <a href="https://goo.gl/maps/GFSngrv82Vk" target="_blank">Wiedner Bräu</a>
 Brewery and traditional Austrian food place.
@@ -45,7 +54,7 @@ A good Heurigen, but quite central and easy to reach via tram; a bit touristy
 Traditional Austrian food, near the ImpactHub where the workshop takes place
 (closed on weekends)
 
-## Burgers & Craft Beers (Ken Wheeler Approved)
+## 🍔🍺 Burgers & Craft Beers (Ken Wheeler Approved)
 
 ### <a href="http://www.brickmakers.at" target="_blank">Brickmakers</a>
 BBQ place with a good selection of beers, near ImpactHub
@@ -57,7 +66,7 @@ Good burgers and craft beer, very close to the city center & St. Stephens Cathed
 Exceptionally good burgers & fries. Even the buns are handmade. Also they have a vast
 selection of different craft beers & ciders. Make sure to make a reservation beforehand.
 
-## Pizza
+## 🍕 Pizza
 
 ### <a href="http://www.ilmare.at" target="_blank">Il Mare</a>
 Italian place with decent pizza and nice outside seating near ImpactHub
@@ -84,13 +93,19 @@ Breakfast in the morning, lunch, and bar in the evening
 ### <a href="http://diehalle.at" target="_blank">Die Halle</a>
 Good food in the Museumsquartier, also nice in the evening
 
+## 🍸 Drinks & Bars
 
-|j};
+### <a href="http://www.ifdogsrunfree.com" target="_blank">If Dogs Run Free</a>
+Very good cocktail place
 
-let make = _children => {
-  ...component,
-  render: _self => <ViennaGuideSection title content />,
-};
+### <a href="http://tuer7.at" target="_blank">Tuer7</a>
+Awesome cocktail place, make sure to call before you go there,
+there are no signs on the building, you have to ring the doorbell to get in
 
-let default =
-  ReasonReact.wrapReasonForJs(~component, jsProps => make(jsProps##children));
+### <a href="dastorberg.at" target="_blank">Das Torberg</a>
+This bar is dedicated to all kinds of Gin & Tonic combinations.
+Huge selection of various brands and also a very moody ambience.
+
+### <a href="singyoursong.at" target="_blank">Sing Your Song</a>
+This is a very cool karaoke bar for those who like to sing their favorite
+songs while having a nice drink.
