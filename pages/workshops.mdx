@@ -43,67 +43,7 @@ Later, we will use React Hooks to solve many of the same problems in a way that 
 
 Before this workshop, attendees are expected to have good working familiarity with ReactJS and Reason. Experience with ReasonReact is not required, but definitely recommended.
 
-
-<h2 id="ocaml-workshop">OCaml Workshop <span className="hostedBy">hosted by OCaml Labs</span></h2>
-
-Coming soon...
-
 <h2 id="reason-and-graphql-workshop">Reason & GraphQL Workshop <span className="hostedBy">hosted by Sean Grove</span></h2>
-
-### Why two proposals?
-
-We don’t know what the conference audience wants. There are two styles of workshop we can do:
-
-- “Clojure” style: A much more limited scope but much deeper approach. The audience starts with `mkdir my_new_project`  and types in everything from the ground up. They naturally leave with a tiny, limited app but know everything about how it’s built and put together. They may be unclear on how to do the next steps (authentication, db interaction, etc.). Nearly no “magic at a distance,” and members may feel much more confident in their ability to overcome challenges on their own afterwards.
-- “Rails” style: A much higher-view - steps of the workshop are in a git-checkoutable form, and the workshop alternates between checkout-next-step, explain what’s going on and the motivations, and then hacking on a specific task for the step. In this case the audience should be clear on how things fit together and how to build on it, but not necessarily how it all works under the hood, and may have more problems debugging when things go wrong (definitely going to be “magic at a distance” here, but could be exciting enough to get member to continue exploring deeper at home afterwards), and there’ll be a lot of emphasis on using the Discord channel.
-
-2 months before the workshop we send out a survey to everyone who bought a ticket and based on that one or the other will take place.
-
-### Expected experience level in both cases:
-
-- Basic familiarity with Reason type system and syntax
-- Basic familiarity with http calls between browser/server
-
-### 1. Clojure Style: Deep-drive, nitty-gritty approach
-
-Let’s explore the benefits and tradeoffs when pairing GraphQL and Reason, both from a server’s and a client’s point-of-view. We’ll build a small app with both a server and client component.
-
-We’ll start with a quick overview of GraphQL’s properties, how the system works, and what the overall ecosystem looks like. We’ll see how its built-in introspect-ability returns fully-descriptive JSON, and how to take that JSON description and generate Reason code and types.
-
-From there, we’ll use GraphQL + ReasonReact on the frontend to build a client for a small app against OneGraph, so we have a sense of what consuming GraphQL is like in a day-to-day context.
-
-Next up, it’s time to start building our own GraphQL server in Reason. We’ll start from scratch, using `esy` to manage our dependencies, and `dune` to manage the build process. We’ll look at how configuration works in both cases. We’ll add in JaneStreet’s Core and Async libraries as dependencies and experiment with what their API surface area looks like. Then we’ll bring in `httpaf` as a basic but highly-performant web server, and see how to build a very basic (non-GraphQL) server with it. We’ll also take a brief look at how to interact with the database via `oneSql`.
-
-Once we’re comfortable with the underlying dependencies and their APIs, we’ll finally build a basic GraphQL server using `ocaml-graphql-server`, and see how we can expose objects, fields, unions, and interfaces.
-
-Finally, we’ll finish up with some thoughts on challenges that you’re likely to faces while implementing GraphQL servers: What constitutes a “good” GraphQL API design, how to optimize your resolvers and overall query execution, dealing with security and permissions, and more.
-
-1. Introduction to GraphQL
-  1. Typed schema
-  2. Introspection query and results
-  3. How to turn that into Reason code and types
-  4. graphql_ppx
-2. GraphQL on the client
-  1. ReasonReact
-  2. reason-apollo
-3. Building your own GraphQL server in Reason
-  1. Setting up a new esy project
-  2. Setting up and configuring dune
-  3. A basic web-server
-    1. Introducing JST Core
-    2. Introducing JST Async
-    3. Introducing httpaf
-    4. Interacting with the database via oneSql
-  4. Building a Reason GraphQL server
-    1. Introducing ocaml-graphql-server
-      1. objects
-      2. fields
-      3. async and io_fields
-      4. unions
-      5. interfaces
-  5. Closing thoughts on overall GraphQL server design, avoiding N+1 problems, security and permissions
-
-### 2. Rails Style: High-level, big-scope, example-driven approach
 
 Let’s explore the benefits and tradeoffs when pairing GraphQL and Reason, both from a server’s and a client’s point-of-view. We’ll build a small but realistic full-stack app together that you can take away and tweak for real-work projects afterwards.
 
@@ -118,6 +58,8 @@ Once we have our application running locally, we’ll set up continuous deployme
 Towards the end of the day, we’ll see what it’s like to consume another GraphQL service from the server, while still retaining the type safety and convenience that we enjoyed earlier in the day on the client.
 
 Finally, we’ll explore what schema stitching might look like, so that we can enjoy all the existing work that’s gone into the GraphQL SaaS ecosystem, while still providing our own custom data.
+
+### Topics + Schedule (subject to change)
 
 - Introduction to GraphQL
 - Using GraphQL on the client
@@ -137,3 +79,7 @@ Finally, we’ll explore what schema stitching might look like, so that we can e
 - Dataloader pattern: Avoiding the N+1 problem
 - Schema stitching
 - Thoughts on overall GraphQL server design, security and permissions, etc.
+
+<h2 id="ocaml-workshop">OCaml Workshop <span className="hostedBy">hosted by OCaml Labs</span></h2>
+
+Coming soon...
