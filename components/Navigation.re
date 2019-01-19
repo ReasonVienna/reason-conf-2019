@@ -47,11 +47,6 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
             {s("For Sponsors")}
           </Link>
         </li>
-        /* <li className=style##listItem>
-             <Link to_="/jobs/" className=style##link ?activeClassName>
-               {s("Jobs")}
-             </Link>
-           </li> */
         <li className=style##listItem>
           <Link to_="/cfp/" className=style##link ?activeClassName>
             {s("Call for Papers")}
@@ -60,6 +55,11 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
         <li className=style##listItem>
           <Link to_="/about/" className=style##link ?activeClassName>
             {s("About")}
+          </Link>
+        </li>
+        <li className=style##listItem>
+          <Link to_="/jobs/" className=style##link ?activeClassName>
+            {s("Jobs")}
           </Link>
         </li>
         <li className=style##listItemBuy>

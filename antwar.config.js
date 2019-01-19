@@ -32,6 +32,7 @@ module.exports = {
     imprint: page("imprint.mdx"),
     contact: page("contact.mdx"),
     cfp: page("cfp.mdx"),
+    jobs: page("jobs.mdx"),
     "code-of-conduct": page("coc.mdx"),
     "terms-of-service": page("terms_of_service.mdx")
   }
