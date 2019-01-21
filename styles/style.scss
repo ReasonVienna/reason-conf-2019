@@ -292,3 +292,8 @@ article {
     visibility: visible;
   }
 }
+
+.job-img-link {
+  @include link($primaryColor);
+  background-image: none;
+}
