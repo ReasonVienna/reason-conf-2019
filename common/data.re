@@ -823,6 +823,12 @@ module Partners = {
       tier: Tier.Gold,
     },
     {
+      name: "janestreet",
+      logoUrl: janeStreetLogo,
+      href: "https://janestreet.com",
+      tier: Tier.Gold,
+    },
+    {
       name: "g2i",
       logoUrl: g2iLogo,
       href: "https://g2i.co/",
