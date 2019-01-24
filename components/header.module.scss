@@ -26,7 +26,7 @@
   background: none;
   max-width: 130px;
   @media (max-width: 768px) {
-    margin-bottom: 20px;
+    margin: 0 auto;
   }
   &:hover {
     background: none;
@@ -62,5 +62,4 @@
 .nav_home {
   composes: push--1col from global;
   composes: pull--1col from global;
-  margin-top: 1em;
 }
