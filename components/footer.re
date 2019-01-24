@@ -61,7 +61,7 @@ ReasonConf is a [not-for-profit conference](/about/) event by the [Reason Associ
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
-© [ReasonConf](mailto:hi@reason-conf.com), 2018|j}
+© [ReasonConf](mailto:hi@reason-conf.com), 2019|j}
             |> md
           }
         </section>
