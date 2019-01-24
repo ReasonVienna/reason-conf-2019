@@ -43,6 +43,13 @@ let make = _children => {
             <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
             <li> <Link to_="/contact/"> {"Contact Us" |> s} </Link> </li>
             <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
+            <li>
+              <a
+                href="https://2018.reason-conf.com"
+                title="ReasonConf 2018 Website">
+                {s("ReasonConf 2018")}
+              </a>
+            </li>
           </ul>
         </nav>
         <nav className=style##social>

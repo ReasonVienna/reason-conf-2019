@@ -69,11 +69,6 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
             {s("Call for Papers")}
           </Link>
         </li>
-        <li className=style##listItem>
-          <a href="https://2018.reason-conf.com" className=style##link>
-            {s("ReasonConf 2018")}
-          </a>
-        </li>
       </ul>
     </nav>;
   },
