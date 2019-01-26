@@ -61,7 +61,7 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
         </li>
         <li className=style##listItem>
           <Link to_="/jobs/" className=style##link ?activeClassName>
-            {s("Jobs")}
+            {s("Job Board")}
           </Link>
         </li>
         <li className=style##listItem>
