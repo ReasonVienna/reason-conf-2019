@@ -7,37 +7,43 @@
     display: block;
     font-weight: bold;
     @include link($bgColor);
-    text-transform: uppercase;
-    font-size: 0.75em;
-    letter-spacing: 0.1em;
     white-space: nowrap;
+  }
+
+  .listItem {
+    margin: 0;
+    padding: 0.5em;
   }
 }
 
-.list {
+.navPrimary {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
-.listItem {
-  display: inline-block;
-  margin: 0.25em;
+.navSecondary {
+  composes: navPrimary;
+  font-size: 75%;
 }
 
 .listItemBuy {
   composes: listItem;
-  margin-right: 0;
+  padding-right: 0 !important;
 }
 
 .ticketsButton {
   composes: root from "./button.module.scss";
   composes: link;
-  padding: 0.5em 0.5em 0.35em;
+  padding: 0.5em 0.5em 0.45em;
   background: $primaryColor !important;
   &:hover {
     background: darken($primaryColor, 5) !important;
@@ -45,14 +51,19 @@
 }
 
 .root_footer {
-  .list {
+  .navPrimary {
     display: block;
     line-height: 1.5;
+  }
+
+  .navSecondary {
+    font-size: inherit;
+    opacity: inherit;
   }
 
   .listItem {
     display: block;
     padding: 0;
-    margin-right: 0;
+    margin-left: 0;
   }
 }

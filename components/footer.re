@@ -43,6 +43,13 @@ let make = _children => {
             <li> <Link to_="/privacy/"> {"Privacy Policy" |> s} </Link> </li>
             <li> <Link to_="/contact/"> {"Contact Us" |> s} </Link> </li>
             <li> <Link to_="/imprint/"> {"Imprint" |> s} </Link> </li>
+            <li>
+              <a
+                href="https://2018.reason-conf.com"
+                title="ReasonConf 2018 Website">
+                {s("ReasonConf 2018")}
+              </a>
+            </li>
           </ul>
         </nav>
         <nav className=style##social>
@@ -61,7 +68,7 @@ ReasonConf is a [not-for-profit conference](/about/) event by the [Reason Associ
 
 Design by [Andrey Okonetchnikov](http://okonet.ru)
 
-© [ReasonConf](mailto:hi@reason-conf.com), 2018|j}
+© [ReasonConf](mailto:hi@reason-conf.com), 2019|j}
             |> md
           }
         </section>

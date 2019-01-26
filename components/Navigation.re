@@ -26,17 +26,29 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
     let ticketsClassName =
       navigationLocation == Header ? Some(style##ticketsButton) : None;
     <nav className=rootClassName>
-      <ul className=style##list>
+      <ul className=style##navPrimary>
         <li className=style##listItem>
           <Link to_="/workshops/" className=style##link ?activeClassName>
             {s("Workshops")}
           </Link>
         </li>
-        /* <li className=style##listItem>
-             <Link to_="/speakers/" className=style##link ?activeClassName>
-               {s("Speakers")}
-             </Link>
-           </li> */
+        /*<li className=style##listItem>
+            <Link to_="/speakers/" className=style##link ?activeClassName>
+              {s("Speakers")}
+            </Link>
+          </li>*/
+        <li className=style##listItem>
+          <Link to_="/about/" className=style##link ?activeClassName>
+            {s("About")}
+          </Link>
+        </li>
+        <li className=style##listItemBuy>
+          <a href="/#tickets" className=?ticketsClassName>
+            {s("Buy a ticket")}
+          </a>
+        </li>
+      </ul>
+      <ul className=style##navSecondary>
         <li className=style##listItem>
           <Link to_="/attendees/" className=style##link ?activeClassName>
             {s("For Attendees")}
@@ -48,24 +60,14 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
           </Link>
         </li>
         <li className=style##listItem>
-          <Link to_="/cfp/" className=style##link ?activeClassName>
-            {s("Call for Papers")}
-          </Link>
-        </li>
-        <li className=style##listItem>
-          <Link to_="/about/" className=style##link ?activeClassName>
-            {s("About")}
-          </Link>
-        </li>
-        <li className=style##listItem>
           <Link to_="/jobs/" className=style##link ?activeClassName>
             {s("Jobs")}
           </Link>
         </li>
-        <li className=style##listItemBuy>
-          <a href="/#tickets" className=?ticketsClassName>
-            {s("Buy a ticket")}
-          </a>
+        <li className=style##listItem>
+          <Link to_="/cfp/" className=style##link ?activeClassName>
+            {s("Call for Papers")}
+          </Link>
         </li>
       </ul>
     </nav>;
