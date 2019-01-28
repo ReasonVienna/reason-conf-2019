@@ -292,4 +292,8 @@ article {
 .job-img-link {
   @include link($primaryColor);
   background-image: none;
+
+  &:hover {
+    background-image: none;
+  }
 }
