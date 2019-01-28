@@ -750,7 +750,7 @@ module Tier = {
       id: "gold",
       name: "Gold Sponsor",
       cost: 7500,
-      amount: 1,
+      amount: 0,
       description: {js|
 Same as Catering plus...
 
