@@ -171,6 +171,13 @@ article {
   }
 }
 
+@media (max-width: 768px) {
+  .grid--full {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
 /* Container element */
 .container {
   margin: 0 auto;
