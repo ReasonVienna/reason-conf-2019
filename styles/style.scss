@@ -113,6 +113,9 @@ main {
       width: 100%;
     }
   }
+  & > article {
+    padding-top: 40px;
+  }
 }
 
 article {
