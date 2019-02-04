@@ -38,11 +38,11 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
               {s("Workshops")}
             </Link>
           </li>
-          <li className=style##listItem>
-            <Link to_="/speakers/" className=style##link ?activeClassName>
-              {s("Speakers")}
-            </Link>
-          </li>
+          /*<li className=style##listItem>
+              <Link to_="/speakers/" className=style##link ?activeClassName>
+                {s("Speakers")}
+              </Link>
+            </li>*/
           <li className=style##listItem>
             <Link to_="/about/" className=style##link ?activeClassName>
               {s("About")}
