@@ -32,6 +32,7 @@ h6 {
   font-weight: 600;
   font-size: 1.25rem;
   color: $primaryColor;
+  line-height: 1.2;
 }
 
 h1 {
@@ -112,6 +113,9 @@ main {
       width: 100%;
     }
   }
+  & > article {
+    padding-top: 40px;
+  }
 }
 
 article {
@@ -167,6 +171,13 @@ article {
 
   .grid--full {
     grid-column: 1 / 13;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid--full {
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 

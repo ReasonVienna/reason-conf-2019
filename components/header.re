@@ -24,7 +24,15 @@ let make = (~pageType, _children) => {
       <div className="container">
         {
           if (isHomePage) {
-            logoEl;
+            <>
+              logoEl
+              <p className=style##description>
+                {
+                  {j|The ReasonML conference for web developers & OCaml enthusiasts|j}
+                  |> s
+                }
+              </p>
+            </>;
           } else {
             <Link to_="/" className=style##link_home> logoEl </Link>;
           }
@@ -33,14 +41,6 @@ let make = (~pageType, _children) => {
           componentOrNull(
             isHomePage,
             <div className=style##meta>
-              <p className=style##description>
-                <strong>
-                  {
-                    {j|The ReasonML conference for web developers & OCaml enthusiasts|j}
-                    |> s
-                  }
-                </strong>
-              </p>
               <h2 className=style##dates>
                 <time dateTime="2019-04-11/2019-04-13">
                   {{j|11–13 April 2019|j} |> s}

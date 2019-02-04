@@ -1,42 +1,44 @@
 @import "../styles/variables.scss";
 
 .root {
-  composes: grid from global;
-  composes: grid_12 from global;
-  margin: 2em 0;
+  grid-column: span 6;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+
+  @media (max-width: 1000px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 
 .speakerCard {
-  composes: grid--2col from global;
+  flex: 0 0 65px;
+  margin-right: 10px;
 
   figcaption {
     display: none;
   }
 }
 
-.description {
-  composes: grid--10col from global;
-}
-
-.figure {
-  grid-row-start: 1;
-  grid-column-start: 1;
-  margin: 0;
-}
-
-.image {
-  display: block;
-  width: 150px;
-  border-radius: 50%;
-}
-
 .name {
-  margin: 0;
-  font-size: x-large;
+  margin-top: 0;
+  line-height: 1.3;
+  font-size: 200%;
+}
+
+.description {
+}
+
+.meta {
+  grid-column: span 3;
+}
+
+.talks {
+  grid-column: span 3;
 }
 
 .company {
-  margin: 0;
   color: $secondaryTextColor;
 }
 

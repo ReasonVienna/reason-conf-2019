@@ -7,7 +7,7 @@
 }
 
 .logo {
-  composes: grid--6col from global;
+  composes: grid--4col from global;
   margin: 0;
 }
 
@@ -34,11 +34,21 @@
   }
 }
 
+.description {
+  grid-row: 2;
+  grid-column: span 6;
+  font-size: 120%;
+  margin-left: 2rem;
+}
+
 .meta {
-  composes: grid--6col from global;
-  margin-top: 2em;
+  grid-column: 9 / 13;
+  margin-top: -1rem;
+
   @media (max-width: 768px) {
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
   }
   p {
     margin: 0;
@@ -46,10 +56,10 @@
 }
 
 .dates {
-  margin: 0.5em 0;
+  margin: 0;
   color: $bgColor;
   font-weight: 600;
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .nav {
@@ -60,6 +70,6 @@
 }
 
 .nav_home {
-  composes: push--1col from global;
-  composes: pull--1col from global;
+  grid-row: 1;
+  grid-column: 5 / 13;
 }

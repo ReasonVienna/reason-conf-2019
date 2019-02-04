@@ -8,16 +8,16 @@ let toSpeakerDetail = (speaker: Data.Speaker.t) =>
 let make = _children => {
   ...component,
   render: _self =>
-    <section>
+    <div>
       <h1> {"Speakers" |> s} </h1>
-      <section>
+      <section className="container grid grid--full">
         {
           Data.Speaker.speakers
           |> Array.map(toSpeakerDetail)
           |> ReasonReact.array
         }
       </section>
-    </section>,
+    </div>,
 };
 
 let default =
