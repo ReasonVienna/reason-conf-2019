@@ -53,6 +53,9 @@ external janeStreetLogo: string = "../assets/img/partners/janestreet-logo.svg";
 
 [@bs.module] external g2iLogo: string = "../assets/img/partners/g2i-logo.svg";
 
+[@bs.module]
+external imandraLogo: string = "../assets/img/partners/imandra-logo.svg";
+
 /* List.find_opt is not supported by this BuckleScript version yet */
 let find_opt = (fn, l) =>
   try (List.find(fn, l) |> (r => Some(r))) {
@@ -827,6 +830,12 @@ module Partners = {
       logoUrl: janeStreetLogo,
       href: "https://janestreet.com",
       tier: Tier.Gold,
+    },
+    {
+      name: "Imandra",
+      logoUrl: imandraLogo,
+      href: "https://www.imandra.ai/",
+      tier: Tier.Catering,
     },
     {
       name: "g2i",
