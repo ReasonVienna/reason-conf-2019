@@ -1,7 +1,7 @@
 [@bs.module] external chengLouImg: string = "../assets/img/speakers/cheng.jpg";
 
 [@bs.module]
-external amelieBenoitImg: string = "../assets/img/speakers/amelie.png";
+external amelieBenoitImg: string = "../assets/img/speakers/amelie.jpg";
 
 [@bs.module]
 external benjaminSanSouciImg: string = "../assets/img/speakers/ben.jpg";
@@ -15,7 +15,7 @@ external jonathanSiebernImg: string = "../assets/img/speakers/jonathan.jpg";
 [@bs.module]
 external gagePetersonImg: string = "../assets/img/speakers/gage.jpg";
 [@bs.module]
-external christophKnittelImg: string = "../assets/img/speakers/christoph.png";
+external christophKnittelImg: string = "../assets/img/speakers/christoph.jpg";
 
 [@bs.module]
 external davidCorticchiatoImg: string = "../assets/img/speakers/david.jpg";
