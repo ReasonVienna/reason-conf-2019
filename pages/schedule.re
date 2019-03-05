@@ -44,7 +44,11 @@ let miscRow = (~fromTime, ~toTime, description) =>
  */
 let breakRow = miscRow;
 
-let talkRow = (~fromTime, ~toTime, speaker: Data.Speaker.t) =>
+let talkRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
+  let renderSpeaker = speaker =>
+    <Link to_={"/speakers/#" ++ Data.Speaker.speakerAnchor(speaker)}>
+      <SpeakerCard speaker compact=true />
+    </Link>;
   ReasonReact.array([|
     <dt className=style##talkTime>
       <time dateTime={toDurationStr(~fromTime, ~toTime)}>
@@ -53,7 +57,7 @@ let talkRow = (~fromTime, ~toTime, speaker: Data.Speaker.t) =>
     </dt>,
     <dd className=style##talkDescription>
       {
-        switch (speaker.talk) {
+        switch (List.hd(speakers).talk) {
         | Some(talk) =>
           let id = Data.Speaker.talkSlug(talk);
           <section className=style##talkDetails id>
@@ -62,9 +66,12 @@ let talkRow = (~fromTime, ~toTime, speaker: Data.Speaker.t) =>
               {" " |> s}
               <a href={"#" ++ id} title={talk.title}> {"#" |> s} </a>
             </h3>
-            <Link to_={"/speakers/#" ++ Data.Speaker.speakerAnchor(speaker)}>
-              <SpeakerCard speaker compact=true />
-            </Link>
+            {
+              speakers
+              |> List.map(renderSpeaker)
+              |> Array.of_list
+              |> ReasonReact.array
+            }
             {talk.abstract |> md}
           </section>;
         | None => ReasonReact.null
@@ -72,6 +79,7 @@ let talkRow = (~fromTime, ~toTime, speaker: Data.Speaker.t) =>
       }
     </dd>,
   |]);
+};
 
 let workshopRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
   let renderSpeaker = speaker =>
@@ -87,12 +95,7 @@ let workshopRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
     <dd className=style##talkDescription>
       <section className=style##talkDetails>
         <h3 className=style##talkTitle> {"Workshop" |> s} </h3>
-        <p>
-          {
-            "An optional workshop to make every beginner and intermediate attendee familiar with the language, the BuckleScript platform as well as ReasonReact."
-            |> s
-          }
-        </p>
+        <p> {"Please see the workshop page for more details." |> s} </p>
         {
           speakers
           |> List.map(renderSpeaker)
@@ -103,6 +106,20 @@ let workshopRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
     </dd>,
   |]);
 };
+
+let panelDiscussionRow = (~fromTime, ~toTime) =>
+  ReasonReact.array([|
+    <dt className=style##talkTime>
+      <time dateTime={toDurationStr(~fromTime, ~toTime)}>
+        {toTimeStr(~fromTime, ~toTime) |> s}
+      </time>
+    </dt>,
+    <dd className=style##talkDescription>
+      <section className=style##talkDetails>
+        <h3 className=style##talkTitle> {"Panel Discussion" |> s} </h3>
+      </section>
+    </dd>,
+  |]);
 
 let openEndRow = (~fromTime, ~toTime, description) =>
   ReasonReact.array([|
@@ -118,9 +135,10 @@ let createRow = ({task, fromTime, toTime}: Data.Timetable.entry) =>
   switch (task) {
   | Break(description) => breakRow(~fromTime, ~toTime, description)
   | Misc(description) => miscRow(~fromTime, ~toTime, description)
-  | Talk(speaker) => talkRow(~fromTime, ~toTime, speaker)
+  | Talk(speakers) => talkRow(~fromTime, ~toTime, speakers)
   | Workshop(speakers) => workshopRow(~fromTime, ~toTime, speakers)
   | OpenEnd(description) => openEndRow(~fromTime, description, ~toTime)
+  | PanelDiscussion => panelDiscussionRow(~fromTime, ~toTime)
   };
 
 let createDay = ({date, entries}: Data.Timetable.day) => {
