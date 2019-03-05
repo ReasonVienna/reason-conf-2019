@@ -27,33 +27,27 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
       navigationLocation == Header ? Some(style##ticketsButton) : None;
     <nav className=rootClassName>
       <ul className=style##navPrimary>
-        /* <li className=style##listItem>
-             <Link to_="/schedule/" className=style##link ?activeClassName>
-               {s("Schedule")}
-             </Link>
-           </li> */
-
-          <li className=style##listItem>
-            <Link to_="/workshops/" className=style##link ?activeClassName>
-              {s("Workshops")}
-            </Link>
-          </li>
-          /*<li className=style##listItem>
-              <Link to_="/speakers/" className=style##link ?activeClassName>
-                {s("Speakers")}
-              </Link>
-            </li>*/
-          <li className=style##listItem>
-            <Link to_="/about/" className=style##link ?activeClassName>
-              {s("About")}
-            </Link>
-          </li>
-          <li className=style##listItemBuy>
-            <a href="/#tickets" className=?ticketsClassName>
-              {s("Buy a ticket")}
-            </a>
-          </li>
-        </ul>
+        <li className=style##listItem>
+          <Link to_="/schedule/" className=style##link ?activeClassName>
+            {s("Schedule")}
+          </Link>
+        </li>
+        <li className=style##listItem>
+          <Link to_="/workshops/" className=style##link ?activeClassName>
+            {s("Workshops")}
+          </Link>
+        </li>
+        <li className=style##listItem>
+          <Link to_="/speakers/" className=style##link ?activeClassName>
+            {s("Speakers")}
+          </Link>
+        </li>
+        <li className=style##listItemBuy>
+          <a href="/#tickets" className=?ticketsClassName>
+            {s("Buy a ticket")}
+          </a>
+        </li>
+      </ul>
       <ul className=style##navSecondary>
         <li className=style##listItem>
           <Link to_="/attendees/" className=style##link ?activeClassName>
@@ -70,9 +64,14 @@ let make = (~pageType=Home, ~navigationLocation=Header, _children) => {
             {s("Job Board")}
           </Link>
         </li>
+        /*<li className=style##listItem>
+            <Link to_="/cfp/" className=style##link ?activeClassName>
+              {s("Call for Papers")}
+            </Link>
+          </li>*/
         <li className=style##listItem>
-          <Link to_="/cfp/" className=style##link ?activeClassName>
-            {s("Call for Papers")}
+          <Link to_="/about/" className=style##link ?activeClassName>
+            {s("About")}
           </Link>
         </li>
       </ul>
