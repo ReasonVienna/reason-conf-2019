@@ -180,7 +180,11 @@ module Speaker = {
     company: "Apple",
     imgUrl: benjaminSanSouciImg,
     description: {j||j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "Shipping a game on iOS written in Reason",
+        abstract: "This is the story of how we shipped an iOS game on the AppStore, all written in Reason using Reprocessing. We'll explore both the technical difficulties and the non-technical ones that we hit, and the solutions we came up with. This will also be a case study of driving the development using demos. This talk will hopefully encourage you all to create the things you want to create, because at the end of the day, you're the only ones who can.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -194,7 +198,11 @@ module Speaker = {
     company: "Draftbit",
     imgUrl: peterPiekarczykImg,
     description: {j|Peter Piekarczyk is the co-founder of Draftbit: a tool that allows anyone to build native apps visually with almost no learning curve. Draftbit is built with ReasonML and has allowed his team to move quickly and effortlessly. Peter loves to cycle, drink coffee and make music. He's a huge fan of learning how to do new things. Peter was born in Chicago but speaks fluent Polish.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "How ReasonML has improved our hiring process",
+        abstract: "ReasonML is a hybrid of Javascript and Ocaml - traditionally 2 different pools of candidates. Have you ever wondered what the best of both worlds is like? Learn how ReasonML has improved the quality of our candidates letting us focus more time on the product and less on hiring.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -209,7 +217,11 @@ module Speaker = {
     company: "Digital Solutions GmbH",
     imgUrl: jonathanSiebernImg,
     description: {j|Full-Stack-Developer from Münster, Germany with about 17 years of experience (mostly web technologies working for Digital Solutions GmbH in Münster, creating tools for online marketers.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "How Reason keeps my ADHD out of production",
+        abstract: "I have been diagnosed with ADHD late in life (2 years ago). This opened my eyes to a journey through challenges and hardship I have not been able to comprehend were even affecting me up to that point. My talk is focused on these challenges and how Reason in particular helps me deal with them in my daily workflow.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -223,7 +235,11 @@ module Speaker = {
     company: "Podium",
     imgUrl: gagePetersonImg,
     description: {j|I graduated in Computer Science from Brigham Young University - Idaho, where my senior project was building a (poor) programming language in OCaml, later went on to work for Podium where I've built lots of stuff in Elixir, JavaScript (React), and Ruby, OCaml has remained my favorite language through it, recently had more serious discussions about introducing Reason. I'm Vegan, passionate about the environment.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "Why your ReasonML Evangelism isn't working",
+        abstract: "Not everyone is of the \"Early-Adopter\" Personality. Many of our coworkers don't care if things are technically \"better\" or fancy language features that help them to remain \"safe\". Understanding the different personality types helps us know how we can all get ReasonML to \"jump the gap\" to more mainstream languages and help our more pragmatic co-works understand why ReasonML is something they should devote time to learn.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -237,7 +253,15 @@ module Speaker = {
     company: "Control Center Apps GmbH",
     imgUrl: christophKnittelImg,
     description: {j|Christoph Knittel is CTO at the Vienna-based Control Center Apps GmbH. Combining 20 years of experience in the design and development of software products with enthusiasm for mobile apps, React/React Native and ReasonML, he has set out with his team to bring modern technologies and user interfaces to enterprise applications in the Public Transport and Public Safety industries.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "A Mission-Critical ReasonML App for Railway Safety",
+        abstract: {j|At cca.io, we build mission-critical apps and services for the Public Transport and Public Safety industries. In 2018, we moved all our frontend development (web and React Native) to ReasonML.
+
+As a case study about ReasonML in a finished product / client project, we present “Written Order”, a web app for Railway Safety. The app is an intelligent assistant for manual processes in train signalling, helping the signaller to ensure it is safe for the train to proceed.
+
+Based on an interpreter for a check list definition language, it presents the signaller a series of simple questions to guide him/her through complex, deeply context-dependent check lists, generating a filled out “Written Order form” image on the way. The app authenticates against the customer’s Active Directory service and is fully offline-capable, yet still runs in Internet Explorer 11.|j},
+      }),
     video: None,
     slides: None,
     social: {
@@ -251,7 +275,13 @@ module Speaker = {
     company: "Ubisoft",
     imgUrl: amelieBenoitImg,
     description: {j|As a web developer, I worked in France to create web applications first using Angular and then React; always in Javascript. A few month ago, I joined Ubisoft Montréal to work on a React-Native application in ReasonML. Sketchnoting addict, I also like to share knowledge and look for solutions to bring fun and dynamism in daily life.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "Our Journey with React Native and ReasonML",
+        abstract: "At Ubisoft Club we rewrote our application from Ionic / Cordova to React Native / ReasonML. As we all were Javascript developers, the transition was difficult, both technically and humanly. We implemented some fancy features using e.g. Storybook and GraphQL. But we had to pay the price of immature bindings, bundler issues...
+
+We would like to share this experience with you, including the best and the worst of it.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -265,7 +295,13 @@ module Speaker = {
     company: "Ubisoft",
     imgUrl: davidCorticchiatoImg,
     description: {j|I started as a C++ developer 14 years ago (So I'm old basically). About 7 years ago I chose to quit embedded software industry for web development. I've been a Pythonita for a long time, then a javascript developper. Now I work for Ubisoft as a mobile developer. We're rebuilding our app in ReasonML + React Native.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "Our journey with React Native and ReasonML",
+        abstract: "At Ubisoft Club we rewrote our application from Ionic / Cordova to React Native / ReasonML. As we all were Javascript developers, the transition was difficult, both technically and humanly. We implemented some fancy features using e.g. Storybook and GraphQL. But we had to pay the price of immature bindings, bundler issues...
+
+We would like to share this experience with you, including the best and the worst of it.",
+      }),
     video: None,
     slides: None,
     social: {
@@ -279,7 +315,14 @@ module Speaker = {
     company: "Jane Street",
     imgUrl: jeremieDiminoImg,
     description: {j||j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "17 Years of Caml Herding",
+        abstract: "Jane Street is a long-time user of OCaml and the largest industrial user of the language. Today, there are hundreds of people at Jane Street who use OCaml to build rich and complex applications that are essential to the our business.
+
+In this talk, I'll discuss the work we've done to provide those people with a great development experience as they write, maintain, and deploy software. I'll also discuss Jane Street as an example of how OCaml can contribute to a tech-focused company's success, both in the short and long term.
+",
+      }),
     video: None,
     slides: None,
     social: {
@@ -293,7 +336,13 @@ module Speaker = {
     company: "",
     imgUrl: douglasTeohImg,
     description: {j|Douglas is a software engineer currently working at Allm Inc. in Japan. He develops backend services with Ruby, and webapp frontends with various compile-to-JavaScript languages. He has also published open source macOS apps.|j},
-    talk: Some({title: "", abstract: ""}),
+    talk:
+      Some({
+        title: "Saving lives with ReasonML",
+        abstract: {j|For stroke patients, there is a saying “time is brain”. First responders need to assess patients as accurately and as quickly as possible, and then it's off to the races to the best treatment centre. This is a high stakes situation where problems arising of both the human and software variety is ideally zero. Losing a loved one because “undefined is not a function” is certainly not ideal.
+
+It should not be a surprise that eliminating the occurrence of such software defects in such a high stakes application is of paramount importance. We recently rewrote the core of our first responder stroke triage mobile application in ReasonML and Bucklescript to achieve the necessary safety guarantees that only the ML family of languages can provide. In this talk, I share details of how we undertook this task and lessons learnt along the way.|j},
+      }),
     video: None,
     slides: None,
     social: {
@@ -321,11 +370,12 @@ module Speaker = {
 
 module Timetable = {
   type task =
-    | Talk(Speaker.t)
+    | Talk(list(Speaker.t))
     | Misc(string)
     | Break(string)
     | Workshop(list(Speaker.t))
-    | OpenEnd(string);
+    | OpenEnd(string)
+    | PanelDiscussion;
   type step = {
     task,
     duration: option(int),
@@ -349,39 +399,36 @@ module Timetable = {
   let day1Steps = [
     {
       task: Misc("Doors open, Registration & Editor Setup"),
-      duration: Some(60),
+      duration: Some(45),
     },
-    {task: Workshop([]), duration: Some(180)},
-    {task: Break("Lunch"), duration: Some(60)},
-    {task: Workshop([]), duration: Some(240)},
-    {task: OpenEnd("Open End until ImpactHub closes"), duration: Some(120)},
+    {task: Workshop([]), duration: Some(480)},
   ];
   let day2Steps = [
-    {task: Misc("Doors open & Registration"), duration: Some(60)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
+    {task: Misc("Doors open & Registration"), duration: Some(45)},
+    {task: Talk([Speaker.chengLou]), duration: Some(60)},
     {task: Break("Coffee break"), duration: Some(30)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
+    {task: Talk([Speaker.peterPiekarczyk]), duration: Some(30)},
+    {task: Talk([Speaker.jonathanSiebern]), duration: Some(30)},
     {task: Break("Lunch"), duration: Some(90)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: Talk(Speaker.chengLou), duration: Some(15)},
-    {task: Talk(Speaker.chengLou), duration: Some(15)},
-    {task: Talk(Speaker.chengLou), duration: Some(15)},
-    {task: Talk(Speaker.chengLou), duration: Some(15)},
-    {task: Break("Coffee  break"), duration: Some(30)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: Break("Coffee  break"), duration: Some(30)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: Talk(Speaker.chengLou), duration: Some(45)},
-    {task: OpenEnd("After Party at Cafe Leopold"), duration: None},
+    {
+      task: Talk([Speaker.amelieBenoit, Speaker.davidCorticchiato]),
+      duration: Some(30),
+    },
+    {task: Talk([Speaker.christophKnittel]), duration: Some(30)},
+    {task: Break("Coffee break"), duration: Some(30)},
+    {task: Talk([Speaker.benjaminSanSouci]), duration: Some(30)},
+    {task: Talk([Speaker.gagePeterson]), duration: Some(30)},
+    {task: Break("Coffee break"), duration: Some(30)},
+    {task: Talk([Speaker.jeremieDimino]), duration: Some(30)},
+    {task: Talk([Speaker.douglasTeoh]), duration: Some(30)},
+    {task: PanelDiscussion, duration: Some(30)},
+    {task: OpenEnd("After Party at Luftburg"), duration: None},
   ];
   let day3Steps = [
-    {
-      task: Misc("Doors open, Registration & Editor Setup"),
-      duration: Some(60),
-    },
-    {task: OpenEnd("Enjoy yourself"), duration: None},
+    {task: Misc("Doors open"), duration: Some(30)},
+    {task: OpenEnd("Open Stage"), duration: Some(195)},
+    {task: Break("Lunch"), duration: Some(90)},
+    {task: OpenEnd("Dojo with Benjamin San Souci"), duration: Some(180)},
   ];
   let calcStep = (fromTime: Js.Date.t, step: step): entry => {
     let toTime =
@@ -404,7 +451,7 @@ module Timetable = {
     };
 
   /* TODO: Why is it saying 11am +2 */
-  let startDate = Js.Date.fromString("2019-04-11T11:00:00.000+02:00");
+  let startDate = Js.Date.fromString("2019-04-11T10:45:00.000+02:00");
   let day2 = DateFns.addDays(float_of_int(1), startDate);
   let day3 = DateFns.addDays(float_of_int(2), startDate);
   let days = [
