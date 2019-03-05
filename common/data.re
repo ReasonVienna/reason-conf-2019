@@ -429,6 +429,10 @@ module Timetable = {
     {task: OpenEnd("Open Stage"), duration: Some(195)},
     {task: Break("Lunch"), duration: Some(90)},
     {task: OpenEnd("Dojo with Benjamin San Souci"), duration: Some(180)},
+    {
+      task: OpenEnd("Gathering at a local wine tavern (Location TBA)"),
+      duration: None,
+    },
   ];
   let calcStep = (fromTime: Js.Date.t, step: step): entry => {
     let toTime =
