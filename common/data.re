@@ -179,11 +179,11 @@ module Speaker = {
     name: "Benjamin San Souci",
     company: "Apple",
     imgUrl: benjaminSanSouciImg,
-    description: {j||j},
+    description: {j|Ben is a French citizen who is excited about building things. After getting his bac in France, he decided to check out what was on the other side of the pond. After getting his degree in Software Engineering, and a short detour through Google, he found himself working at Apple.|j},
     talk:
       Some({
-        title: "Shipping a game on iOS written in Reason",
-        abstract: "This is the story of how we shipped an iOS game on the AppStore, all written in Reason using Reprocessing. We'll explore both the technical difficulties and the non-technical ones that we hit, and the solutions we came up with. This will also be a case study of driving the development using demos. This talk will hopefully encourage you all to create the things you want to create, because at the end of the day, you're the only ones who can.",
+        title: "Shipping a game on iOS written in ReasonML",
+        abstract: "Shipping a mobile game in ReasonML is not as hard as one might think. This talk will go over our demo-driven approach to developing this game, the small technical difficulties one might encounter and the tough non-technical ones. You'll hopefully be inspired to gain back creative confidence to make your childhood dream game in ReasonML.",
       }),
     video: None,
     slides: None,
