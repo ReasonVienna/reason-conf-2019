@@ -48,3 +48,12 @@ $padding: 25px 15px;
   composes: headingWithAnchor from global;
   composes: talkTitleLink;
 }
+
+.speakers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.speaker {
+}
