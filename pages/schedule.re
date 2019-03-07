@@ -94,8 +94,9 @@ let workshopRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
     </dt>,
     <dd className=style##talkDescription>
       <section className=style##talkDetails>
-        <h3 className=style##talkTitle> {"Workshop" |> s} </h3>
-        <p> {"Please see the workshop page for more details." |> s} </p>
+        <Link to_="/workshops">
+          <h3 className=style##talkTitleLink> {"Workshops" |> s} </h3>
+        </Link>
         {
           speakers
           |> List.map(renderSpeaker)

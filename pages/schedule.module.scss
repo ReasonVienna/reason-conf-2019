@@ -38,8 +38,13 @@ $padding: 25px 15px;
   color: $textColor;
 }
 
+.talkTitleLink {
+  display: inline-block;
+  margin-top: 0.2em;
+  font-size: 1em;
+}
+
 .talkTitle {
   composes: headingWithAnchor from global;
-  margin-top: 0;
-  font-size: 1em;
+  composes: talkTitleLink;
 }
