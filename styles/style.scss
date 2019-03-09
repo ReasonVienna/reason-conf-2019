@@ -276,10 +276,7 @@ article {
   position: relative;
 
   & > a {
-    position: absolute;
     display: inline-block;
-    left: -1em;
-    right: 0;
     text-align: left;
     height: 100%;
     color: $secondaryTextColor;
