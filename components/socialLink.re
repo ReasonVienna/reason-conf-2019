@@ -17,7 +17,7 @@ let make = (~target: target, ~link: option(string), _children) => {
         switch (target) {
         | Twitter => ("https://twitter.com/" ++ link, "twitter")
         | Github => ("https://github.com/" ++ link, "github")
-        | Website => ("https://twitter.com/", "sharethis")
+        | Website => (link, "sharethis")
         };
       <SocialIcon className=style##item network url color="#9eb3bd" />;
     },
