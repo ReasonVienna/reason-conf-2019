@@ -188,8 +188,8 @@ module Speaker = {
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/bsansouci"),
-      twitterUser: Some("https://twitter.com/bsansouci"),
+      githubUser: Some("bsansouci"),
+      twitterUser: Some("bsansouci"),
       website: None,
     },
   };
@@ -206,8 +206,8 @@ module Speaker = {
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/peterpme"),
-      twitterUser: Some("https://twitter.com/peterpme"),
+      githubUser: Some("peterpme"),
+      twitterUser: Some("peterpme"),
       website: Some("https://peterp.me"),
     },
   };
@@ -225,8 +225,8 @@ module Speaker = {
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/jsiebern"),
-      twitterUser: Some("https://twitter.com/j_siebern"),
+      githubUser: Some("jsiebern"),
+      twitterUser: Some("j_siebern"),
       website: None,
     },
   };
@@ -243,8 +243,8 @@ module Speaker = {
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/justgage"),
-      twitterUser: Some("https://twitter.com/justgage"),
+      githubUser: Some("justgage"),
+      twitterUser: Some("justgage"),
       website: None,
     },
   };
@@ -265,8 +265,8 @@ Based on an interpreter for a check list definition language, it presents the si
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/cknitt"),
-      twitterUser: Some("https://twitter.com/cknitt"),
+      githubUser: Some("cknitt"),
+      twitterUser: Some("cknitt"),
       website: Some("https://www.knittel.cc/"),
     },
   };
@@ -285,8 +285,8 @@ We would like to share this experience with you, including the best and the wors
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/abenoit"),
-      twitterUser: Some("https://twitter.com/AmelieBenoit33"),
+      githubUser: Some("abenoit"),
+      twitterUser: Some("AmelieBenoit33"),
       website: None,
     },
   };
@@ -305,7 +305,7 @@ We would like to share this experience with you, including the best and the wors
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/dawee"),
+      githubUser: Some("dawee"),
       twitterUser: None,
       website: None,
     },
@@ -326,8 +326,8 @@ In this talk, I'll discuss the work we've done to provide those people with a gr
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/diml"),
-      twitterUser: Some("https://twitter.com/dimenix"),
+      githubUser: Some("diml"),
+      twitterUser: Some("dimenix"),
       website: None,
     },
   };
@@ -346,8 +346,8 @@ It should not be a surprise that eliminating the occurrence of such software def
     video: None,
     slides: None,
     social: {
-      githubUser: Some("https://github.com/dteoh/"),
-      twitterUser: None,
+      githubUser: Some("dteoh"),
+      twitterUser: Some("_dteoh"),
       website: Some("https://dteoh.com/"),
     },
   };

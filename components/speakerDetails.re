@@ -18,7 +18,7 @@ let make = (~speaker: Data.Speaker.t, _children) => {
           {speaker.name |> s}
         </h2>
         <p className=style##company>
-          {speaker.company ++ ", " |> s}
+          {speaker.company ++ " " |> s}
           <div className=style##social>
             <SocialLink target=Twitter link={speaker.social.twitterUser} />
             <SocialLink target=Github link={speaker.social.githubUser} />
