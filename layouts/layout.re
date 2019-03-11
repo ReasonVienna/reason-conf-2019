@@ -43,7 +43,7 @@ let make = (~location: location, ~file: file, children) => {
     <>
       /* <Antwar.Interactive
            container={<CookieBox />}
-           id="components/CookieBox.re.js"
+           id="components/CookieBox.gen.js"
          /> */
       <Meta siteName="ReasonConf" title description keywords ogImage />
       {

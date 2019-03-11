@@ -3,7 +3,7 @@ import { hot } from "react-hot-loader";
 
 import { HelmetProvider } from "react-helmet-async";
 
-import Layout from "./layout.re.js";
+import Layout from "./layout.gen.js";
 
 import "../styles/style.scss";
 

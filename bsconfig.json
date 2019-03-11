@@ -17,6 +17,14 @@
       "files": [""]                    
     } */
   ],
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  },
   "package-specs": {
     "module": "commonjs",
     "in-source": true

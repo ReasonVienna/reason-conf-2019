@@ -22,7 +22,7 @@ function commonConfig() {
     module: {
       rules: [
         {
-          test: /(\.bs|re\.)?\.js$/,
+          test: /(\.bs|gen\.)?\.js$/,
           use: "babel-loader",
           include: [
             path.join(__dirname, "components"),
