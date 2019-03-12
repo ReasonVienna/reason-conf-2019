@@ -5,7 +5,7 @@ node_modules
 public/
 *.swp
 *.bs.js
-*.re.js
+*.gen.js
 genflow.native
 .genFlowLog
 .cache/
