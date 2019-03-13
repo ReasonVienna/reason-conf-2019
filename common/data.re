@@ -368,12 +368,44 @@ It should not be a surprise that eliminating the occurrence of such software def
   let speakers: array(t) = Array.concat([headlineSpeakers, otherSpeakers]);
 };
 
+module Workshop = {
+  type t = {
+    title: string,
+    slug: string,
+    leader: string,
+  };
+
+  let beginnerWS = {
+    title: {j|Beginner Reason & ReasonReact Workshop|j},
+    slug: "beginner-reason-and-reasonreact-workshop",
+    leader: "Reason Association",
+  };
+  let advancedRRWS = {
+    title: {j|Advanced ReasonReact Workshop|j},
+    slug: "advanced-reasonreact-workshop",
+    leader: "Ricky Vetter",
+  };
+  let reasonGraphQLWS = {
+    title: {j|Reason & GraphQL Workshop|j},
+    slug: "reason-and-graphql-workshop",
+    leader: "Sean Grove",
+  };
+
+  let ocamlWS = {
+    title: {j|OCaml Workshop|j},
+    slug: "ocaml-workshop",
+    leader: "OCamllabs",
+  };
+
+  let workshops = [beginnerWS, advancedRRWS, reasonGraphQLWS, ocamlWS];
+};
+
 module Timetable = {
   type task =
     | Talk(list(Speaker.t))
     | Misc(string)
     | Break(string)
-    | Workshop(list(Speaker.t))
+    | Workshop(list(Workshop.t))
     | OpenEnd(string)
     | PanelDiscussion;
   type step = {
@@ -401,7 +433,7 @@ module Timetable = {
       task: Misc("Doors open, Registration & Editor Setup"),
       duration: Some(45),
     },
-    {task: Workshop([]), duration: Some(480)},
+    {task: Workshop(Workshop.workshops), duration: Some(480)},
   ];
   let day2Steps = [
     {task: Misc("Doors open & Registration"), duration: Some(45)},
@@ -426,9 +458,9 @@ module Timetable = {
   ];
   let day3Steps = [
     {task: Misc("Doors open"), duration: Some(30)},
-    {task: OpenEnd("Open Stage"), duration: Some(195)},
+    {task: Misc("Open Stage"), duration: Some(195)},
     {task: Break("Lunch"), duration: Some(90)},
-    {task: OpenEnd("Dojo with Benjamin San Souci"), duration: Some(180)},
+    {task: Misc("Dojo with Benjamin San Souci"), duration: Some(180)},
     {
       task: OpenEnd("Gathering at a local wine tavern (Location TBA)"),
       duration: None,
