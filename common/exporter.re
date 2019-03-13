@@ -72,7 +72,7 @@ let convertTask = (task: Data.Timetable.task): array(session) =>
   | Talk(speakers) =>
     switch (List.hd(speakers).talk) {
     | Some(talk) =>
-      let {Data.Speaker.title, abstract as description} = talk;
+      let {Data.Speaker.title, abstract: description} = talk;
       [|session(~type_="TALK", ~title, ~description)|];
     }
   | Break(title) => [|
