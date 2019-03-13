@@ -33,6 +33,7 @@ module.exports = {
     contact: page("contact.mdx"),
     cfp: page("cfp.mdx"),
     jobs: page("jobs.mdx"),
+    export: page("data_export.gen"),
     "code-of-conduct": page("coc.mdx"),
     "terms-of-service": page("terms_of_service.mdx")
   }
