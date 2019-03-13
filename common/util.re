@@ -19,6 +19,13 @@ let toHHMM = date => {
   {j|$hh:$mm|j};
 };
 
+let toYYYYMMDD = date => {
+  let year = Js.Date.getUTCFullYear(date);
+  let month = Js.Date.getUTCMonth(date) +. 1.;
+  let day = Js.Date.getDate(date);
+  {j|$year-$month-$day|j};
+};
+
 let componentOrNull = (condition, component) =>
   if (condition) {component} else {ReasonReact.null};
 
