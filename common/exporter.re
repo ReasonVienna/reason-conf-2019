@@ -12,6 +12,8 @@ type session = {
   type_: string,
   title: string,
   description: string,
+  [@bs.optional]
+  people: array(string),
 };
 
 /* Speaker */
@@ -50,10 +52,20 @@ external stringifyAnyPretty:
 let convertSpeaker = (sp: Data.Speaker.t): contact => {
   let {Data.Speaker.name, talk, company, description, imgUrl} = sp;
 
+  let people = [|name|];
+
   let talks =
     Belt.Option.(
       map(talk, t =>
-        [|session(~type_="TALK", ~title=t.title, ~description=t.abstract)|]
+        [|
+          session(
+            ~type_="TALK",
+            ~title=t.title,
+            ~description=t.abstract,
+            ~people,
+            (),
+          ),
+        |]
       )
       ->getWithDefault([||])
     );
@@ -73,22 +85,23 @@ let convertTask = (task: Data.Timetable.task): array(session) =>
     switch (List.hd(speakers).talk) {
     | Some(talk) =>
       let {Data.Speaker.title, abstract: description} = talk;
-      [|session(~type_="TALK", ~title, ~description)|];
+      let people = speakers->Belt.List.map(s => s.name)->Array.of_list;
+      [|session(~type_="TALK", ~title, ~description, ~people, ())|];
     }
   | Break(title) => [|
-      session(~type_="COFFEE_BREAK", ~title, ~description=""),
+      session(~type_="COFFEE_BREAK", ~title, ~description="", ()),
     |]
   | Workshop(workshops) =>
     workshops
     |> List.map((ws: Data.Workshop.t) =>
-         session(~type_="WORKSHOP", ~title=ws.title, ~description="")
+         session(~type_="WORKSHOP", ~title=ws.title, ~description="", ())
        )
     |> Array.of_list
   | OpenEnd(title) => [|
-      session(~type_="OPEN_END", ~title, ~description=""),
+      session(~type_="OPEN_END", ~title, ~description="", ()),
     |]
-  | Misc(title) => [|session(~type_="MISC", ~title, ~description="")|]
-  | _ => [|session(~type_="UNKNOWN", ~title="", ~description="")|]
+  | Misc(title) => [|session(~type_="MISC", ~title, ~description="", ())|]
+  | _ => [|session(~type_="UNKNOWN", ~title="", ~description="", ())|]
   };
 
 let convertEntryToInterval = (entry: Data.Timetable.entry): interval => {
