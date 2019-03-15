@@ -33,6 +33,8 @@ let make = (~location: location, ~file: file, children) => {
       | "/sponsors/" => Sponsors
       | "/speaker"
       | "/speaker/" => NoLayout
+      | "/export"
+      | "/export/" => NoLayout
       | "/badges"
       | "/badges/" => Print
       | _ => Normal

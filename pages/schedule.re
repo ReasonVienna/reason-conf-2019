@@ -79,7 +79,7 @@ let talkRow = (~fromTime, ~toTime, speakers: list(Data.Speaker.t)) => {
   |]);
 };
 
-let workshopRow = (~fromTime, ~toTime) =>
+let workshopRow = (~fromTime, ~toTime, ~workshops: list(Data.Workshop.t)) =>
   ReasonReact.array([|
     <dt className=style##talkTime>
       <time dateTime={toDurationStr(~fromTime, ~toTime)}>
@@ -87,9 +87,19 @@ let workshopRow = (~fromTime, ~toTime) =>
       </time>
     </dt>,
     <dd className=style##talkDescription>
-      <Link to_="/workshops">
-        <h3 className=style##talkTitleLink> {"Workshops" |> s} </h3>
-      </Link>
+      {
+        List.map(
+          (ws: Data.Workshop.t) =>
+            <p key={ws.slug}>
+              <Link to_={"/workshops#" ++ ws.slug}>
+                <span className=style##talkTitleLink> {ws.title |> s} </span>
+              </Link>
+            </p>,
+          workshops,
+        )
+        |> Array.of_list
+        |> ate
+      }
     </dd>,
   |]);
 
@@ -123,7 +133,7 @@ let createRow = ({task, fromTime, toTime}: Data.Timetable.entry) =>
   | Misc(description) => miscRow(~fromTime, ~toTime, description)
   | OpenEnd(description) => miscRow(~fromTime, ~toTime, description)
   | Talk(speakers) => talkRow(~fromTime, ~toTime, speakers)
-  | Workshop(speakers) => workshopRow(~fromTime, ~toTime)
+  | Workshop(workshops) => workshopRow(~fromTime, ~toTime, ~workshops)
   | PanelDiscussion => panelDiscussionRow(~fromTime, ~toTime)
   };
 
