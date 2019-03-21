@@ -333,7 +333,7 @@ In this talk, I'll discuss the work we've done to provide those people with a gr
   };
   let douglasTeoh = {
     name: "Douglas Teoh",
-    company: "",
+    company: "Allm Inc",
     imgUrl: douglasTeohImg,
     description: {j|Douglas is a software engineer currently working at Allm Inc. in Japan. He develops backend services with Ruby, and webapp frontends with various compile-to-JavaScript languages. He has also published open source macOS apps.|j},
     talk:
