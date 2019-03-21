@@ -318,7 +318,7 @@ We would like to share this experience with you, including the best and the wors
     talk:
       Some({
         title: "17 Years of Caml Herding",
-        abstract: "Jane Street is a long-time user of OCaml and the largest industrial user of the language. Today, there are hundreds of people at Jane Street who use OCaml to build rich and complex applications that are essential to the our business.
+        abstract: "Jane Street is a long-time user of OCaml and the largest industrial user of the language. Today, there are hundreds of people at Jane Street who use OCaml to build rich and complex applications that are essential to our business.
 
 In this talk, I'll discuss the work we've done to provide those people with a great development experience as they write, maintain, and deploy software. I'll also discuss Jane Street as an example of how OCaml can contribute to a tech-focused company's success, both in the short and long term.
 ",
