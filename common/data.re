@@ -314,7 +314,14 @@ We would like to share this experience with you, including the best and the wors
     name: "Jeremie Dimino",
     company: "Jane Street",
     imgUrl: jeremieDiminoImg,
-    description: {j||j},
+    description: {j|Jeremie Dimino is the original author of Dune, a popular
+    OCaml build system. He has been working as a Software Engineer at Jane
+    Street for the past 6 years where he thrived doing what he is passionate
+    about: programming and Open Source. He is also part of the core OCaml
+    development team and has contributed to various aspect of the compiler such
+    as improving the FFI. He is also the initial author of the utop toplevel
+    and was the main maintainer of the widely used Lwt library for several
+    years.|j},
     talk:
       Some({
         title: "17 Years of Caml Herding",
