@@ -59,6 +59,11 @@ const cfp = {
   title: "Call for Papers"
 };
 
+const workshops = {
+  id: "workshops",
+  title: "Workshops"
+};
+
 module.exports = [
   page_index,
   speakers,
@@ -71,5 +76,6 @@ module.exports = [
   coc,
   imprint,
   contact,
-  cfp
+  cfp,
+  workshops
 ];
