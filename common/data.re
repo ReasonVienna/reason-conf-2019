@@ -40,6 +40,10 @@ external janeStreetLogo: string = "../assets/img/partners/janestreet-logo.svg";
 [@bs.module]
 external imandraLogo: string = "../assets/img/partners/imandra-logo.svg";
 
+[@bs.module]
+external nomadicLabsLogo: string =
+  "../assets/img/partners/nomadic-labs-logo.png";
+
 /* List.find_opt is not supported by this BuckleScript version yet */
 let find_opt = (fn, l) =>
   try (List.find(fn, l) |> (r => Some(r))) {
@@ -541,7 +545,7 @@ Same as Catering plus...
       id: "catering",
       name: "Catering",
       cost: 2500,
-      amount: 4,
+      amount: 1,
       description: {js|
 Same as Supporter plus...
 
@@ -555,7 +559,7 @@ Same as Supporter plus...
       id: "supporter",
       name: "Supporter",
       cost: 1000,
-      amount: 9,
+      amount: 8,
       description: {js|
 - Logo on the website in the sponsor's section
 - Mention on twitter.com
@@ -613,6 +617,12 @@ module Partners = {
       name: "g2i",
       logoUrl: g2iLogo,
       href: "https://g2i.co/",
+      tier: Tier.Supporter,
+    },
+    {
+      name: "Nomadic Labs",
+      logoUrl: nomadicLabsLogo,
+      href: "https://nomadic-labs.com/",
       tier: Tier.Supporter,
     },
   |];
