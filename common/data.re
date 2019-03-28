@@ -461,7 +461,10 @@ module Timetable = {
     {task: Talk([Speaker.douglasTeoh]), duration: Some(30)},
     {task: Talk([Speaker.peterPiekarczyk]), duration: Some(30)},
     {task: PanelDiscussion, duration: Some(30)},
-    {task: OpenEnd("After Party at Luftburg"), duration: None},
+    {
+      task: OpenEnd("After Party at Luftburg sponsored by Jane Street"),
+      duration: None,
+    },
   ];
   let day3Steps = [
     {task: Misc("Doors open"), duration: Some(30)},
