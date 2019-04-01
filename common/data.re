@@ -444,7 +444,9 @@ module Timetable = {
       task: Misc("Doors open, Registration & Editor Setup"),
       duration: Some(45),
     },
-    {task: Workshop(Workshop.workshops), duration: Some(480)},
+    {task: Workshop(Workshop.workshops), duration: Some(180)},
+    {task: Break("Lunch"), duration: Some(60)},
+    {task: Misc("Afternoon Workshop Block"), duration: Some(240)},
   ];
   let day2Steps = [
     {task: Misc("Doors open & Registration"), duration: Some(45)},
