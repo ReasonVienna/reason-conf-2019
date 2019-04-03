@@ -476,9 +476,12 @@ module Timetable = {
     {task: Misc("Doors open"), duration: Some(30)},
     {task: Misc("Open Stage"), duration: Some(195)},
     {task: Break("Lunch"), duration: Some(90)},
-    {task: Misc("Dojo with Benjamin San Souci"), duration: Some(180)},
     {
-      task: OpenEnd("Gathering at a local wine tavern (Location TBA)"),
+      task: Misc("Dojo with the Ahrefs Team and Benjamin San Souci"),
+      duration: Some(180),
+    },
+    {
+      task: OpenEnd("Gathering at the Weinhof Zimmermann (Neustift am Walde)"),
       duration: None,
     },
   ];
