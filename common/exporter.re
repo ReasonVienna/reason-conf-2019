@@ -87,7 +87,9 @@ let convertTask = (task: Data.Timetable.task): array(session) =>
       let {Data.Speaker.title, abstract: description} = talk;
       let people = speakers->Belt.List.map(s => s.name)->Array.of_list;
       [|session(~type_="TALK", ~title, ~description, ~people, ())|];
+    | None => [|session(~type_="TALK", ~title="TBA", ~description="", ())|]
     }
+
   | Break(title) => [|
       session(~type_="COFFEE_BREAK", ~title, ~description="", ()),
     |]
@@ -99,6 +101,14 @@ let convertTask = (task: Data.Timetable.task): array(session) =>
     |> Array.of_list
   | OpenEnd(title) => [|
       session(~type_="OPEN_END", ~title, ~description="", ()),
+    |]
+  | PanelDiscussion => [|
+      session(
+        ~type_="PANEL_DISCUSSION",
+        ~title="Panel Discussion",
+        ~description="",
+        (),
+      ),
     |]
   | Misc(title) => [|session(~type_="MISC", ~title, ~description="", ())|]
   | _ => [|session(~type_="UNKNOWN", ~title="", ~description="", ())|]
