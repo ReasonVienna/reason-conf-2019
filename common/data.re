@@ -151,7 +151,14 @@ module Speaker = {
   let talkSlug = ({title}: talk) => GithubSlugger.slug(title);
   let speakerAnchor = ({social}) =>
     Js.Option.getWithDefault("tba", social.githubUser);
-  let createPlaceholder = (~company="?", ~talk=?, ~name="TBA", ()) => {
+
+  let talkPlaceholder: talk = {
+    title: "TBA",
+    abstract: "Details will be announced reasonably soon!",
+  };
+
+  let createPlaceholder =
+      (~company="?", ~talk=Some(talkPlaceholder), ~name="TBA", ()) => {
     name,
     company,
     imgUrl: speakerPlaceholder,
@@ -185,10 +192,11 @@ module Speaker = {
     imgUrl: benjaminSanSouciImg,
     description: {j|Ben is a French citizen who is excited about building things. After getting his bac in France, he decided to check out what was on the other side of the pond. After getting his degree in Software Engineering, and a short detour through Google, he found himself working at Apple.|j},
     talk:
-      Some({
-        title: "Shipping a game on iOS written in ReasonML",
-        abstract: "Shipping a mobile game in ReasonML is not as hard as one might think. This talk will go over our demo-driven approach to developing this game, the small technical difficulties one might encounter and the tough non-technical ones. You'll hopefully be inspired to gain back creative confidence to make your childhood dream game in ReasonML.",
-      }),
+      /*Some({*/
+      /*title: "Shipping a game on iOS written in ReasonML",*/
+      /*abstract: "Shipping a mobile game in ReasonML is not as hard as one might think. This talk will go over our demo-driven approach to developing this game, the small technical difficulties one might encounter and the tough non-technical ones. You'll hopefully be inspired to gain back creative confidence to make your childhood dream game in ReasonML.",*/
+      /*}),*/
+      None,
     video: None,
     slides: None,
     social: {
@@ -456,7 +464,7 @@ module Timetable = {
       task: Talk([Speaker.amelieBenoit, Speaker.davidCorticchiato]),
       duration: Some(30),
     },
-    {task: Talk([Speaker.benjaminSanSouci]), duration: Some(30)},
+    {task: Talk([Speaker.createPlaceholder()]), duration: Some(30)},
     {task: Break("Lunch"), duration: Some(90)},
     {task: Talk([Speaker.jeremieDimino]), duration: Some(30)},
     {task: Talk([Speaker.gagePeterson]), duration: Some(30)},
