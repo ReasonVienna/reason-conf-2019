@@ -103,12 +103,7 @@ let convertTask = (task: Data.Timetable.task): array(session) =>
       session(~type_="OPEN_END", ~title, ~description="", ()),
     |]
   | PanelDiscussion => [|
-      session(
-        ~type_="PANEL_DISCUSSION",
-        ~title="Panel Discussion",
-        ~description="",
-        (),
-      ),
+      session(~type_="PANEL", ~title="Panel Discussion", ~description="", ()),
     |]
   | Misc(title) => [|session(~type_="MISC", ~title, ~description="", ())|]
   | _ => [|session(~type_="UNKNOWN", ~title="", ~description="", ())|]
