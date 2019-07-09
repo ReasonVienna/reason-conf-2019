@@ -6,6 +6,7 @@ let make = _children => {
   ...component,
   render: _self =>
     <>
+      <ReasonConfUs />
       <OfferingSection />
       /*<SpeakersSection />*/
       <TicketsSection />
