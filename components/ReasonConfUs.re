@@ -9,7 +9,7 @@ let make = _children => {
       <h1 className="push--1col pull--1col">
         {"Reason Conf US is happening!" |> ReasonReact.string}
       </h1>
-      <p className="extraText">
+      <p className="extraText push--1col pull--1col">
         {
           "We're proud to announce Reason Conf US taking place in Chicago, IL on October 8th. Keynote by Jordan Walke. "
           |> ReasonReact.string
