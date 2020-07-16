@@ -12,7 +12,7 @@
     "graphql": "^0.13.2",
     "graphql-request": "^1.8.2",
     "graphql-tools": "^3.1.1",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "lodash.clonedeep": "^4.5.0",
     "marked": "^0.3.12",
     "normalize.css": "^7.0.0",
